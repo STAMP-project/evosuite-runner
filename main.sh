@@ -35,19 +35,25 @@ do
       if [ "$flagmodel" -eq 1 ]; then
         echo "Model seeding is on - seed_clone=$clone_seed_p"
         model_dir="analysis-result/$project/models"
-        java -d64 -Xmx4000m -jar evosuite-master-1.0.7-SNAPSHOT.jar -generateTests -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=180 -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Donline_model_seeding=TRUE -Dmodel_path="$model_dir" -Dreport_dir="model-seeding-report-$clone_seed_p" > "logs/model_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/model_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
+        java -d64 -Xmx4000m -jar evosuite-master-1.0.7-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=215000 -Dstopping_condition=MAXFITNESSEVALUATIONS -Dshow_progress=FALSE -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Donline_model_seeding=TRUE -Dmodel_path="$model_dir" > "logs/model_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/model_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
+        pid=$!
+        . parsing.sh "model" $pid $i $project $class $clone_seed_p &
       elif [[ "$flagtest" -eq 1  ]]; then
         junits=$(python python/collect-junits.py $project $class)
         if [[ -z "$junits" ]]; then
           echo "There is no test for class $class. Test seeding is skipped"
        else
          echo "Test seeding is on - seed_clone=$clone_seed_p"
-         java -d64 -Xmx4000m -jar evosuite-master-1.0.7-SNAPSHOT.jar -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Dcarve_object_pool=TRUE -Dselected_junit="$junits" -Dreport_dir="test-seeding-report-$clone_seed_p"> "logs/test_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/test_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
+         java -d64 -Xmx4000m -jar evosuite-master-1.0.7-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=215000 -Dstopping_condition=MAXFITNESSEVALUATIONS -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Dcarve_object_pool=TRUE -Dselected_junit="$junits" > "logs/test_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/test_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
+         pid=$!
+         . parsing.sh "test" $pid $i $project $class $clone_seed_p &
         fi
       else
         echo "No seeding is on"
         echo "$projectCP"
-        java -d64 -Xmx4000m -jar evosuite-master-1.0.7-SNAPSHOT.jar -generateTests -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=180 -projectCP "$projectCP" -class "$class" -Dreport_dir="no-seeding-report" > "logs/no_seeding/$project-$class-$i-out.txt" 2> "logs/no_seeding/$project-$class-$i-err.txt" &
+        java -d64 -Xmx4000m -jar evosuite-master-1.0.7-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=215000 -Dstopping_condition=MAXFITNESSEVALUATIONS -projectCP "$projectCP" -class "$class" > "logs/no_seeding/$project-$class-$i-out.txt" 2> "logs/no_seeding/$project-$class-$i-err.txt" &
+        pid=$!
+        . parsing.sh "no" $pid $i $project $class &
         fi
         while (( $(pgrep -l java | wc -l) >= $LIMIT ))
         do
