@@ -22,7 +22,7 @@ LIMIT=$3
 echo "Round = $rounds"
 echo "classes file = $classes"
 echo "LIMIT = $LIMIT"
-for ((i=1;i<=$rounds;i++));
+for ((i=11;i<=$rounds;i++));
 do
  echo "Round $i experiment"
  for clone_seed_p in "${clone_seed[@]}"
