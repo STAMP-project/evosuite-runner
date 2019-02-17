@@ -1,0 +1,939 @@
+* EvoSuite 1.0.7-SNAPSHOT
+* Going to generate test cases for class: org.sat4j.tools.encoding.Product
+* Starting Client-0
+* Connecting to master process on port 21014
+* Analyzing classpath: 
+  - bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT.jar
+  - bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT-tests.jar
+* Finished analyzing classpath
+* Executing tests from 6 test classes for carving
+[MASTER] 11:21:51.608 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Product'.
+[MASTER] 11:21:51.654 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.EncodingStrategyAdapter'.
+[MASTER] 11:21:51.661 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding'.
+[MASTER] 11:21:51.683 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding'.
+[MASTER] 11:21:51.712 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesProductEncoding'.
+[MASTER] 11:21:51.718 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding'.
+[MASTER] 11:21:51.742 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding'.
+[MASTER] 11:21:51.746 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesLadderEncoding'.
+[MASTER] 11:21:51.786 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IVecInt'.
+[MASTER] 11:21:51.787 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Policy'.
+[MASTER] 11:21:51.795 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ISolver'.
+[MASTER] 11:21:51.797 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IProblem'.
+[MASTER] 11:21:51.798 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.RandomAccessModel'.
+[MASTER] 11:21:51.804 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ContradictionException'.
+[MASTER] 11:21:51.806 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.TimeoutException'.
+[MASTER] 11:21:51.897 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Binary'.
+[MASTER] 11:21:51.899 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Binomial'.
+[MASTER] 11:21:51.901 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Commander'.
+[MASTER] 11:21:51.902 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Ladder'.
+[MASTER] 11:21:51.906 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Sequential'.
+[MASTER] 11:21:51.915 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IConstr'.
+[MASTER] 11:21:51.918 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.EncodingStrategy'.
+[MASTER] 11:21:51.927 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.ClausalCardinalitiesDecorator'.
+[MASTER] 11:21:51.933 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.SolverDecorator'.
+[MASTER] 11:21:51.947 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.SolverFactory'.
+[MASTER] 11:21:51.969 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.ASolverFactory'.
+[MASTER] 11:21:51.974 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.RestartStrategy'.
+[MASTER] 11:21:51.975 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ConflictTimer'.
+[MASTER] 11:21:51.975 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ICDCL'.
+[MASTER] 11:21:51.976 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.UnitPropagationListener'.
+[MASTER] 11:21:51.978 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ActivityListener'.
+[MASTER] 11:21:51.979 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.VarActivityListener'.
+[MASTER] 11:21:51.980 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ConstrActivityListener'.
+[MASTER] 11:21:51.982 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Learner'.
+[MASTER] 11:21:51.983 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.IPhaseSelectionStrategy'.
+[MASTER] 11:21:51.984 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.IOrder'.
+[MASTER] 11:21:51.985 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.DataStructureFactory'.
+[MASTER] 11:21:51.985 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IOptimizationProblem'.
+[MASTER] 11:21:51.986 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.LearningStrategy'.
+[MASTER] 11:21:51.987 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.LimitedLearning'.
+[MASTER] 11:21:51.989 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.PercentLengthLearning'.
+[MASTER] 11:21:51.996 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.MixedDataStructureDanielWL'.
+[MASTER] 11:21:51.999 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.AbstractDataStructureFactory'.
+[MASTER] 11:21:52.004 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IVec'.
+[MASTER] 11:21:52.006 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Constr'.
+[MASTER] 11:21:52.007 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ILits'.
+[MASTER] 11:21:52.008 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.Vec'.
+[MASTER] 11:21:52.050 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.cnf.Lits'.
+[MASTER] 11:21:52.062 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.VarOrderHeap'.
+[MASTER] 11:21:52.070 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.PhaseInLastLearnedClauseSelectionStrategy'.
+[MASTER] 11:21:52.072 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.AbstractPhaserecordingSelectionStrategy'.
+[MASTER] 11:21:52.074 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Heap'.
+[MASTER] 11:21:52.079 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.MiniSATLearning'.
+[MASTER] 11:21:52.080 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.AbstractLearning'.
+[MASTER] 11:21:52.081 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Solver'.
+[MASTER] 11:21:52.150 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ISolverService'.
+[MASTER] 11:21:52.152 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ISimplifier'.
+[MASTER] 11:21:52.153 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.LearnedConstraintsDeletionStrategy'.
+[MASTER] 11:21:52.170 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Solver$10'.
+[MASTER] 11:21:52.188 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Counter'.
+[MASTER] 11:21:52.193 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.SearchListener'.
+[MASTER] 11:21:52.196 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Solver$1'.
+[MASTER] 11:21:52.198 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.restarts.MiniSATRestarts'.
+[MASTER] 11:21:52.202 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.SearchParams'.
+[MASTER] 11:21:52.208 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ILogAble'.
+[MASTER] 11:21:52.209 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ILogAble$1'.
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMostOneWith8Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMostOneWith8Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMostOneWith8Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMostOneWith8Vars
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Product from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Policy from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Sequential from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Binary from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Commander from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Binomial from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Ladder from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.EncodingStrategy from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.SolverFactory from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.core.Vec from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.constraints.cnf.Lits from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.constraints.MixedDataStructureDanielWL from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.orders.PhaseInLastLearnedClauseSelectionStrategy from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.orders.VarOrderHeap from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.learning.MiniSATLearning from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.restarts.MiniSATRestarts from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.core.SearchParams from existing JUnit tests
+* Generating tests for class org.sat4j.tools.encoding.Product
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 699
+* Using seed 1550398905006
+* Starting evolution
+[Progress:>                             0%] [Cov:>                                  0%]* Initialsss Number of Goals in DynMOSA = 136 / 699
+[Progress:>                             0%] [Cov:=================>                 51%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.2072072072072072
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.13725490196078433
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.11538461538461539
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.13725490196078433
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 200
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[MASTER] 11:22:05.144 [logback-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.sat4j.tools.OptToSatAdapter due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.sat4j.tools.LexicoDecorator due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.sat4j.tools.OptToSatAdapter due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.sat4j.opt.MinOneDecorator due to org.evosuite.ga.ConstructionFailedException: Failed to add constructor for org.sat4j.tools.Minimal4CardinalityModel due to org.evosuite.ga.ConstructionFailedException: Max recursion depth reached
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 302
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:===================>               56%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 399
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:=========================>         73%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.6396396396396397
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.5098039215686274
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.7606837606837606
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.5098039215686274
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 498
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:============================>      81%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 597
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:=============================>     85%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.8738738738738738
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.803921568627451
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.8931623931623932
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.803921568627451
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 691
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:===============================>   90%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 787
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 889
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 986
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1085
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1187
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1281
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1380
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1475
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1574
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1673
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1770
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1865
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1962
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2065
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             0%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2151
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2254
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2354
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2454
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2555
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2652
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2747
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2837
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2940
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3042
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3144
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3241
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3338
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3440
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3541
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3642
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3736
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3839
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3938
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4035
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4136
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4237
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             1%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4335
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4441
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4543
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4638
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4735
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4832
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4933
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5031
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5135
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5235
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5332
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5432
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5537
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5639
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5742
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5842
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5942
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6043
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6145
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6250
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6351
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             2%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6453
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6552
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6647
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6746
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6841
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6944
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7041
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7139
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7233
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7328
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7427
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7527
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7616
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7720
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7823
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7925
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+[Progress:>                             3%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+
+* Search finished after 121s and 78 generations, 101344 statements, best individual has fitness: 8.0
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 111
+* Number of covered goals: 111
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 51
+* Number of covered goals: 51
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 26
+* Number of covered goals: 26
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 99%
+* Total number of goals: 468
+* Number of covered goals: 464
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 8
+* Number of covered goals: 4
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 100%
+* Total number of goals: 51
+* Number of covered goals: 51
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* Generated 36 tests with total length 229
+* Resulting test suite's coverage: 94% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 11:25:10.739 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.94175% of time used, but only 8/36 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 42%
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* Compiling and checking tests
+* Writing tests to file
+* Writing JUnit test case 'Product_ESTest' to evosuite-tests
+* Done!
+
+* Computation finished
