@@ -1,0 +1,24 @@
+[MASTER] 01:15:12.086 [logback-2] ERROR FunctionalMockStatement - IAE on <public abstract java.nio.file.attribute.BasicFileAttributes java.nio.file.spi.FileSystemProvider.readAttributes(java.nio.file.Path,java.lang.Class,java.nio.file.LinkOption[]) throws java.io.IOException> when called with [[], null, null]
+[MASTER] 01:15:12.118 [logback-2] ERROR FunctionalMockStatement - Cannot use Mockito on class java.nio.file.FileSystem due to IAE: 
+Misplaced or misused argument matcher detected here:
+
+-> at org.evosuite.testcase.fm.MethodDescriptor.executeMatcher(MethodDescriptor.java:245)
+-> at org.evosuite.testcase.fm.MethodDescriptor.executeMatcher(MethodDescriptor.java:248)
+-> at org.evosuite.testcase.fm.MethodDescriptor.executeMatcher(MethodDescriptor.java:248)
+
+You cannot use argument matchers outside of verification or stubbing.
+Examples of correct usage of argument matchers:
+    when(mock.get(anyInt())).thenReturn(null);
+    doThrow(new RuntimeException()).when(mock).someVoidMethod(anyObject());
+    verify(mock).someMethod(contains("foo"))
+
+This message may appear after an NullPointerException if the last matcher is returning an object 
+like any() but the stubbed method signature expect a primitive argument, in this case,
+use primitive alternatives.
+    when(mock.get(any())); // bad use, will raise NPE
+    when(mock.get(anyInt())); // correct usage use
+
+Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+Mocking methods declared on non-public parent classes is not supported.
+

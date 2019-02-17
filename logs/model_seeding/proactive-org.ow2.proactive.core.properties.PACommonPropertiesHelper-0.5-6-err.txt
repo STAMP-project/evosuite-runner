@@ -1,0 +1,94 @@
+[MASTER] 04:33:19.054 [logback-2] ERROR TestCaseExecutor - ExecutionException (this is likely a serious error in the framework)
+java.util.concurrent.ExecutionException: java.util.NoSuchElementException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) [na:1.8.0_191]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:206) [na:1.8.0_191]
+	at org.evosuite.testcase.execution.TimeoutHandler.executeWithTimeout(TimeoutHandler.java:107) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TimeoutHandler.execute(TimeoutHandler.java:96) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:334) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:277) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:264) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.runTest(TestCaseExecutor.java:140) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.structural.MultiCriteriatManager.calculateFitness(MultiCriteriatManager.java:364) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.calculateFitness(DynaMOSA.java:237) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.AbstractMOSA.breedNextGeneration(AbstractMOSA.java:146) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:73) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:163) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:115) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:676) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:244) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:160) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_191]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+Caused by: java.util.NoSuchElementException: null
+	at java.util.LinkedList.removeFirst(LinkedList.java:270) ~[na:1.8.0_191]
+	at java.util.LinkedList.pop(LinkedList.java:801) ~[na:1.8.0_191]
+	at org.evosuite.testcase.execution.ExecutionTraceImpl.finishCalls(ExecutionTraceImpl.java:826) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.ExecutionTraceProxy.finishCalls(ExecutionTraceProxy.java:154) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.ExecutionTracer.getTrace(ExecutionTracer.java:233) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestRunnable.call(TestRunnable.java:262) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestRunnable.call(TestRunnable.java:55) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	... 4 common frames omitted
+[MASTER] 04:33:19.062 [logback-2] ERROR TestCaseExecutor - TG: Exception caught: 
+java.util.NoSuchElementException: null
+	at java.util.LinkedList.removeFirst(LinkedList.java:270) ~[na:1.8.0_191]
+	at java.util.LinkedList.pop(LinkedList.java:801) ~[na:1.8.0_191]
+	at org.evosuite.testcase.execution.ExecutionTraceImpl.finishCalls(ExecutionTraceImpl.java:826) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.ExecutionTraceProxy.finishCalls(ExecutionTraceProxy.java:154) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.ExecutionTracer.getTrace(ExecutionTracer.java:233) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:384) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:277) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:264) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.runTest(TestCaseExecutor.java:140) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.structural.MultiCriteriatManager.calculateFitness(MultiCriteriatManager.java:364) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.calculateFitness(DynaMOSA.java:237) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.AbstractMOSA.breedNextGeneration(AbstractMOSA.java:146) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:73) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:163) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:115) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:676) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:244) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:160) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_191]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+[MASTER] 04:33:19.062 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.ow2.proactive.core.properties.PACommonPropertiesHelper with seed 1550374362614. Configuration id : null
+java.lang.Error: java.util.NoSuchElementException
+	at org.evosuite.testcase.execution.TestCaseExecutor.runTest(TestCaseExecutor.java:146) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.structural.MultiCriteriatManager.calculateFitness(MultiCriteriatManager.java:364) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.calculateFitness(DynaMOSA.java:237) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.AbstractMOSA.breedNextGeneration(AbstractMOSA.java:146) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.evolve(DynaMOSA.java:73) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ga.metaheuristics.mosa.DynaMOSA.generateSolution(DynaMOSA.java:163) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.strategy.MOSuiteStrategy.generateTests(MOSuiteStrategy.java:115) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.generateTests(TestSuiteGenerator.java:676) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:244) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:160) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_191]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+Caused by: java.util.NoSuchElementException: null
+	at java.util.LinkedList.removeFirst(LinkedList.java:270) ~[na:1.8.0_191]
+	at java.util.LinkedList.pop(LinkedList.java:801) ~[na:1.8.0_191]
+	at org.evosuite.testcase.execution.ExecutionTraceImpl.finishCalls(ExecutionTraceImpl.java:826) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.ExecutionTraceProxy.finishCalls(ExecutionTraceProxy.java:154) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.ExecutionTracer.getTrace(ExecutionTracer.java:233) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:384) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:277) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.execute(TestCaseExecutor.java:264) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.testcase.execution.TestCaseExecutor.runTest(TestCaseExecutor.java:140) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	... 14 common frames omitted
+[MASTER] 04:33:19.185 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 04:33:21.187 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 04:33:22.188 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 04:33:23.188 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 04:33:24.188 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 04:33:25.189 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 04:33:25.189 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 04:33:25.290 [main] ERROR TestGeneration - failed to write statistics data

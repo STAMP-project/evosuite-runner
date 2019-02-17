@@ -1,0 +1,24 @@
+[MASTER] 23:32:58.249 [logback-2] ERROR ClientNodeImpl - Error when connecting to master via RMI
+java.lang.SecurityException: Unprivileged thread "main" cannot add a privileged thread: failed to add "Statistics sender in client process"
+Current privileged threads are: 
+"pool-3-thread-1"
+"Reference Handler"
+"Finalizer"
+"Signal Dispatcher"
+"Attach Listener"
+"RMI TCP Accept-21047"
+"RMI Reaper"
+"GC Daemon"
+"RMI Scheduler(0)"
+	at org.evosuite.runtime.sandbox.MSecurityManager.addPrivilegedThread(MSecurityManager.java:396) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.runtime.sandbox.Sandbox.addPrivilegedThread(Sandbox.java:92) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.service.ClientNodeImpl.init(ClientNodeImpl.java:411) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.ClientServices.registerServices(ClientServices.java:68) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ClientProcess.run(ClientProcess.java:88) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ClientProcess.main(ClientProcess.java:229) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+[MASTER] 23:32:58.289 [logback-2] ERROR ClientProcess - Error when generating tests for: org.sat4j.tools.DotSearchTracing with seed 1550356377916. Configuration id : null
+java.lang.RuntimeException: Could not connect to master process on port 3875
+	at org.evosuite.ClientProcess.run(ClientProcess.java:93) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ClientProcess.main(ClientProcess.java:229) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+[MASTER] 23:32:58.867 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:32:58.968 [main] ERROR TestGeneration - failed to write statistics data
