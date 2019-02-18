@@ -1,0 +1,17 @@
+[MASTER] 20:52:24.299 [logback-2] ERROR ClientNodeImpl - Error when connecting to master via RMI
+java.lang.SecurityException: Unprivileged thread "main" cannot add a privileged thread: failed to add "Statistics sender in client process"
+Current privileged threads are: 
+"pool-3-thread-1"
+"Reference Handler"
+	at org.evosuite.runtime.sandbox.MSecurityManager.addPrivilegedThread(MSecurityManager.java:396) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.runtime.sandbox.Sandbox.addPrivilegedThread(Sandbox.java:92) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.service.ClientNodeImpl.init(ClientNodeImpl.java:411) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.ClientServices.registerServices(ClientServices.java:68) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ClientProcess.run(ClientProcess.java:88) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ClientProcess.main(ClientProcess.java:229) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+[MASTER] 20:52:24.350 [logback-2] ERROR ClientProcess - Error when generating tests for: org.sat4j.tools.DimacsOutputSolver with seed 1550433143559. Configuration id : null
+java.lang.RuntimeException: Could not connect to master process on port 17252
+	at org.evosuite.ClientProcess.run(ClientProcess.java:93) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.ClientProcess.main(ClientProcess.java:229) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+[MASTER] 20:52:25.050 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 20:52:25.154 [main] ERROR TestGeneration - failed to write statistics data
