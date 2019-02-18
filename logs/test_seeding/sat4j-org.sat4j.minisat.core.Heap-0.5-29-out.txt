@@ -1,0 +1,289 @@
+* EvoSuite 1.0.7-SNAPSHOT
+* Going to generate test cases for class: org.sat4j.minisat.core.Heap
+* Starting Client-0
+* Connecting to master process on port 2124
+* Analyzing classpath: 
+  - bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT.jar
+  - bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT-tests.jar
+* Finished analyzing classpath
+* Executing tests from 1 test class for carving
+[MASTER] 16:30:32.380 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Heap'.
+[MASTER] 16:30:32.490 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.VarOrderTest'.
+[MASTER] 16:30:32.545 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.IOrder'.
+[MASTER] 16:30:32.622 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.ClausalDataStructureWL'.
+[MASTER] 16:30:32.625 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.AbstractDataStructureFactory'.
+[MASTER] 16:30:32.643 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.DataStructureFactory'.
+[MASTER] 16:30:32.644 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IVec'.
+[MASTER] 16:30:32.645 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Constr'.
+[MASTER] 16:30:32.646 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IConstr'.
+[MASTER] 16:30:32.663 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ILits'.
+[MASTER] 16:30:32.664 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.Vec'.
+[MASTER] 16:30:32.715 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.cnf.Lits'.
+[MASTER] 16:30:32.783 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.UnitPropagationListener'.
+[MASTER] 16:30:32.784 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Learner'.
+[MASTER] 16:30:32.788 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.VarOrderHeap'.
+[MASTER] 16:30:32.830 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.IPhaseSelectionStrategy'.
+[MASTER] 16:30:32.831 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.PhaseInLastLearnedClauseSelectionStrategy'.
+[MASTER] 16:30:32.851 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.AbstractPhaserecordingSelectionStrategy'.
+[MASTER] 16:30:32.887 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Propagatable'.
+ - Carving test org.sat4j.minisat.VarOrderTest.testNumberOfInterestingVariables
+ - Carving test org.sat4j.minisat.VarOrderTest.testVarDecayActivity
+ - Carving test org.sat4j.minisat.VarOrderTest.testUpdateVar
+ - Carving test org.sat4j.minisat.VarOrderTest.testUndo
+ - Carving test org.sat4j.minisat.VarOrderTest.testSetVarDecay
+ - Carving test org.sat4j.minisat.VarOrderTest.testNewVarint
+ - Carving test org.sat4j.minisat.VarOrderTest.testGetVocabulary
+[MASTER] 16:30:34.085 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.LiteralsUtils'.
+[MASTER] 16:30:34.140 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IVecInt'.
+[MASTER] 16:30:34.141 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.VecInt'.
+[MASTER] 16:30:34.220 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IteratorInt'.
+[MASTER] 16:30:34.222 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.VecInt$1'.
+ - Carving test org.sat4j.minisat.VarOrderTest.testNewVar
+ - Carving test org.sat4j.minisat.VarOrderTest.testSelect
+ -> Carved 1 tests for class class org.sat4j.minisat.core.Heap from existing JUnit tests
+ -> Carved 9 tests for class class org.sat4j.core.Vec from existing JUnit tests
+ -> Carved 9 tests for class class org.sat4j.minisat.constraints.cnf.Lits from existing JUnit tests
+ -> Carved 9 tests for class class org.sat4j.minisat.constraints.ClausalDataStructureWL from existing JUnit tests
+ -> Carved 9 tests for class class org.sat4j.minisat.orders.PhaseInLastLearnedClauseSelectionStrategy from existing JUnit tests
+ -> Carved 9 tests for class class org.sat4j.minisat.orders.VarOrderHeap from existing JUnit tests
+ -> Carved 1 tests for class class org.sat4j.core.LiteralsUtils from existing JUnit tests
+ -> Carved 1 tests for class class org.sat4j.core.VecInt from existing JUnit tests
+* Generating tests for class org.sat4j.minisat.core.Heap
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 548
+* Using seed 1550503824590
+* Starting evolution
+[Progress:>                             0%] [Cov:>                                  0%]* Initialsss Number of Goals in DynMOSA = 203 / 548
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.609375
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.4915254237288136
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.4670846394984326
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.3684210526315789
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 0.9285714285714286
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.4745762711864407
+[Progress:>                             0%] [Cov:======================>            64%]* naaame: 
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 200
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: 
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 304
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.671875
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.559322033898305
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.5705329153605015
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.3684210526315789
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.5423728813559322
+[Progress:>                             0%] [Cov:=======================>           68%]* naaame: 
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 408
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.671875
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.559322033898305
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.5705329153605015
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.3684210526315789
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.5423728813559322
+[Progress:>                             0%] [Cov:=======================>           68%]* naaame: 
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 513
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.703125
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.6610169491525424
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.6332288401253918
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.42105263157894735
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.6101694915254238
+[Progress:>                             0%] [Cov:=========================>         72%]* naaame: 
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 614
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.703125
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.6610169491525424
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.6332288401253918
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.42105263157894735
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.6101694915254238
+[Progress:>                             0%] [Cov:=========================>         72%][Progress:>                             0%] [Cov:=========================>         72%]* naaame: 
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 718
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.703125
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.6610169491525424
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.6332288401253918
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.42105263157894735
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.6101694915254238
+* naaame: 
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 736
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+[Progress:>                             0%] [Cov:=========================>         72%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.703125
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.6610169491525424
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.6332288401253918
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.42105263157894735
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.6101694915254238
+
+* Search finished after 124s and 6 generations, 8446 statements, best individual has fitness: 193.0
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.703125
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.6610169491525424
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.6332288401253918
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.42105263157894735
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.6101694915254238
+* Minimizing test suite
+[MASTER] 16:33:49.131 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 73%
+* Total number of goals: 64
+* Number of covered goals: 47
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 66%
+* Total number of goals: 59
+* Number of covered goals: 39
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 12
+* Number of covered goals: 12
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 67%
+* Total number of goals: 319
+* Number of covered goals: 214
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 42%
+* Total number of goals: 19
+* Number of covered goals: 8
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 14
+* Number of covered goals: 14
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 86%
+* Total number of goals: 14
+* Number of covered goals: 12
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 61%
+* Total number of goals: 59
+* Number of covered goals: 36
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.703125
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.6610169491525424
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.6332288401253918
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.42105263157894735
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.6101694915254238
+* Generated 48 tests with total length 530
+* Resulting test suite's coverage: 73% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 22%
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.703125
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.6610169491525424
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.6332288401253918
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.42105263157894735
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.7857142857142857
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.6101694915254238
+* Compiling and checking tests
+[MASTER] 16:34:41.871 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 16:34:41.873 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[4];
+doubleArray0[0] = 0.0;
+doubleArray0[1] = 0.0;
+doubleArray0[2] = 0.0;
+doubleArray0[3] = (-1760.476480501);
+int[] intArray0 = new int[1];
+int int0 = 0;
+intArray0[0] = 0;
+LevelAndActivityVariableComparator levelAndActivityVariableComparator0 = new LevelAndActivityVariableComparator(doubleArray0, intArray0);
+Heap heap0 = new Heap(levelAndActivityVariableComparator0);
+heap0.setBounds(0);
+heap0.setBounds(0);
+heap0.heapProperty(int0);
+int int1 = heap0.size();
+heap0.inHeap(int1);
+int int2 = 2645;
+heap0.insert(int0);
+heap0.setBounds(int2);
+int int3 = 1;
+heap0.setBounds(int3);
+heap0.size();
+int int4 = 710;
+heap0.increase(int4);
+heap0.heapProperty();
+int int5 = 795;
+heap0.ok(int5);
+heap0.heapProperty();
+int int6 = 5;
+heap0.percolateUp(int6);
+int int7 = 1;
+heap0.inHeap(int7);
+
+[MASTER] 16:34:50.493 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 16:34:50.525 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ double[] doubleArray0 = new double[7];
+doubleArray0[0] = 4510.0;
+doubleArray0[1] = (-1165.4999748185037);
+doubleArray0[2] = 78.334907;
+doubleArray0[3] = 0.0;
+doubleArray0[4] = 0.0;
+doubleArray0[5] = 1172.597;
+doubleArray0[6] = (-2422.536621425122);
+ActivityBasedVariableComparator activityBasedVariableComparator0 = new ActivityBasedVariableComparator(doubleArray0);
+Heap heap0 = new Heap(activityBasedVariableComparator0);
+int int0 = 0;
+heap0.heapProperty(int0);
+
+* Writing tests to file
+* Writing JUnit test case 'Heap_ESTest' to evosuite-tests
+* Done!
+
+* Computation finished
