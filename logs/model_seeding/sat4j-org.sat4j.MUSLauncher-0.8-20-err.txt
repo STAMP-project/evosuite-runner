@@ -1,0 +1,592 @@
+[MASTER] 05:46:45.152 [logback-2] ERROR TestCluster - Failed to check cache for org.sat4j.tools.GroupClauseSelectorSolver<?> : Invalid generic instance
+[MASTER] 05:46:58.668 [logback-2] ERROR TestCluster - Failed to check cache for org.sat4j.minisat.core.Solver<D> : Type points to itself
+[MASTER] 05:48:44.450 [logback-2] ERROR ClientNodeImpl - Cannot inform master of change of state
+java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.io.InvalidClassException: cannot bind enum descriptor to a non-enum class
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:355) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682) ~[na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:276) ~[na:1.8.0_91]
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:253) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162) ~[na:1.8.0_91]
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227) ~[na:1.8.0_91]
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179) ~[na:1.8.0_91]
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source) ~[na:na]
+	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:279) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:68) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.postProcessTests(TestSuiteGenerator.java:543) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:254) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:160) [evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_91]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
+Caused by: java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.io.InvalidClassException: cannot bind enum descriptor to a non-enum class
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:312) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682) ~[na:1.8.0_91]
+	... 3 common frames omitted
+Caused by: java.io.InvalidClassException: cannot bind enum descriptor to a non-enum class
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:604) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1630) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readEnum(ObjectInputStream.java:1733) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1350) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:503) ~[na:1.8.0_91]
+	at org.evosuite.assertion.Assertion.readObject(Assertion.java:256) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at java.util.HashSet.readObject(HashSet.java:333) ~[na:1.8.0_91]
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at java.util.ArrayList.readObject(ArrayList.java:791) ~[na:1.8.0_91]
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:503) ~[na:1.8.0_91]
+	at org.evosuite.testcase.DefaultTestCase.readObject(DefaultTestCase.java:1139) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at java.util.ArrayList.readObject(ArrayList.java:791) ~[na:1.8.0_91]
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastRef.unmarshalValue(UnicastRef.java:326) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastServerRef.unmarshalParametersUnchecked(UnicastServerRef.java:592) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastServerRef.unmarshalParameters(UnicastServerRef.java:580) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:310) ~[na:1.8.0_91]
+	... 12 common frames omitted
+[MASTER] 05:48:46.975 [logback-2] ERROR JUnitAnalyzer - Compilation failed on compilation units: [RegularFileObject[/tmp/EvoSuite_5_1550551726769/org/sat4j/MUSLauncher_5_tmp__ESTest.java], RegularFileObject[/tmp/EvoSuite_5_1550551726769/org/sat4j/MUSLauncher_5_tmp__ESTest_scaffolding.java]]
+[MASTER] 05:48:46.975 [logback-2] ERROR JUnitAnalyzer - Classpath: bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT.jar:bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT-tests.jar:/home/pderakhshanfar/common-uncommon-behaviour-testing-experiment/evosuite-master-1.0.7-SNAPSHOT.jar:/home/pderakhshanfar/common-uncommon-behaviour-testing-experiment/bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT.jar:/home/pderakhshanfar/common-uncommon-behaviour-testing-experiment/bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT-tests.jar
+[MASTER] 05:48:46.975 [logback-2] ERROR JUnitAnalyzer - evosuiteCP: /home/pderakhshanfar/common-uncommon-behaviour-testing-experiment/evosuite-master-1.0.7-SNAPSHOT.jar:/home/pderakhshanfar/common-uncommon-behaviour-testing-experiment/bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT.jar:/home/pderakhshanfar/common-uncommon-behaviour-testing-experiment/bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT-tests.jar
+[MASTER] 05:48:46.984 [logback-2] ERROR JUnitAnalyzer - Diagnostic: cannot find symbol
+  symbol:   method access$004(org.sat4j.MUSLauncher)
+  location: class org.sat4j.MUSLauncher: 23
+[MASTER] 05:48:46.985 [logback-2] ERROR JUnitAnalyzer - RegularFileObject[/tmp/EvoSuite_5_1550551726769/org/sat4j/MUSLauncher_5_tmp__ESTest.java]
+1: /*
+2:  * This file was automatically generated by EvoSuite
+3:  * Tue Feb 19 04:48:46 GMT 2019
+4:  */
+5: 
+6: package org.sat4j;
+7: 
+8: import org.junit.Test;
+9: import static org.junit.Assert.*;
+10: import static org.evosuite.runtime.EvoAssertions.*;
+11: import org.evosuite.runtime.EvoRunner;
+12: import org.evosuite.runtime.EvoRunnerParameters;
+13: import org.junit.runner.RunWith;
+14: import org.sat4j.MUSLauncher;
+15: 
+16: @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, useJEE = true) 
+17: public class MUSLauncher_5_tmp__ESTest extends MUSLauncher_5_tmp__ESTest_scaffolding {
+18: 
+19:   @Test(timeout = 4000)
+20:   public void test0()  throws Throwable  {
+21:       // Undeclared exception!
+22:       try { 
+23:         MUSLauncher.access$004((MUSLauncher) null);
+24:         fail("Expecting exception: NullPointerException");
+25:       
+26:       } catch(NullPointerException e) {
+27:          //
+28:          // no message in exception (getMessage() returned null)
+29:          //
+30:          verifyException("org.sat4j.MUSLauncher", e);
+31:       }
+32:   }
+33: }
+RegularFileObject[/tmp/EvoSuite_5_1550551726769/org/sat4j/MUSLauncher_5_tmp__ESTest.java]
+1: /**
+2:  * Scaffolding file used to store all the setups needed to run 
+3:  * tests automatically generated by EvoSuite
+4:  * Tue Feb 19 04:48:46 GMT 2019
+5:  */
+6: 
+7: package org.sat4j;
+8: 
+9: import org.evosuite.runtime.annotation.EvoSuiteClassExclude;
+10: import org.junit.BeforeClass;
+11: import org.junit.Before;
+12: import org.junit.After;
+13: import org.junit.AfterClass;
+14: import org.evosuite.runtime.sandbox.Sandbox;
+15: import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
+16: 
+17: @EvoSuiteClassExclude
+18: public class MUSLauncher_5_tmp__ESTest_scaffolding {
+19: 
+20:   @org.junit.Rule 
+21:   public org.evosuite.runtime.vnet.NonFunctionalRequirementRule nfr = new org.evosuite.runtime.vnet.NonFunctionalRequirementRule();
+22: 
+23:   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
+24: 
+25:   private org.evosuite.runtime.thread.ThreadStopper threadStopper =  new org.evosuite.runtime.thread.ThreadStopper (org.evosuite.runtime.thread.KillSwitchHandler.getInstance(), 3000);
+26: 
+27: 
+28:   @BeforeClass 
+29:   public static void initEvoSuiteFramework() { 
+30:     org.evosuite.runtime.RuntimeSettings.className = "org.sat4j.MUSLauncher"; 
+31:     org.evosuite.runtime.GuiSupport.initialize(); 
+32:     org.evosuite.runtime.RuntimeSettings.maxNumberOfThreads = 100; 
+33:     org.evosuite.runtime.RuntimeSettings.maxNumberOfIterationsPerLoop = 10000; 
+34:     org.evosuite.runtime.RuntimeSettings.mockSystemIn = true; 
+35:     org.evosuite.runtime.RuntimeSettings.sandboxMode = org.evosuite.runtime.sandbox.Sandbox.SandboxMode.RECOMMENDED; 
+36:     org.evosuite.runtime.sandbox.Sandbox.initializeSecurityManagerForSUT(); 
+37:     org.evosuite.runtime.classhandling.JDKClassResetter.init();
+38:     setSystemProperties();
+39:     initializeClasses();
+40:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+41:   } 
+42: 
+43:   @AfterClass 
+44:   public static void clearEvoSuiteFramework(){ 
+45:     Sandbox.resetDefaultSecurityManager(); 
+46:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+47:   } 
+48: 
+49:   @Before 
+50:   public void initTestCase(){ 
+51:     threadStopper.storeCurrentThreads();
+52:     threadStopper.startRecordingTime();
+53:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().initHandler(); 
+54:     org.evosuite.runtime.sandbox.Sandbox.goingToExecuteSUTCode(); 
+55:     setSystemProperties(); 
+56:     org.evosuite.runtime.GuiSupport.setHeadless(); 
+57:     org.evosuite.runtime.Runtime.getInstance().resetRuntime(); 
+58:     org.evosuite.runtime.agent.InstrumentingAgent.activate(); 
+59:   } 
+60: 
+61:   @After 
+62:   public void doneWithTestCase(){ 
+63:     threadStopper.killAndJoinClientThreads();
+64:     org.evosuite.runtime.jvm.ShutdownHookHandler.getInstance().safeExecuteAddedHooks(); 
+65:     org.evosuite.runtime.classhandling.JDKClassResetter.reset(); 
+66:     resetClasses(); 
+67:     org.evosuite.runtime.sandbox.Sandbox.doneWithExecutingSUTCode(); 
+68:     org.evosuite.runtime.agent.InstrumentingAgent.deactivate(); 
+69:     org.evosuite.runtime.GuiSupport.restoreHeadlessMode(); 
+70:   } 
+71: 
+72:   public static void setSystemProperties() {
+73:  
+74:     java.lang.System.setProperties((java.util.Properties) defaultProperties.clone()); 
+75:     java.lang.System.setProperty("java.io.tmpdir", "/tmp"); 
+76:     java.lang.System.setProperty("user.dir", "/home/pderakhshanfar/common-uncommon-behaviour-testing-experiment"); 
+77:   }
+78: 
+79:   private static void initializeClasses() {
+80:     org.evosuite.runtime.classhandling.ClassStateSupport.initializeClasses(MUSLauncher_5_tmp__ESTest_scaffolding.class.getClassLoader() ,
+81:       "org.sat4j.minisat.core.Solver$2",
+82:       "org.sat4j.minisat.core.Solver$1",
+83:       "org.sat4j.specs.UnitClauseProvider",
+84:       "org.sat4j.minisat.core.ConflictTimerAdapter",
+85:       "org.sat4j.AbstractLauncher",
+86:       "org.sat4j.minisat.learning.AbstractLearning",
+87:       "org.sat4j.minisat.core.Solver$4",
+88:       "org.sat4j.minisat.core.Solver$3",
+89:       "org.sat4j.minisat.core.LearnedConstraintsEvaluationType",
+90:       "org.sat4j.core.ASolverFactory",
+91:       "org.sat4j.reader.DimacsReader",
+92:       "org.sat4j.minisat.core.DataStructureFactory",
+93:       "org.sat4j.specs.UnitPropagationListener",
+94:       "org.sat4j.core.Vec",
+95:       "org.sat4j.minisat.core.SizeComparator",
+96:       "org.sat4j.minisat.core.Glucose2LCDS",
+97:       "org.sat4j.minisat.core.Solver$6",
+98:       "org.sat4j.tools.FullClauseSelectorSolver",
+99:       "org.sat4j.minisat.core.SolverStats",
+100:       "org.sat4j.minisat.core.Solver$8",
+101:       "org.sat4j.reader.LecteurDimacs",
+102:       "org.sat4j.minisat.core.IPhaseSelectionStrategy",
+103:       "org.sat4j.minisat.core.ConstrActivityListener",
+104:       "org.sat4j.tools.SolverDecorator",
+105:       "org.sat4j.ILauncherMode",
+106:       "org.sat4j.core.EmptyVecInt",
+107:       "org.sat4j.minisat.core.Pair",
+108:       "org.sat4j.ExitCode",
+109:       "org.sat4j.specs.IVec",
+110:       "org.sat4j.minisat.orders.AbstractPhaserecordingSelectionStrategy",
+111:       "org.sat4j.minisat.restarts.ArminRestarts",
+112:       "org.sat4j.specs.Lbool",
+113:       "org.sat4j.minisat.constraints.AbstractDataStructureFactory",
+114:       "org.sat4j.AbstractLauncher$2",
+115:       "org.sat4j.tools.GroupClauseSelectorSolver",
+116:       "org.sat4j.AbstractLauncher$1",
+117:       "org.sat4j.specs.SearchListener",
+118:       "org.sat4j.specs.SearchListenerAdapter",
+119:       "org.sat4j.tools.xplain.Xplain",
+120:       "org.sat4j.minisat.core.SimplificationType",
+121:       "org.sat4j.reader.ParseFormatException",
+122:       "org.sat4j.tools.AbstractClauseSelectorSolver",
+123:       "org.sat4j.minisat.learning.MiniSATLearning",
+124:       "org.sat4j.minisat.core.SearchParams",
+125:       "org.sat4j.minisat.constraints.MixedDataStructureDanielWL",
+126:       "org.sat4j.minisat.core.ActivityLCDS",
+127:       "org.sat4j.MUSLauncher",
+128:       "org.sat4j.specs.ILogAble$1",
+129:       "org.sat4j.specs.TimeoutException",
+130:       "org.sat4j.specs.Constr",
+131:       "org.sat4j.specs.ISolverService",
+132:       "org.sat4j.minisat.orders.VarOrderHeap",
+133:       "org.sat4j.minisat.orders.RSATPhaseSelectionStrategy",
+134:       "org.sat4j.minisat.core.LearningStrategy",
+135:       "org.sat4j.specs.IGroupSolver",
+136:       "org.sat4j.DecisionMode",
+137:       "org.sat4j.LightFactory",
+138:       "org.sat4j.minisat.core.ISimplifier",
+139:       "org.sat4j.specs.IteratorInt",
+140:       "org.sat4j.specs.ISolver",
+141:       "org.sat4j.minisat.core.ConflictTimer",
+142:       "org.sat4j.minisat.core.VarActivityListener",
+143:       "org.sat4j.specs.UnitClauseProvider$1",
+144:       "org.sat4j.specs.RandomAccessModel",
+145:       "org.sat4j.minisat.SolverFactory",
+146:       "org.sat4j.minisat.core.VoidTracing",
+147:       "org.sat4j.minisat.core.ActivityListener",
+148:       "org.sat4j.minisat.core.LBDConflictTimer",
+149:       "org.sat4j.minisat.core.GlucoseLCDS",
+150:       "org.sat4j.BasicLauncher",
+151:       "org.sat4j.minisat.core.ILits",
+152:       "org.sat4j.specs.ILogAble",
+153:       "org.sat4j.specs.ContradictionException",
+154:       "org.sat4j.reader.GroupedCNFReader",
+155:       "org.sat4j.minisat.core.SizeLCDS",
+156:       "org.sat4j.minisat.core.RestartStrategy",
+157:       "org.sat4j.specs.IConstr",
+158:       "org.sat4j.specs.IVecInt",
+159:       "org.sat4j.minisat.core.AgeLCDS",
+160:       "org.sat4j.tools.SolutionFoundListener",
+161:       "org.sat4j.tools.xplain.Explainer",
+162:       "org.sat4j.minisat.core.PrimeImplicantStrategy",
+163:       "org.sat4j.reader.Reader",
+164:       "org.sat4j.minisat.core.IOrder",
+165:       "org.sat4j.OptimizationMode",
+166:       "org.sat4j.minisat.orders.VariableComparator",
+167:       "org.sat4j.minisat.core.Learner",
+168:       "org.sat4j.minisat.core.ActivityComparator",
+169:       "org.sat4j.specs.IProblem",
+170:       "org.sat4j.minisat.core.ICDCL",
+171:       "org.sat4j.minisat.core.LearnedConstraintsDeletionStrategy",
+172:       "org.sat4j.core.VecInt",
+173:       "org.sat4j.minisat.core.Solver",
+174:       "org.sat4j.tools.xplain.HighLevelXplain",
+175:       "org.sat4j.minisat.core.MemoryBasedConflictTimer",
+176:       "org.sat4j.minisat.constraints.cnf.Lits"
+177:     );
+178:   } 
+179: 
+180:   private static void resetClasses() {
+181:     org.evosuite.runtime.classhandling.ClassResetter.getInstance().setClassLoader(MUSLauncher_5_tmp__ESTest_scaffolding.class.getClassLoader()); 
+182: 
+183:     org.evosuite.runtime.classhandling.ClassStateSupport.resetClasses(
+184:       "org.sat4j.AbstractLauncher",
+185:       "org.sat4j.MUSLauncher",
+186:       "org.sat4j.MUSLauncher$1",
+187:       "org.sat4j.MUSLauncher$2",
+188:       "org.sat4j.specs.ILogAble$1",
+189:       "org.sat4j.specs.ILogAble",
+190:       "org.sat4j.core.ASolverFactory",
+191:       "org.sat4j.minisat.SolverFactory",
+192:       "org.sat4j.ExitCode",
+193:       "org.sat4j.AbstractLauncher$1",
+194:       "org.sat4j.tools.AbstractOutputSolver",
+195:       "org.sat4j.tools.DimacsStringSolver",
+196:       "org.sat4j.reader.InstanceReader",
+197:       "org.sat4j.tools.xplain.QuickXplainStrategy",
+198:       "org.sat4j.LightFactory",
+199:       "org.sat4j.tools.DimacsOutputSolver",
+200:       "org.sat4j.minisat.learning.LimitedLearning",
+201:       "org.sat4j.minisat.learning.FixedLengthLearning",
+202:       "org.sat4j.minisat.learning.AbstractLearning",
+203:       "org.sat4j.minisat.learning.NoLearningButHeuristics",
+204:       "org.sat4j.minisat.learning.MiniSATLearning",
+205:       "org.sat4j.minisat.constraints.AbstractDataStructureFactory",
+206:       "org.sat4j.minisat.constraints.AbstractCardinalityDataStructure",
+207:       "org.sat4j.minisat.constraints.CardinalityDataStructureYanMin",
+208:       "org.sat4j.core.Vec",
+209:       "org.sat4j.minisat.constraints.cnf.Lits",
+210:       "org.sat4j.minisat.orders.VarOrderHeap",
+211:       "org.sat4j.minisat.orders.AbstractPhaserecordingSelectionStrategy",
+212:       "org.sat4j.minisat.orders.PhaseInLastLearnedClauseSelectionStrategy",
+213:       "org.sat4j.minisat.orders.RandomWalkDecorator",
+214:       "org.sat4j.minisat.restarts.LubyRestarts",
+215:       "org.sat4j.minisat.core.Solver$1",
+216:       "org.sat4j.minisat.core.Solver",
+217:       "org.sat4j.minisat.core.SearchParams",
+218:       "org.sat4j.core.EmptyVecInt",
+219:       "org.sat4j.core.VecInt",
+220:       "org.sat4j.minisat.core.ActivityComparator",
+221:       "org.sat4j.minisat.core.SolverStats",
+222:       "org.sat4j.specs.SearchListenerAdapter",
+223:       "org.sat4j.minisat.core.VoidTracing",
+224:       "org.sat4j.specs.UnitClauseProvider$1",
+225:       "org.sat4j.specs.UnitClauseProvider",
+226:       "org.sat4j.minisat.core.Solver$2",
+227:       "org.sat4j.minisat.core.Solver$3",
+228:       "org.sat4j.minisat.core.Solver$4",
+229:       "org.sat4j.minisat.core.Pair",
+230:       "org.sat4j.minisat.core.ConflictTimerAdapter",
+231:       "org.sat4j.minisat.core.MemoryBasedConflictTimer",
+232:       "org.sat4j.minisat.core.ActivityLCDS",
+233:       "org.sat4j.minisat.core.LBDConflictTimer",
+234:       "org.sat4j.minisat.core.GlucoseLCDS",
+235:       "org.sat4j.minisat.core.Glucose2LCDS",
+236:       "org.sat4j.minisat.core.AgeLCDS",
+237:       "org.sat4j.minisat.core.SizeComparator",
+238:       "org.sat4j.minisat.core.SizeLCDS",
+239:       "org.sat4j.minisat.core.Solver$8",
+240:       "org.sat4j.core.ReadOnlyVecInt",
+241:       "org.sat4j.tools.SolverDecorator",
+242:       "org.sat4j.tools.OptToSatAdapter",
+243:       "org.sat4j.tools.AbstractMinimalModel",
+244:       "org.sat4j.tools.Minimal4InclusionModel",
+245:       "org.sat4j.minisat.constraints.MixedDataStructureDanielWL",
+246:       "org.sat4j.minisat.orders.RSATPhaseSelectionStrategy",
+247:       "org.sat4j.minisat.restarts.ArminRestarts",
+248:       "org.sat4j.tools.ModelIterator",
+249:       "org.sat4j.specs.Lbool",
+250:       "org.sat4j.core.EmptyVecInt$1",
+251:       "org.sat4j.minisat.core.Heap",
+252:       "org.sat4j.minisat.orders.ActivityBasedVariableComparator",
+253:       "org.sat4j.core.VecInt$1",
+254:       "org.sat4j.minisat.core.ConflictTimerContainer",
+255:       "org.sat4j.minisat.core.Solver$6",
+256:       "org.sat4j.minisat.core.WatcherBasedPrimeImplicantStrategy",
+257:       "org.sat4j.minisat.constraints.cnf.Clauses",
+258:       "org.sat4j.specs.ContradictionException",
+259:       "org.sat4j.tools.SolutionCounter",
+260:       "org.sat4j.tools.xplain.DeletionStrategy",
+261:       "org.sat4j.specs.TimeoutException",
+262:       "org.sat4j.tools.StatisticsSolver",
+263:       "org.sat4j.tools.Minimal4CardinalityModel",
+264:       "org.sat4j.tools.SingleSolutionDetector",
+265:       "org.sat4j.tools.SubModelIterator",
+266:       "org.sat4j.tools.xplain.QuickXplain2001Strategy",
+267:       "org.sat4j.minisat.restarts.FixedPeriodRestarts",
+268:       "org.sat4j.minisat.orders.PositiveLiteralSelectionStrategy",
+269:       "org.sat4j.minisat.orders.LevelBasedVarOrderHeap",
+270:       "org.sat4j.minisat.restarts.NoRestarts",
+271:       "org.sat4j.minisat.learning.NoLearningNoHeuristics",
+272:       "org.sat4j.reader.LecteurDimacs",
+273:       "org.sat4j.reader.DimacsReader",
+274:       "org.sat4j.opt.AbstractSelectorVariablesDecorator",
+275:       "org.sat4j.opt.MaxSatDecorator",
+276:       "org.sat4j.tools.ModelIteratorToSATAdapter",
+277:       "org.sat4j.reader.ParseFormatException",
+278:       "org.sat4j.reader.GroupedCNFReader",
+279:       "org.sat4j.minisat.orders.PureOrder",
+280:       "org.sat4j.minisat.restarts.EMARestarts",
+281:       "org.sat4j.minisat.learning.PercentLengthLearning",
+282:       "org.sat4j.minisat.orders.NaturalStaticOrder",
+283:       "org.sat4j.minisat.orders.NegativeLiteralSelectionStrategy",
+284:       "org.sat4j.minisat.learning.ClauseOnlyLearning",
+285:       "org.sat4j.minisat.learning.ActiveLearning",
+286:       "org.sat4j.minisat.restarts.Glucose21Restarts",
+287:       "org.sat4j.minisat.core.CircularBuffer",
+288:       "org.sat4j.tools.xplain.InsertionStrategy",
+289:       "org.sat4j.opt.MinOneDecorator",
+290:       "org.sat4j.tools.GateTranslator",
+291:       "org.sat4j.minisat.core.Counter",
+292:       "org.sat4j.minisat.orders.TabuListDecorator",
+293:       "org.sat4j.core.LiteralsUtils",
+294:       "org.sat4j.core.ConstrGroup",
+295:       "org.sat4j.DecisionMode",
+296:       "org.sat4j.OptimizationMode",
+297:       "org.sat4j.ILauncherMode"
+298:     );
+299:   }
+300: }
+
+[MASTER] 05:48:46.987 [logback-2] ERROR JUnitAnalyzer - Failed to compile test case:
+MUSLauncher.access$004((MUSLauncher) null);
+
+[MASTER] 05:49:07.239 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: org.sat4j.MUSLauncher with seed 1550551583273. Configuration id : null
+java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.io.InvalidClassException: cannot bind enum descriptor to a non-enum class
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:355) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682) ~[na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:276) ~[na:1.8.0_91]
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:253) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162) ~[na:1.8.0_91]
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227) ~[na:1.8.0_91]
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179) ~[na:1.8.0_91]
+	at com.sun.proxy.$Proxy7.evosuite_collectTestGenerationResult(Unknown Source) ~[na:na]
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:164) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_91]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
+Caused by: java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.io.InvalidClassException: cannot bind enum descriptor to a non-enum class
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:312) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683) ~[na:1.8.0_91]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_91]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682) ~[na:1.8.0_91]
+	... 3 common frames omitted
+Caused by: java.io.InvalidClassException: cannot bind enum descriptor to a non-enum class
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:604) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1630) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readEnum(ObjectInputStream.java:1733) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1350) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:503) ~[na:1.8.0_91]
+	at org.evosuite.assertion.Assertion.readObject(Assertion.java:256) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at java.util.HashSet.readObject(HashSet.java:333) ~[na:1.8.0_91]
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at java.util.ArrayList.readObject(ArrayList.java:791) ~[na:1.8.0_91]
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:503) ~[na:1.8.0_91]
+	at org.evosuite.testcase.DefaultTestCase.readObject(DefaultTestCase.java:1139) ~[evosuite-master-1.0.7-SNAPSHOT.jar:1.0.7-SNAPSHOT]
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at java.util.HashMap.readObject(HashMap.java:1396) ~[na:1.8.0_91]
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2018) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1942) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at java.util.ArrayList.readObject(ArrayList.java:791) ~[na:1.8.0_91]
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1058) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1909) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1808) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1353) ~[na:1.8.0_91]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastRef.unmarshalValue(UnicastRef.java:326) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastServerRef.unmarshalParametersUnchecked(UnicastServerRef.java:592) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastServerRef.unmarshalParameters(UnicastServerRef.java:580) ~[na:1.8.0_91]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:310) ~[na:1.8.0_91]
+	... 12 common frames omitted
