@@ -184,3 +184,94 @@ Current fitness function value: class org.evosuite.coverage.method.MethodCoverag
 Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
 Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.18181818181818182
 * Compiling and checking tests
+[MASTER] 17:03:35.906 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 17:03:35.907 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Commander commander0 = new Commander();
+ISolver iSolver0 = null;
+IVecInt iVecInt0 = VecInt.EMPTY;
+IVecInt iVecInt1 = iVecInt0.clone();
+commander0.addAtMostOne(iSolver0, iVecInt1);
+
+[MASTER] 17:03:42.862 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 17:03:42.946 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Commander commander0 = new Commander();
+ISolver iSolver0 = mock(ISolver.class, new ViolatedAssumptionAnswer());
+doReturn((IConstr) null, (IConstr) null, (IConstr) null).when(iSolver0).addAtMost(any(org.sat4j.specs.IVecInt.class) , anyInt());
+doReturn((IConstr) null).when(iSolver0).addClause(any(org.sat4j.specs.IVecInt.class));
+doReturn((Map) null, (Map) null).when(iSolver0).getStat();
+ModelIterator modelIterator0 = new ModelIterator(iSolver0, 0L);
+modelIterator0.isSatisfiable();
+commander0.toString();
+modelIterator0.isSatisfiable();
+modelIterator0.getStat();
+modelIterator0.isSatisfiable();
+modelIterator0.getStat();
+IVecInt iVecInt0 = VecInt.EMPTY;
+modelIterator0.addAtMost(iVecInt0, (-3054));
+IVecInt iVecInt1 = iVecInt0.clone();
+modelIterator0.setKeepSolverHot(true);
+commander0.addExactly(modelIterator0, iVecInt1, 0);
+commander0.addExactlyOne(modelIterator0, iVecInt0);
+int int0 = 808;
+commander0.addExactly(modelIterator0, iVecInt0, int0);
+VecInt vecInt0 = new VecInt();
+int int1 = 5;
+vecInt0.contains(int1);
+vecInt0.remove(int1);
+int int2 = 11;
+commander0.addExactly(modelIterator0, vecInt0, int2);
+commander0.addExactlyOne(modelIterator0, vecInt0);
+int int3 = (-501);
+commander0.addExactly(modelIterator0, iVecInt0, int3);
+commander0.addAtMostOne(modelIterator0, iVecInt0);
+
+[MASTER] 17:03:53.504 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.StackOverflowError: null
+[MASTER] 17:03:53.515 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Commander commander0 = new Commander();
+ISolver iSolver0 = mock(ISolver.class, new ViolatedAssumptionAnswer());
+doReturn((IConstr) null, (IConstr) null, (IConstr) null).when(iSolver0).addAtMost(any(org.sat4j.specs.IVecInt.class) , anyInt());
+doReturn((IConstr) null).when(iSolver0).addClause(any(org.sat4j.specs.IVecInt.class));
+doReturn((Map) null, (Map) null).when(iSolver0).getStat();
+ModelIterator modelIterator0 = new ModelIterator(iSolver0, 0L);
+modelIterator0.isSatisfiable();
+commander0.toString();
+modelIterator0.isSatisfiable();
+modelIterator0.getStat();
+modelIterator0.isSatisfiable();
+modelIterator0.getStat();
+IVecInt iVecInt0 = VecInt.EMPTY;
+modelIterator0.addAtMost(iVecInt0, (-3054));
+IVecInt iVecInt1 = iVecInt0.clone();
+modelIterator0.setKeepSolverHot(true);
+commander0.addExactly(modelIterator0, iVecInt1, 0);
+commander0.addExactlyOne(modelIterator0, iVecInt0);
+commander0.addAtMostOne(modelIterator0, iVecInt1);
+LightFactory lightFactory0 = LightFactory.instance();
+String string0 = "H0 2H&$";
+ISolver iSolver1 = lightFactory0.createSolverByName(string0);
+ModelIterator modelIterator1 = new ModelIterator(iSolver1);
+IVecInt iVecInt2 = modelIterator1.unsatExplanation();
+modelIterator1.isSatisfiable();
+iSolver1.getStat();
+commander0.addExactlyOne(modelIterator1, iVecInt2);
+int int0 = 808;
+commander0.addExactly(modelIterator0, iVecInt0, int0);
+VecInt vecInt0 = new VecInt();
+int int1 = 5;
+vecInt0.contains(int1);
+vecInt0.remove(int1);
+int int2 = 11;
+commander0.addExactly(modelIterator0, vecInt0, int2);
+commander0.addExactlyOne(modelIterator0, vecInt0);
+int int3 = (-501);
+commander0.addExactly(modelIterator0, iVecInt0, int3);
+commander0.addAtMostOne(modelIterator0, iVecInt0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 4
+* Writing tests to file
+* Writing JUnit test case 'Commander_ESTest' to evosuite-tests
+* Done!
+
+* Computation finished
