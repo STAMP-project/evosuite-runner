@@ -1,0 +1,2393 @@
+* EvoSuite 1.0.7-SNAPSHOT
+* Going to generate test cases for class: org.sat4j.tools.encoding.Product
+* Starting Client-0
+* Connecting to master process on port 21293
+* Analyzing classpath: 
+  - bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT.jar
+  - bins/sat4j/org.ow2.sat4j.core-2.3.6-SNAPSHOT-tests.jar
+* Finished analyzing classpath
+* Executing tests from 6 test classes for carving
+[MASTER] 11:04:26.012 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Product'.
+[MASTER] 11:04:26.036 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.EncodingStrategyAdapter'.
+[MASTER] 11:04:26.041 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding'.
+[MASTER] 11:04:26.124 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding'.
+[MASTER] 11:04:26.149 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesProductEncoding'.
+[MASTER] 11:04:26.209 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding'.
+[MASTER] 11:04:26.216 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding'.
+[MASTER] 11:04:26.239 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.TestClausalCardinalitiesLadderEncoding'.
+[MASTER] 11:04:26.290 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Policy'.
+[MASTER] 11:04:26.315 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ISolver'.
+[MASTER] 11:04:26.316 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IProblem'.
+[MASTER] 11:04:26.332 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.RandomAccessModel'.
+[MASTER] 11:04:26.333 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IVecInt'.
+[MASTER] 11:04:26.345 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ContradictionException'.
+[MASTER] 11:04:26.354 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.TimeoutException'.
+[MASTER] 11:04:26.516 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Binary'.
+[MASTER] 11:04:26.523 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Binomial'.
+[MASTER] 11:04:26.555 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Commander'.
+[MASTER] 11:04:26.562 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Ladder'.
+[MASTER] 11:04:26.567 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.Sequential'.
+[MASTER] 11:04:26.591 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IConstr'.
+[MASTER] 11:04:26.627 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.encoding.EncodingStrategy'.
+[MASTER] 11:04:26.651 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.ClausalCardinalitiesDecorator'.
+[MASTER] 11:04:26.665 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.tools.SolverDecorator'.
+[MASTER] 11:04:26.703 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.SolverFactory'.
+[MASTER] 11:04:26.745 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.ASolverFactory'.
+[MASTER] 11:04:26.748 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.RestartStrategy'.
+[MASTER] 11:04:26.749 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ConflictTimer'.
+[MASTER] 11:04:26.749 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.DataStructureFactory'.
+[MASTER] 11:04:26.750 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.IOrder'.
+[MASTER] 11:04:26.751 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IOptimizationProblem'.
+[MASTER] 11:04:26.751 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.LearningStrategy'.
+[MASTER] 11:04:26.752 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.VarActivityListener'.
+[MASTER] 11:04:26.752 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ICDCL'.
+[MASTER] 11:04:26.752 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.UnitPropagationListener'.
+[MASTER] 11:04:26.753 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ActivityListener'.
+[MASTER] 11:04:26.753 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ConstrActivityListener'.
+[MASTER] 11:04:26.754 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Learner'.
+[MASTER] 11:04:26.754 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.LimitedLearning'.
+[MASTER] 11:04:26.769 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.PercentLengthLearning'.
+[MASTER] 11:04:26.772 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.IPhaseSelectionStrategy'.
+[MASTER] 11:04:26.780 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.MixedDataStructureDanielWL'.
+[MASTER] 11:04:26.785 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.AbstractDataStructureFactory'.
+[MASTER] 11:04:26.791 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.IVec'.
+[MASTER] 11:04:26.794 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Constr'.
+[MASTER] 11:04:26.795 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ILits'.
+[MASTER] 11:04:26.796 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.core.Vec'.
+[MASTER] 11:04:26.823 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.constraints.cnf.Lits'.
+[MASTER] 11:04:26.857 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.VarOrderHeap'.
+[MASTER] 11:04:26.924 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.PhaseInLastLearnedClauseSelectionStrategy'.
+[MASTER] 11:04:26.936 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.orders.AbstractPhaserecordingSelectionStrategy'.
+[MASTER] 11:04:26.939 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Heap'.
+[MASTER] 11:04:26.952 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.MiniSATLearning'.
+[MASTER] 11:04:26.955 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.learning.AbstractLearning'.
+[MASTER] 11:04:26.960 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Solver'.
+[MASTER] 11:04:27.069 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ISolverService'.
+[MASTER] 11:04:27.091 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.ISimplifier'.
+[MASTER] 11:04:27.109 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.LearnedConstraintsDeletionStrategy'.
+[MASTER] 11:04:27.112 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Solver$10'.
+[MASTER] 11:04:27.119 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Counter'.
+[MASTER] 11:04:27.132 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.SearchListener'.
+[MASTER] 11:04:27.134 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.Solver$1'.
+[MASTER] 11:04:27.138 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.restarts.MiniSATRestarts'.
+[MASTER] 11:04:27.142 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.minisat.core.SearchParams'.
+[MASTER] 11:04:27.161 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ILogAble'.
+[MASTER] 11:04:27.162 [logback-1] WARN  CarvingClassLoader - Instrumenting class 'org.sat4j.specs.ILogAble$1'.
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesSequentialEncoding.testAtMostOneWith8Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesCommanderEncoding.testAtMostOneWith8Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesProductEncoding.testAtMostOneWith8Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinaryEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesBinomialEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testExactly2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMost2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testExactly4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMost4With11Vars
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtLeastOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtLeast2
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMostOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testExactlyOne
+ - Carving test org.sat4j.tools.TestClausalCardinalitiesLadderEncoding.testAtMostOneWith8Vars
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Product from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Policy from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Sequential from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Binary from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Commander from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Binomial from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.Ladder from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.tools.encoding.EncodingStrategy from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.SolverFactory from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.core.Vec from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.constraints.cnf.Lits from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.constraints.MixedDataStructureDanielWL from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.orders.PhaseInLastLearnedClauseSelectionStrategy from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.orders.VarOrderHeap from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.learning.MiniSATLearning from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.restarts.MiniSATRestarts from existing JUnit tests
+ -> Carved 48 tests for class class org.sat4j.minisat.core.SearchParams from existing JUnit tests
+* Generating tests for class org.sat4j.tools.encoding.Product
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Total number of test goals for DYNAMOSA: 699
+* Using seed 1550397857705
+* Starting evolution
+[Progress:>                             0%] [Cov:>                                  0%]* Initialsss Number of Goals in DynMOSA = 136 / 699
+[Progress:=>                            5%] [Cov:====================>              58%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.4864864864864865
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.37254901960784315
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.2841880341880342
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.375
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.8
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.37254901960784315
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 200
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 299
+[Progress:==>                           8%] [Cov:=====================>             62%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 397
+[Progress:===>                          10%] [Cov:=====================>             62%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.5405405405405406
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.45098039215686275
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.36324786324786323
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.375
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 0.8
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.45098039215686275
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 501
+[Progress:===>                          10%] [Cov:=============================>     85%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 606
+[Progress:===>                          11%] [Cov:=============================>     85%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 702
+[Progress:====>                         14%] [Cov:=============================>     85%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.8378378378378378
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.7647058823529411
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9615384615384616
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.7647058823529411
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 804
+[Progress:====>                         15%] [Cov:=============================>     85%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 905
+[Progress:====>                         16%] [Cov:=============================>     85%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 998
+[Progress:=====>                        17%] [Cov:===============================>   90%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1097
+[Progress:=====>                        19%] [Cov:===============================>   90%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.9279279279279279
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 0.9215686274509803
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9850427350427351
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 0.9215686274509803
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1200
+[Progress:======>                       20%] [Cov:================================>  92%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1296
+[Progress:======>                       20%] [Cov:================================>  92%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1389
+[Progress:======>                       21%] [Cov:================================>  92%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1490
+[Progress:======>                       23%] [Cov:================================>  92%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1589
+[Progress:=======>                      25%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.9819819819819819
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9893162393162394
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1691
+[Progress:=======>                      26%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1789
+[Progress:========>                     28%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1892
+[Progress:========>                     29%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.9819819819819819
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9893162393162394
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 1993
+[Progress:=========>                    30%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2084
+[Progress:=========>                    31%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2189
+[Progress:=========>                    33%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2286
+[Progress:============>                 40%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.9819819819819819
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9893162393162394
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2381
+[Progress:============>                 41%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2477
+[Progress:============>                 42%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2578
+[Progress:============>                 43%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2679
+[Progress:============>                 43%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2778
+[Progress:=============>                45%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.9819819819819819
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9893162393162394
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2881
+[Progress:=============>                46%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 2978
+[Progress:==============>               48%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3083
+[Progress:==============>               48%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3187
+[Progress:===============>              50%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 0.9819819819819819
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9893162393162394
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3285
+[Progress:===============>              50%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3385
+[Progress:===============>              50%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3478
+[Progress:===============>              51%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3574
+[Progress:===============>              53%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3671
+[Progress:================>             54%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3774
+[Progress:================>             55%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3876
+[Progress:================>             55%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 3970
+[Progress:================>             55%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4068
+[Progress:================>             56%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4158
+[Progress:================>             56%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4242
+[Progress:=================>            58%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4334
+[Progress:==================>           60%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4426
+[Progress:==================>           60%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4523
+[Progress:==================>           61%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4612
+[Progress:==================>           62%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4700
+[Progress:==================>           63%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4797
+[Progress:===================>          64%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4889
+[Progress:===================>          65%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 4981
+[Progress:====================>         68%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5078
+[Progress:=====================>        70%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5165
+[Progress:=====================>        71%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5256
+[Progress:=====================>        72%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5347
+[Progress:=====================>        73%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5443
+[Progress:======================>       74%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5538
+[Progress:======================>       75%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5622
+[Progress:=======================>      77%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5716
+[Progress:=======================>      78%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5813
+[Progress:========================>     80%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5900
+[Progress:========================>     80%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 5989
+[Progress:========================>     80%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6071
+[Progress:========================>     81%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6163
+[Progress:========================>     82%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6255
+[Progress:========================>     82%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6347
+[Progress:========================>     83%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6442
+[Progress:=========================>    84%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6528
+[Progress:===========================>  90%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6624
+[Progress:===========================>  90%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6716
+[Progress:===========================>  91%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6815
+[Progress:===========================>  92%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 6916
+[Progress:===========================>  93%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7008
+[Progress:===========================>  93%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7097
+[Progress:=============================>97%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7194
+[Progress:=============================>98%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7281
+[Progress:=============================>99%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7375
+[Progress:==============================100%] [Cov:================================>  93%]* naaame: 
+* naaame: org.evosuite.ga.stoppingconditions.GlobalTimeStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.ZeroFitnessStoppingCondition
+* naaame: org.evosuite.ga.stoppingconditions.RMIStoppingCondition
+* naaame: org.evosuite.ShutdownTestWriter
+* naaame: org.evosuite.ga.stoppingconditions.MaxFitnessEvaluationsStoppingCondition
+Current fitness evaluations: 7412
+[Progress:==============================100%] [Cov:================================>  93%]Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+
+* Search finished after 121s and 76 generations, 137141 statements, best individual has fitness: 8.0
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* Minimizing test suite
+[MASTER] 11:07:41.768 [logback-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 111
+* Number of covered goals: 111
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 51
+* Number of covered goals: 51
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 25
+* Number of covered goals: 25
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 99%
+* Total number of goals: 468
+* Number of covered goals: 464
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 50%
+* Total number of goals: 8
+* Number of covered goals: 4
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 100%
+* Total number of goals: 51
+* Number of covered goals: 51
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* Generated 63 tests with total length 885
+* Resulting test suite's coverage: 94% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 11:08:22.508 [logback-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6712166666666667% of time used, but only 6/63 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 3%
+Current fitness function value: class org.evosuite.coverage.line.LineCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.branch.BranchCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.exception.ExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.mutation.WeakMutationSuiteFitness ** 0.9914529914529915
+Current fitness function value: class org.evosuite.coverage.io.output.OutputCoverageSuiteFitness ** 0.5
+Current fitness function value: class org.evosuite.coverage.method.MethodCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.method.MethodNoExceptionCoverageSuiteFitness ** 1.0
+Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness ** 1.0
+* Compiling and checking tests
+[MASTER] 11:08:42.757 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 11:08:42.790 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Product product0 = new Product();
+assertNotNull(product0);
+
+int[] intArray0 = new int[9];
+intArray0[0] = 8;
+intArray0[1] = 1259;
+intArray0[2] = 4;
+intArray0[3] = 4;
+intArray0[4] = 857;
+intArray0[5] = 20;
+intArray0[6] = (-2759);
+intArray0[7] = 4;
+intArray0[8] = 41;
+VecInt vecInt0 = new VecInt(intArray0);
+assertNotNull(vecInt0);
+assertFalse(vecInt0.isEmpty());
+assertEquals(9, vecInt0.size());
+assertEquals(41, vecInt0.last());
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), 4, 41}, intArray0);
+
+IVecInt iVecInt0 = vecInt0.push((-2759));
+assertNotNull(iVecInt0);
+assertEquals(10, vecInt0.size());
+assertEquals((-2759), vecInt0.last());
+assertFalse(vecInt0.isEmpty());
+assertEquals(10, iVecInt0.size());
+assertFalse(iVecInt0.isEmpty());
+assertEquals((-2759), iVecInt0.last());
+assertSame(vecInt0, iVecInt0);
+assertSame(iVecInt0, vecInt0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), 4, 41}, intArray0);
+
+IVecInt iVecInt1 = vecInt0.clone();
+assertNotNull(iVecInt1);
+assertTrue(iVecInt1.equals((Object)vecInt0));
+assertTrue(iVecInt1.equals((Object)iVecInt0));
+assertEquals(10, vecInt0.size());
+assertEquals((-2759), vecInt0.last());
+assertFalse(vecInt0.isEmpty());
+assertEquals(10, iVecInt1.size());
+assertFalse(iVecInt1.isEmpty());
+assertEquals((-2759), iVecInt1.last());
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(iVecInt1, vecInt0);
+assertNotSame(iVecInt1, iVecInt0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), 4, 41}, intArray0);
+
+PercentLengthLearning<CardinalityDataStructure> percentLengthLearning0 = new PercentLengthLearning<CardinalityDataStructure>();
+assertNotNull(percentLengthLearning0);
+assertEquals(10, percentLengthLearning0.getLimit());
+
+CardinalityDataStructure cardinalityDataStructure0 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure0);
+
+SearchParams searchParams0 = new SearchParams();
+assertNotNull(searchParams0);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+
+PercentLengthLearning<CardinalityDataStructure> percentLengthLearning1 = new PercentLengthLearning<CardinalityDataStructure>();
+assertNotNull(percentLengthLearning1);
+assertFalse(percentLengthLearning1.equals((Object)percentLengthLearning0));
+assertEquals(10, percentLengthLearning1.getLimit());
+
+CardinalityDataStructure cardinalityDataStructure1 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure1);
+assertFalse(cardinalityDataStructure1.equals((Object)cardinalityDataStructure0));
+
+SearchParams searchParams1 = new SearchParams();
+assertNotNull(searchParams1);
+assertFalse(searchParams1.equals((Object)searchParams0));
+assertEquals(0.999, searchParams1.getClaDecay(), 0.01);
+assertEquals(0.95, searchParams1.getVarDecay(), 0.01);
+assertEquals(100, searchParams1.getInitConflictBound());
+assertEquals(1.5, searchParams1.getConflictBoundIncFactor(), 0.01);
+
+PureOrder pureOrder0 = new PureOrder(8);
+assertNotNull(pureOrder0);
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+
+RandomWalkDecorator randomWalkDecorator0 = new RandomWalkDecorator(pureOrder0, 857);
+assertNotNull(randomWalkDecorator0);
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(857.0, randomWalkDecorator0.getProbability(), 0.01);
+
+LubyRestarts lubyRestarts0 = new LubyRestarts();
+assertNotNull(lubyRestarts0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+
+Solver<CardinalityDataStructure> solver0 = new Solver<CardinalityDataStructure>(percentLengthLearning0, cardinalityDataStructure0, pureOrder0, lubyRestarts0);
+assertNotNull(solver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(percentLengthLearning0.equals((Object)percentLengthLearning1));
+assertFalse(cardinalityDataStructure0.equals((Object)cardinalityDataStructure1));
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0, solver0.nVars());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(0, solver0.getPropagationLevel());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.decisionLevel());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.nConstraints());
+assertEquals(2147483, solver0.getTimeout());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals(10, percentLengthLearning0.getLimit());
+
+IConstr iConstr0 = product0.addExactlyOne(solver0, vecInt0);
+assertNotNull(iConstr0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertTrue(vecInt0.equals((Object)iVecInt1));
+assertFalse(percentLengthLearning0.equals((Object)percentLengthLearning1));
+assertFalse(cardinalityDataStructure0.equals((Object)cardinalityDataStructure1));
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(0, solver0.getPropagationLevel());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.decisionLevel());
+assertFalse(solver0.isVerbose());
+assertEquals(2766, solver0.realNumberOfVariables());
+assertEquals(2766, solver0.nVars());
+assertEquals(2147483, solver0.getTimeout());
+assertEquals(30, solver0.nConstraints());
+assertFalse(solver0.isSolverKeptHot());
+assertFalse(iConstr0.canBePropagatedMultipleTimes());
+assertEquals(2, iConstr0.size());
+assertEquals(0.0, iConstr0.getActivity(), 0.01);
+assertEquals(10, vecInt0.size());
+assertEquals((-2759), vecInt0.last());
+assertFalse(vecInt0.isEmpty());
+assertEquals(10, percentLengthLearning0.getLimit());
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(percentLengthLearning0, percentLengthLearning1);
+assertNotSame(cardinalityDataStructure0, cardinalityDataStructure1);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), 4, 41}, intArray0);
+
+NoLearningNoHeuristics<CardinalityDataStructure> noLearningNoHeuristics0 = new NoLearningNoHeuristics<CardinalityDataStructure>();
+assertNotNull(noLearningNoHeuristics0);
+
+lubyRestarts0.onBackjumpToRootLevel();
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+
+CardinalityDataStructure cardinalityDataStructure2 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure2);
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure0));
+
+Solver<CardinalityDataStructure> solver1 = new Solver<CardinalityDataStructure>(noLearningNoHeuristics0, cardinalityDataStructure2, searchParams0, pureOrder0, lubyRestarts0);
+assertNotNull(solver1);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(searchParams0.equals((Object)searchParams1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure0));
+assertFalse(solver1.equals((Object)solver0));
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0, solver1.nConstraints());
+assertEquals(2147483, solver1.getTimeout());
+assertFalse(solver1.isSolverKeptHot());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.decisionLevel());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertEquals(0, solver1.realNumberOfVariables());
+
+GroupClauseSelectorSolver<Solver<CardinalityDataStructure>> groupClauseSelectorSolver0 = new GroupClauseSelectorSolver<Solver<CardinalityDataStructure>>(solver1);
+assertNotNull(groupClauseSelectorSolver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(searchParams0.equals((Object)searchParams1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure0));
+assertFalse(solver1.equals((Object)solver0));
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(0, solver1.nConstraints());
+assertEquals(2147483, solver1.getTimeout());
+assertFalse(solver1.isSolverKeptHot());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.decisionLevel());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertEquals(0, solver1.realNumberOfVariables());
+assertTrue(groupClauseSelectorSolver0.isSatisfiable());
+
+IConstr iConstr1 = product0.addAtMostOne(groupClauseSelectorSolver0, iVecInt0);
+assertNotNull(iConstr1);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(searchParams0.equals((Object)searchParams1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure0));
+assertTrue(vecInt0.equals((Object)iVecInt1));
+assertFalse(solver1.equals((Object)solver0));
+assertTrue(iVecInt0.equals((Object)iVecInt1));
+assertFalse(iConstr1.equals((Object)iConstr0));
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(10, vecInt0.size());
+assertEquals((-2759), vecInt0.last());
+assertFalse(vecInt0.isEmpty());
+assertEquals(2759, solver1.nVars());
+assertEquals(8, solver1.currentDecisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(29, solver1.nConstraints());
+assertFalse(solver1.isSolverKeptHot());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertFalse(solver1.isVerbose());
+assertEquals("c ", solver1.getLogPrefix());
+assertEquals(2759, solver1.realNumberOfVariables());
+assertEquals(8, solver1.decisionLevel());
+assertEquals(12, solver1.getPropagationLevel());
+assertEquals(10, iVecInt0.size());
+assertFalse(iVecInt0.isEmpty());
+assertEquals((-2759), iVecInt0.last());
+assertEquals(22, iConstr1.size());
+assertEquals(0.0, iConstr1.getActivity(), 0.01);
+assertFalse(iConstr1.canBePropagatedMultipleTimes());
+assertNotSame(searchParams0, searchParams1);
+assertNotSame(cardinalityDataStructure2, cardinalityDataStructure1);
+assertNotSame(cardinalityDataStructure2, cardinalityDataStructure0);
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(solver1, solver0);
+assertNotSame(iVecInt0, iVecInt1);
+assertSame(iVecInt0, vecInt0);
+assertNotSame(iConstr1, iConstr0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), 4, 41}, intArray0);
+
+IConstr iConstr2 = product0.addAtMostNonOpt(groupClauseSelectorSolver0, iVecInt1, 4);
+assertNotNull(iConstr2);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(searchParams0.equals((Object)searchParams1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure1));
+assertFalse(cardinalityDataStructure2.equals((Object)cardinalityDataStructure0));
+assertTrue(vecInt0.equals((Object)iVecInt1));
+assertFalse(solver1.equals((Object)solver0));
+assertTrue(iVecInt1.equals((Object)vecInt0));
+assertTrue(iVecInt1.equals((Object)iVecInt0));
+assertFalse(iConstr2.equals((Object)iConstr1));
+assertFalse(iConstr2.equals((Object)iConstr0));
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(8, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(10, vecInt0.size());
+assertEquals((-2759), vecInt0.last());
+assertFalse(vecInt0.isEmpty());
+assertEquals(2795, solver1.realNumberOfVariables());
+assertEquals(2147483, solver1.getTimeout());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(2795, solver1.nVars());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(16, solver1.decisionLevel());
+assertFalse(solver1.isVerbose());
+assertEquals(20, solver1.getPropagationLevel());
+assertEquals("c ", solver1.getLogPrefix());
+assertEquals(16, solver1.currentDecisionLevel());
+assertEquals(84, solver1.nConstraints());
+assertEquals(10, iVecInt1.size());
+assertFalse(iVecInt1.isEmpty());
+assertEquals((-2759), iVecInt1.last());
+assertEquals(0.0, iConstr2.getActivity(), 0.01);
+assertFalse(iConstr2.canBePropagatedMultipleTimes());
+assertEquals(55, iConstr2.size());
+assertNotSame(searchParams0, searchParams1);
+assertNotSame(cardinalityDataStructure2, cardinalityDataStructure1);
+assertNotSame(cardinalityDataStructure2, cardinalityDataStructure0);
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(solver1, solver0);
+assertNotSame(iVecInt1, vecInt0);
+assertNotSame(iVecInt1, iVecInt0);
+assertNotSame(iConstr2, iConstr1);
+assertNotSame(iConstr2, iConstr0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), 4, 41}, intArray0);
+
+
+[MASTER] 11:08:48.791 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 11:08:48.797 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Product product0 = new Product();
+assertNotNull(product0);
+
+int[] intArray0 = new int[7];
+VecInt vecInt0 = new VecInt(intArray0);
+assertNotNull(vecInt0);
+assertFalse(vecInt0.isEmpty());
+assertEquals(7, vecInt0.size());
+assertEquals(0, vecInt0.last());
+assertEquals(7, intArray0.length);
+assertArrayEquals(new int[] {0, 0, 0, 0, 0, 0, 0}, intArray0);
+
+vecInt0.shrink((-1));
+assertFalse(vecInt0.isEmpty());
+assertEquals(8, vecInt0.size());
+assertEquals(7, intArray0.length);
+assertArrayEquals(new int[] {0, 0, 0, 0, 0, 0, 0}, intArray0);
+
+PhaseInLastLearnedClauseSelectionStrategy phaseInLastLearnedClauseSelectionStrategy0 = new PhaseInLastLearnedClauseSelectionStrategy();
+assertNotNull(phaseInLastLearnedClauseSelectionStrategy0);
+assertEquals("phase appearing in latest learned clause", phaseInLastLearnedClauseSelectionStrategy0.toString());
+
+VarOrderHeap varOrderHeap0 = new VarOrderHeap(phaseInLastLearnedClauseSelectionStrategy0);
+assertNotNull(varOrderHeap0);
+assertEquals("phase appearing in latest learned clause", phaseInLastLearnedClauseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+
+RandomWalkDecorator randomWalkDecorator0 = new RandomWalkDecorator(varOrderHeap0, (-17));
+assertNotNull(randomWalkDecorator0);
+assertEquals("phase appearing in latest learned clause", phaseInLastLearnedClauseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+assertEquals((-17.0), randomWalkDecorator0.getProbability(), 0.01);
+
+LubyRestarts lubyRestarts0 = new LubyRestarts();
+assertNotNull(lubyRestarts0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(1, lubyRestarts0.luby());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+
+ClauseOnlyLearning<CardinalityDataStructure> clauseOnlyLearning0 = new ClauseOnlyLearning<CardinalityDataStructure>();
+assertNotNull(clauseOnlyLearning0);
+assertEquals("Limit learning to clauses using watched literals only", clauseOnlyLearning0.toString());
+
+CardinalityDataStructure cardinalityDataStructure0 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure0);
+
+SearchParams searchParams0 = new SearchParams((-17), 2916.862, 2916.862, 15);
+assertNotNull(searchParams0);
+assertEquals(15, searchParams0.getInitConflictBound());
+assertEquals(2916.862, searchParams0.getClaDecay(), 0.01);
+assertEquals(2916.862, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals((-17.0), searchParams0.getVarDecay(), 0.01);
+
+Solver<CardinalityDataStructure> solver0 = new Solver<CardinalityDataStructure>(clauseOnlyLearning0, cardinalityDataStructure0, searchParams0, randomWalkDecorator0, lubyRestarts0);
+assertNotNull(solver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals("phase appearing in latest learned clause", phaseInLastLearnedClauseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+assertEquals((-17.0), randomWalkDecorator0.getProbability(), 0.01);
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(1, lubyRestarts0.luby());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals("Limit learning to clauses using watched literals only", clauseOnlyLearning0.toString());
+assertEquals(15, searchParams0.getInitConflictBound());
+assertEquals(2916.862, searchParams0.getClaDecay(), 0.01);
+assertEquals(2916.862, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals((-17.0), searchParams0.getVarDecay(), 0.01);
+assertEquals(0, solver0.decisionLevel());
+assertEquals(2147483, solver0.getTimeout());
+assertEquals(0, solver0.nVars());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.nConstraints());
+assertEquals(0, solver0.realNumberOfVariables());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0, solver0.currentDecisionLevel());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.getPropagationLevel());
+
+Solver<CardinalityDataStructure> solver1 = new Solver<CardinalityDataStructure>(clauseOnlyLearning0, cardinalityDataStructure0, searchParams0, varOrderHeap0, lubyRestarts0);
+assertNotNull(solver1);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals("phase appearing in latest learned clause", phaseInLastLearnedClauseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(1, lubyRestarts0.luby());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals("Limit learning to clauses using watched literals only", clauseOnlyLearning0.toString());
+assertEquals(15, searchParams0.getInitConflictBound());
+assertEquals(2916.862, searchParams0.getClaDecay(), 0.01);
+assertEquals(2916.862, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals((-17.0), searchParams0.getVarDecay(), 0.01);
+assertEquals(0, solver1.decisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.currentDecisionLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nConstraints());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.nVars());
+assertFalse(solver1.isSolverKeptHot());
+
+GroupClauseSelectorSolver<Solver<CardinalityDataStructure>> groupClauseSelectorSolver0 = new GroupClauseSelectorSolver<Solver<CardinalityDataStructure>>(solver1);
+assertNotNull(groupClauseSelectorSolver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals("phase appearing in latest learned clause", phaseInLastLearnedClauseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(1, lubyRestarts0.luby());
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals("Limit learning to clauses using watched literals only", clauseOnlyLearning0.toString());
+assertEquals(15, searchParams0.getInitConflictBound());
+assertEquals(2916.862, searchParams0.getClaDecay(), 0.01);
+assertEquals(2916.862, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals((-17.0), searchParams0.getVarDecay(), 0.01);
+assertEquals(0, solver1.decisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.currentDecisionLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nConstraints());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.nVars());
+assertFalse(solver1.isSolverKeptHot());
+assertTrue(groupClauseSelectorSolver0.isSatisfiable());
+
+Product product1 = new Product();
+assertNotNull(product1);
+assertFalse(product1.equals((Object)product0));
+
+product1.addExactly((ISolver) null, vecInt0, 4820);
+
+[MASTER] 11:08:52.057 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 11:08:52.087 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Product product0 = new Product();
+assertNotNull(product0);
+
+VecInt vecInt0 = new VecInt(14, 14);
+assertNotNull(vecInt0);
+assertFalse(vecInt0.isEmpty());
+assertEquals(14, vecInt0.size());
+assertEquals(14, vecInt0.last());
+
+IVecInt iVecInt0 = vecInt0.push(496);
+assertNotNull(iVecInt0);
+assertEquals(15, vecInt0.size());
+assertFalse(vecInt0.isEmpty());
+assertEquals(496, vecInt0.last());
+assertEquals(15, iVecInt0.size());
+assertFalse(iVecInt0.isEmpty());
+assertEquals(496, iVecInt0.last());
+assertSame(vecInt0, iVecInt0);
+assertSame(iVecInt0, vecInt0);
+
+MiniSATLearning<CardinalityDataStructure> miniSATLearning0 = new MiniSATLearning<CardinalityDataStructure>();
+assertNotNull(miniSATLearning0);
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+
+CardinalityDataStructure cardinalityDataStructure0 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure0);
+
+SearchParams searchParams0 = new SearchParams(14, 571.3687519, 496, 496);
+assertNotNull(searchParams0);
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+
+PureOrder pureOrder0 = new PureOrder();
+assertNotNull(pureOrder0);
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+
+MiniSATRestarts miniSATRestarts0 = new MiniSATRestarts();
+assertNotNull(miniSATRestarts0);
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertEquals(0L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertTrue(miniSATRestarts0.shouldRestart());
+
+Solver<CardinalityDataStructure> solver0 = new Solver<CardinalityDataStructure>(miniSATLearning0, cardinalityDataStructure0, searchParams0, pureOrder0, miniSATRestarts0);
+assertNotNull(solver0);
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertEquals(0L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertTrue(miniSATRestarts0.shouldRestart());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.nConstraints());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals("c ", solver0.getLogPrefix());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(0, solver0.nVars());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(2147483, solver0.getTimeout());
+
+GroupClauseSelectorSolver<Solver<CardinalityDataStructure>> groupClauseSelectorSolver0 = new GroupClauseSelectorSolver<Solver<CardinalityDataStructure>>(solver0);
+assertNotNull(groupClauseSelectorSolver0);
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.nConstraints());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals("c ", solver0.getLogPrefix());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(0, solver0.nVars());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(2147483, solver0.getTimeout());
+assertTrue(groupClauseSelectorSolver0.isSatisfiable());
+
+Product product1 = new Product();
+assertNotNull(product1);
+assertFalse(product1.equals((Object)product0));
+
+int[] intArray0 = new int[8];
+intArray0[0] = 496;
+intArray0[1] = 14;
+intArray0[2] = 496;
+intArray0[3] = 496;
+intArray0[4] = (-1674);
+intArray0[5] = (-869);
+intArray0[6] = 14;
+intArray0[7] = 14;
+VecInt vecInt1 = new VecInt(intArray0);
+assertNotNull(vecInt1);
+assertFalse(vecInt1.equals((Object)vecInt0));
+assertFalse(vecInt1.equals((Object)iVecInt0));
+assertFalse(vecInt1.isEmpty());
+assertEquals(14, vecInt1.last());
+assertEquals(8, vecInt1.size());
+assertEquals(8, intArray0.length);
+assertArrayEquals(new int[] {496, 14, 496, 496, (-1674), (-869), 14, 14}, intArray0);
+
+Solver<CardinalityDataStructure> solver1 = new Solver<CardinalityDataStructure>(miniSATLearning0, cardinalityDataStructure0, searchParams0, pureOrder0, miniSATRestarts0);
+assertNotNull(solver1);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+
+LexicoDecorator<Solver<CardinalityDataStructure>> lexicoDecorator0 = new LexicoDecorator<Solver<CardinalityDataStructure>>(solver1);
+assertNotNull(lexicoDecorator0);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(0, lexicoDecorator0.numberOfCriteria());
+assertFalse(lexicoDecorator0.isOptimal());
+assertFalse(lexicoDecorator0.hasNoObjectiveFunction());
+assertTrue(lexicoDecorator0.nonOptimalMeansSatisfiable());
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+
+SolutionFoundListener solutionFoundListener0 = SolutionFoundListener.VOID;
+assertNotNull(solutionFoundListener0);
+
+OptToSatAdapter optToSatAdapter0 = new OptToSatAdapter(lexicoDecorator0, solutionFoundListener0);
+assertNotNull(optToSatAdapter0);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(0, lexicoDecorator0.numberOfCriteria());
+assertFalse(lexicoDecorator0.isOptimal());
+assertFalse(lexicoDecorator0.hasNoObjectiveFunction());
+assertTrue(lexicoDecorator0.nonOptimalMeansSatisfiable());
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertFalse(optToSatAdapter0.isOptimal());
+
+FullClauseSelectorSolver<OptToSatAdapter> fullClauseSelectorSolver0 = new FullClauseSelectorSolver<OptToSatAdapter>(optToSatAdapter0, false);
+assertNotNull(fullClauseSelectorSolver0);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(0, lexicoDecorator0.numberOfCriteria());
+assertFalse(lexicoDecorator0.isOptimal());
+assertFalse(lexicoDecorator0.hasNoObjectiveFunction());
+assertTrue(lexicoDecorator0.nonOptimalMeansSatisfiable());
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertFalse(optToSatAdapter0.isOptimal());
+assertFalse(fullClauseSelectorSolver0.isSkipDuplicatedEntries());
+
+IVecInt iVecInt1 = fullClauseSelectorSolver0.getLastClause();
+assertNotNull(iVecInt1);
+assertFalse(solver1.equals((Object)solver0));
+assertFalse(iVecInt1.equals((Object)vecInt0));
+assertFalse(iVecInt1.equals((Object)vecInt1));
+assertFalse(iVecInt1.equals((Object)iVecInt0));
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(0, lexicoDecorator0.numberOfCriteria());
+assertFalse(lexicoDecorator0.isOptimal());
+assertFalse(lexicoDecorator0.hasNoObjectiveFunction());
+assertTrue(lexicoDecorator0.nonOptimalMeansSatisfiable());
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertFalse(optToSatAdapter0.isOptimal());
+assertFalse(fullClauseSelectorSolver0.isSkipDuplicatedEntries());
+assertTrue(iVecInt1.isEmpty());
+assertEquals(0, iVecInt1.size());
+assertNotSame(solver1, solver0);
+assertNotSame(iVecInt1, vecInt0);
+assertNotSame(iVecInt1, vecInt1);
+assertNotSame(iVecInt1, iVecInt0);
+
+IConstr iConstr0 = product0.addAtMostOne(solver0, iVecInt1);
+assertNotNull(iConstr0);
+assertFalse(product0.equals((Object)product1));
+assertFalse(solver0.equals((Object)solver1));
+assertFalse(solver1.equals((Object)solver0));
+assertFalse(iVecInt1.equals((Object)vecInt0));
+assertFalse(iVecInt1.equals((Object)vecInt1));
+assertFalse(iVecInt1.equals((Object)iVecInt0));
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.nConstraints());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals("c ", solver0.getLogPrefix());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(0, solver0.nVars());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(2147483, solver0.getTimeout());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals(0, solver1.nVars());
+assertEquals("c ", solver1.getLogPrefix());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(0, lexicoDecorator0.numberOfCriteria());
+assertFalse(lexicoDecorator0.isOptimal());
+assertFalse(lexicoDecorator0.hasNoObjectiveFunction());
+assertTrue(lexicoDecorator0.nonOptimalMeansSatisfiable());
+assertFalse(optToSatAdapter0.isOptimal());
+assertFalse(fullClauseSelectorSolver0.isSkipDuplicatedEntries());
+assertTrue(iVecInt1.isEmpty());
+assertEquals(0, iVecInt1.size());
+assertEquals(0.0, iConstr0.getActivity(), 0.01);
+assertEquals(0, iConstr0.size());
+assertFalse(iConstr0.canBePropagatedMultipleTimes());
+assertNotSame(product0, product1);
+assertNotSame(solver0, solver1);
+assertNotSame(solver1, solver0);
+assertNotSame(iVecInt1, vecInt0);
+assertNotSame(iVecInt1, vecInt1);
+assertNotSame(iVecInt1, iVecInt0);
+
+IConstr iConstr1 = product0.addAtMostNonOpt(solver0, iVecInt0, 14);
+assertNotNull(iConstr1);
+assertFalse(product0.equals((Object)product1));
+assertFalse(vecInt0.equals((Object)iVecInt1));
+assertFalse(vecInt0.equals((Object)vecInt1));
+assertFalse(iVecInt0.equals((Object)iVecInt1));
+assertFalse(iVecInt0.equals((Object)vecInt1));
+assertFalse(solver0.equals((Object)solver1));
+assertFalse(iConstr1.equals((Object)iConstr0));
+assertEquals(15, vecInt0.size());
+assertFalse(vecInt0.isEmpty());
+assertEquals(496, vecInt0.last());
+assertEquals(15, iVecInt0.size());
+assertFalse(iVecInt0.isEmpty());
+assertEquals(496, iVecInt0.last());
+assertEquals("Learn all clauses as in MiniSAT", miniSATLearning0.toString());
+assertEquals(496, searchParams0.getInitConflictBound());
+assertEquals(496.0, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(571.3687519, searchParams0.getClaDecay(), 0.01);
+assertEquals(14.0, searchParams0.getVarDecay(), 0.01);
+assertEquals(20, pureOrder0.getPeriod());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertFalse(miniSATRestarts0.shouldRestart());
+assertEquals(496L, miniSATRestarts0.nextRestartNumberOfConflict());
+assertEquals("MiniSAT restarts strategy", miniSATRestarts0.toString());
+assertFalse(solver0.isVerbose());
+assertEquals(1, solver0.nConstraints());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals(496, solver0.realNumberOfVariables());
+assertEquals("c ", solver0.getLogPrefix());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(496, solver0.nVars());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(2147483, solver0.getTimeout());
+assertEquals(1, iConstr1.size());
+assertEquals(0.0, iConstr1.getActivity(), 0.01);
+assertFalse(iConstr1.canBePropagatedMultipleTimes());
+assertNotSame(product0, product1);
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(vecInt0, vecInt1);
+assertSame(iVecInt0, vecInt0);
+assertNotSame(iVecInt0, iVecInt1);
+assertNotSame(iVecInt0, vecInt1);
+assertNotSame(solver0, solver1);
+assertNotSame(iConstr1, iConstr0);
+
+String[] stringArray0 = new String[1];
+stringArray0[0] = "";
+OptToSatAdapter[] optToSatAdapterArray0 = new OptToSatAdapter[5];
+optToSatAdapterArray0[0] = optToSatAdapter0;
+optToSatAdapterArray0[1] = optToSatAdapter0;
+optToSatAdapterArray0[2] = optToSatAdapter0;
+optToSatAdapterArray0[3] = optToSatAdapter0;
+optToSatAdapterArray0[4] = optToSatAdapter0;
+ManyCore<OptToSatAdapter> manyCore0 = new ManyCore<OptToSatAdapter>(stringArray0, optToSatAdapterArray0);
+assertNotNull(manyCore0);
+assertEquals(1, stringArray0.length);
+assertEquals(5, optToSatAdapterArray0.length);
+
+IVecInt iVecInt2 = manyCore0.createBlockingClauseForCurrentModel();
+assertNotNull(iVecInt2);
+assertFalse(iVecInt2.equals((Object)vecInt0));
+assertTrue(iVecInt2.equals((Object)iVecInt1));
+assertFalse(iVecInt2.equals((Object)vecInt1));
+assertFalse(iVecInt2.equals((Object)iVecInt0));
+assertTrue(iVecInt2.isEmpty());
+assertEquals(0, iVecInt2.size());
+assertNotSame(iVecInt2, vecInt0);
+assertNotSame(iVecInt2, vecInt1);
+assertNotSame(iVecInt2, iVecInt0);
+assertNotSame(iVecInt2, iVecInt1);
+assertEquals(1, stringArray0.length);
+assertEquals(5, optToSatAdapterArray0.length);
+
+product0.addExactly(fullClauseSelectorSolver0, iVecInt2, 14);
+
+[MASTER] 11:08:54.634 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected:<32> but was:<0>
+[MASTER] 11:08:54.650 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Product product0 = new Product();
+assertNotNull(product0);
+
+int[] intArray0 = new int[9];
+intArray0[0] = 8;
+intArray0[1] = 1259;
+intArray0[2] = 4;
+intArray0[3] = 4;
+intArray0[4] = 857;
+intArray0[5] = 20;
+intArray0[6] = (-2759);
+intArray0[7] = (-1540);
+intArray0[8] = 41;
+VecInt vecInt0 = new VecInt(intArray0);
+assertNotNull(vecInt0);
+assertEquals(9, vecInt0.size());
+assertEquals(41, vecInt0.last());
+assertFalse(vecInt0.isEmpty());
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), (-1540), 41}, intArray0);
+
+IVecInt iVecInt0 = vecInt0.push((-1540));
+assertNotNull(iVecInt0);
+assertEquals((-1540), vecInt0.last());
+assertEquals(10, vecInt0.size());
+assertFalse(vecInt0.isEmpty());
+assertEquals((-1540), iVecInt0.last());
+assertFalse(iVecInt0.isEmpty());
+assertEquals(10, iVecInt0.size());
+assertSame(vecInt0, iVecInt0);
+assertSame(iVecInt0, vecInt0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), (-1540), 41}, intArray0);
+
+IVecInt iVecInt1 = vecInt0.clone();
+assertNotNull(iVecInt1);
+assertTrue(iVecInt1.equals((Object)vecInt0));
+assertTrue(iVecInt1.equals((Object)iVecInt0));
+assertEquals((-1540), vecInt0.last());
+assertEquals(10, vecInt0.size());
+assertFalse(vecInt0.isEmpty());
+assertEquals(10, iVecInt1.size());
+assertFalse(iVecInt1.isEmpty());
+assertEquals((-1540), iVecInt1.last());
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(iVecInt1, iVecInt0);
+assertNotSame(iVecInt1, vecInt0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), (-1540), 41}, intArray0);
+
+PercentLengthLearning<CardinalityDataStructure> percentLengthLearning0 = new PercentLengthLearning<CardinalityDataStructure>();
+assertNotNull(percentLengthLearning0);
+assertEquals(10, percentLengthLearning0.getLimit());
+
+CardinalityDataStructure cardinalityDataStructure0 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure0);
+
+SearchParams searchParams0 = new SearchParams();
+assertNotNull(searchParams0);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+
+PureOrder pureOrder0 = new PureOrder(1163);
+assertNotNull(pureOrder0);
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(1163, pureOrder0.getPeriod());
+
+RandomWalkDecorator randomWalkDecorator0 = new RandomWalkDecorator(pureOrder0, 8);
+assertNotNull(randomWalkDecorator0);
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(1163, pureOrder0.getPeriod());
+assertEquals(8.0, randomWalkDecorator0.getProbability(), 0.01);
+
+LubyRestarts lubyRestarts0 = new LubyRestarts();
+assertNotNull(lubyRestarts0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(1, lubyRestarts0.luby());
+
+Solver<CardinalityDataStructure> solver0 = new Solver<CardinalityDataStructure>(percentLengthLearning0, cardinalityDataStructure0, searchParams0, randomWalkDecorator0, lubyRestarts0);
+assertNotNull(solver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(1163, pureOrder0.getPeriod());
+assertEquals(8.0, randomWalkDecorator0.getProbability(), 0.01);
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0, solver0.nConstraints());
+assertEquals(2147483, solver0.getTimeout());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.realNumberOfVariables());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(0, solver0.currentDecisionLevel());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.nVars());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(10, percentLengthLearning0.getLimit());
+
+RSATLastLearnedClausesPhaseSelectionStrategy rSATLastLearnedClausesPhaseSelectionStrategy0 = new RSATLastLearnedClausesPhaseSelectionStrategy();
+assertNotNull(rSATLastLearnedClausesPhaseSelectionStrategy0);
+assertEquals("lightweight component caching from RSAT inverting phase for variables at conflict decision level", rSATLastLearnedClausesPhaseSelectionStrategy0.toString());
+
+VarOrderHeap varOrderHeap0 = new VarOrderHeap(rSATLastLearnedClausesPhaseSelectionStrategy0);
+assertNotNull(varOrderHeap0);
+assertEquals("lightweight component caching from RSAT inverting phase for variables at conflict decision level", rSATLastLearnedClausesPhaseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+
+ActiveLearning<CardinalityDataStructure> activeLearning0 = new ActiveLearning<CardinalityDataStructure>();
+assertNotNull(activeLearning0);
+assertEquals(0, activeLearning0.getLimit());
+assertEquals(0.95, activeLearning0.getActivityPercent(), 0.01);
+
+Solver<CardinalityDataStructure> solver1 = new Solver<CardinalityDataStructure>(percentLengthLearning0, cardinalityDataStructure0, searchParams0, varOrderHeap0, lubyRestarts0);
+assertNotNull(solver1);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals("lightweight component caching from RSAT inverting phase for variables at conflict decision level", rSATLastLearnedClausesPhaseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals("c ", solver1.getLogPrefix());
+assertEquals(0, solver1.nVars());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(0, solver1.realNumberOfVariables());
+assertEquals(10, percentLengthLearning0.getLimit());
+
+GroupClauseSelectorSolver<Solver<CardinalityDataStructure>> groupClauseSelectorSolver0 = new GroupClauseSelectorSolver<Solver<CardinalityDataStructure>>(solver1);
+assertNotNull(groupClauseSelectorSolver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(solver1.equals((Object)solver0));
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(1, lubyRestarts0.luby());
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals("lightweight component caching from RSAT inverting phase for variables at conflict decision level", rSATLastLearnedClausesPhaseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(0, solver1.currentDecisionLevel());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals("c ", solver1.getLogPrefix());
+assertEquals(0, solver1.nVars());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals(0, solver1.nConstraints());
+assertEquals(0, solver1.realNumberOfVariables());
+assertTrue(groupClauseSelectorSolver0.isSatisfiable());
+assertEquals(10, percentLengthLearning0.getLimit());
+
+VecInt vecInt1 = new VecInt(intArray0);
+assertNotNull(vecInt1);
+assertFalse(vecInt1.equals((Object)iVecInt1));
+assertFalse(vecInt1.equals((Object)iVecInt0));
+assertFalse(vecInt1.equals((Object)vecInt0));
+assertFalse(vecInt1.isEmpty());
+assertEquals(9, vecInt1.size());
+assertEquals(41, vecInt1.last());
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), (-1540), 41}, intArray0);
+
+IConstr iConstr0 = product0.addAtMostOne(solver0, iVecInt1);
+assertNotNull(iConstr0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(solver0.equals((Object)solver1));
+assertFalse(vecInt0.equals((Object)vecInt1));
+assertTrue(vecInt0.equals((Object)iVecInt1));
+assertTrue(iVecInt1.equals((Object)vecInt0));
+assertTrue(iVecInt1.equals((Object)iVecInt0));
+assertFalse(iVecInt1.equals((Object)vecInt1));
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(1163, pureOrder0.getPeriod());
+assertEquals(8.0, randomWalkDecorator0.getProbability(), 0.01);
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(1, lubyRestarts0.luby());
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals(2147483, solver0.getTimeout());
+assertFalse(solver0.isVerbose());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals(29, solver0.nConstraints());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(0, solver0.currentDecisionLevel());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(2759, solver0.realNumberOfVariables());
+assertEquals(2759, solver0.nVars());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0.0, iConstr0.getActivity(), 0.01);
+assertFalse(iConstr0.canBePropagatedMultipleTimes());
+assertEquals(22, iConstr0.size());
+assertEquals((-1540), vecInt0.last());
+assertEquals(10, vecInt0.size());
+assertFalse(vecInt0.isEmpty());
+assertEquals(10, iVecInt1.size());
+assertFalse(iVecInt1.isEmpty());
+assertEquals((-1540), iVecInt1.last());
+assertEquals(10, percentLengthLearning0.getLimit());
+assertNotSame(solver0, solver1);
+assertNotSame(vecInt0, vecInt1);
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(iVecInt1, iVecInt0);
+assertNotSame(iVecInt1, vecInt1);
+assertNotSame(iVecInt1, vecInt0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), (-1540), 41}, intArray0);
+
+IConstr iConstr1 = product0.addAtMostOne(solver1, vecInt0);
+assertNotNull(iConstr1);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(solver1.equals((Object)solver0));
+assertFalse(vecInt0.equals((Object)vecInt1));
+assertTrue(vecInt0.equals((Object)iVecInt1));
+assertFalse(iConstr1.equals((Object)iConstr0));
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(1, lubyRestarts0.luby());
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals("lightweight component caching from RSAT inverting phase for variables at conflict decision level", rSATLastLearnedClausesPhaseSelectionStrategy0.toString());
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+assertEquals(2766, solver1.realNumberOfVariables());
+assertEquals(0, solver1.decisionLevel());
+assertEquals(2147483, solver1.getTimeout());
+assertEquals(2766, solver1.nVars());
+assertEquals(0, solver1.currentDecisionLevel());
+assertFalse(solver1.isVerbose());
+assertEquals(0, solver1.getPropagationLevel());
+assertFalse(solver1.isDBSimplificationAllowed());
+assertEquals("c ", solver1.getLogPrefix());
+assertEquals(29, solver1.nConstraints());
+assertFalse(solver1.isSolverKeptHot());
+assertEquals((-1540), vecInt0.last());
+assertEquals(10, vecInt0.size());
+assertFalse(vecInt0.isEmpty());
+assertEquals(22, iConstr1.size());
+assertFalse(iConstr1.canBePropagatedMultipleTimes());
+assertEquals(0.0, iConstr1.getActivity(), 0.01);
+assertEquals(10, percentLengthLearning0.getLimit());
+assertNotSame(solver1, solver0);
+assertNotSame(vecInt0, vecInt1);
+assertSame(vecInt0, iVecInt0);
+assertNotSame(vecInt0, iVecInt1);
+assertNotSame(iConstr1, iConstr0);
+assertEquals(9, intArray0.length);
+assertArrayEquals(new int[] {8, 1259, 4, 4, 857, 20, (-2759), (-1540), 41}, intArray0);
+
+
+[MASTER] 11:09:05.626 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 11:09:05.628 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Product product0 = new Product();
+assertNotNull(product0);
+
+String[] stringArray0 = new String[5];
+stringArray0[0] = "";
+stringArray0[1] = "N_bQDMpG,l";
+boolean boolean0 = FileSystemHandling.createFolder((EvoSuiteFile) null);
+assertFalse(boolean0);
+
+stringArray0[2] = "p:k!9NS3u7~'k;";
+stringArray0[3] = "";
+int[] intArray0 = new int[7];
+intArray0[0] = 7;
+intArray0[1] = 0;
+intArray0[2] = 671;
+intArray0[3] = (-350);
+intArray0[4] = 671;
+intArray0[5] = (-2162);
+CardinalityDataStructure cardinalityDataStructure0 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure0);
+
+SearchParams searchParams0 = new SearchParams();
+assertNotNull(searchParams0);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+
+VarOrderHeap varOrderHeap0 = new VarOrderHeap((IPhaseSelectionStrategy) null);
+assertNotNull(varOrderHeap0);
+assertEquals(0, varOrderHeap0.numberOfInterestingVariables());
+
+VarOrderHeap varOrderHeap1 = new VarOrderHeap();
+assertNotNull(varOrderHeap1);
+assertFalse(varOrderHeap1.equals((Object)varOrderHeap0));
+assertEquals(0, varOrderHeap1.numberOfInterestingVariables());
+
+RandomWalkDecorator randomWalkDecorator0 = new RandomWalkDecorator(varOrderHeap1, (-2162));
+assertNotNull(randomWalkDecorator0);
+assertFalse(varOrderHeap1.equals((Object)varOrderHeap0));
+assertEquals(0, varOrderHeap1.numberOfInterestingVariables());
+assertEquals((-2162.0), randomWalkDecorator0.getProbability(), 0.01);
+
+LubyRestarts lubyRestarts0 = new LubyRestarts();
+assertNotNull(lubyRestarts0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+
+NoLearningNoHeuristics<CardinalityDataStructure> noLearningNoHeuristics0 = new NoLearningNoHeuristics<CardinalityDataStructure>();
+assertNotNull(noLearningNoHeuristics0);
+
+PureOrder pureOrder0 = new PureOrder();
+assertNotNull(pureOrder0);
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals(20, pureOrder0.getPeriod());
+
+Solver<CardinalityDataStructure> solver0 = new Solver<CardinalityDataStructure>(noLearningNoHeuristics0, cardinalityDataStructure0, searchParams0, pureOrder0, lubyRestarts0);
+assertNotNull(solver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals(20, pureOrder0.getPeriod());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0, solver0.nConstraints());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals(2147483, solver0.getTimeout());
+assertEquals(0, solver0.decisionLevel());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.nVars());
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+
+GroupClauseSelectorSolver<Solver<CardinalityDataStructure>> groupClauseSelectorSolver0 = new GroupClauseSelectorSolver<Solver<CardinalityDataStructure>>(solver0);
+assertNotNull(groupClauseSelectorSolver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals(20, pureOrder0.getPeriod());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertEquals(0, solver0.currentDecisionLevel());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0, solver0.nConstraints());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals(2147483, solver0.getTimeout());
+assertEquals(0, solver0.decisionLevel());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.nVars());
+assertTrue(groupClauseSelectorSolver0.isSatisfiable());
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+
+VecInt vecInt0 = new VecInt(intArray0);
+assertNotNull(vecInt0);
+assertFalse(vecInt0.isEmpty());
+assertEquals(0, vecInt0.last());
+assertEquals(7, vecInt0.size());
+assertEquals(7, intArray0.length);
+assertArrayEquals(new int[] {7, 0, 671, (-350), 671, (-2162), 0}, intArray0);
+
+product0.addAtMostOne(groupClauseSelectorSolver0, vecInt0);
+
+[MASTER] 11:09:05.908 [logback-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: null
+[MASTER] 11:09:05.910 [logback-1] WARN  JUnitAnalyzer - Failing test:
+ Product product0 = new Product();
+assertNotNull(product0);
+
+OptToSatAdapter optToSatAdapter0 = null;
+GroupClauseSelectorSolver<OptToSatAdapter> groupClauseSelectorSolver0 = new GroupClauseSelectorSolver<OptToSatAdapter>((OptToSatAdapter) null);
+assertNotNull(groupClauseSelectorSolver0);
+
+ModelIterator modelIterator0 = new ModelIterator(groupClauseSelectorSolver0);
+assertNotNull(modelIterator0);
+assertEquals(0L, modelIterator0.numberOfModelsFoundSoFar());
+
+int[] intArray0 = new int[7];
+intArray0[0] = 16;
+intArray0[1] = (-350);
+intArray0[2] = 43;
+int int0 = (-2162);
+intArray0[3] = (-2162);
+PercentLengthLearning<CardinalityDataStructure> percentLengthLearning0 = new PercentLengthLearning<CardinalityDataStructure>();
+assertNotNull(percentLengthLearning0);
+assertEquals(10, percentLengthLearning0.getLimit());
+
+CardinalityDataStructure cardinalityDataStructure0 = new CardinalityDataStructure();
+assertNotNull(cardinalityDataStructure0);
+
+SearchParams searchParams0 = new SearchParams();
+assertNotNull(searchParams0);
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+
+PureOrder pureOrder0 = new PureOrder(112);
+assertNotNull(pureOrder0);
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(112, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+
+boolean boolean0 = FileSystemHandling.shouldAllThrowIOExceptions();
+assertTrue(boolean0);
+
+RandomWalkDecorator randomWalkDecorator0 = new RandomWalkDecorator(pureOrder0, 43);
+assertNotNull(randomWalkDecorator0);
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder0.toString());
+assertEquals(112, pureOrder0.getPeriod());
+assertEquals(0, pureOrder0.numberOfInterestingVariables());
+assertEquals(43.0, randomWalkDecorator0.getProbability(), 0.01);
+
+LubyRestarts lubyRestarts0 = new LubyRestarts();
+assertNotNull(lubyRestarts0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+
+PureOrder pureOrder1 = new PureOrder();
+assertNotNull(pureOrder1);
+assertFalse(pureOrder1.equals((Object)pureOrder0));
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder1.toString());
+assertEquals(20, pureOrder1.getPeriod());
+assertEquals(0, pureOrder1.numberOfInterestingVariables());
+
+Solver<CardinalityDataStructure> solver0 = new Solver<CardinalityDataStructure>(percentLengthLearning0, cardinalityDataStructure0, searchParams0, pureOrder1, lubyRestarts0);
+assertNotNull(solver0);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(pureOrder1.equals((Object)pureOrder0));
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(0L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertTrue(lubyRestarts0.shouldRestart());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder1.toString());
+assertEquals(20, pureOrder1.getPeriod());
+assertEquals(0, pureOrder1.numberOfInterestingVariables());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.nConstraints());
+assertEquals(2147483, solver0.getTimeout());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals(0, solver0.nVars());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0, solver0.currentDecisionLevel());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.getPropagationLevel());
+assertEquals(10, percentLengthLearning0.getLimit());
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+
+GroupClauseSelectorSolver<Solver<CardinalityDataStructure>> groupClauseSelectorSolver1 = new GroupClauseSelectorSolver<Solver<CardinalityDataStructure>>(solver0);
+assertNotNull(groupClauseSelectorSolver1);
+assertEquals(32, LubyRestarts.DEFAULT_LUBY_FACTOR);
+assertFalse(pureOrder1.equals((Object)pureOrder0));
+assertFalse(lubyRestarts0.shouldRestart());
+assertEquals(1, lubyRestarts0.luby());
+assertEquals(32L, lubyRestarts0.nextRestartNumberOfConflict());
+assertEquals(32, lubyRestarts0.getFactor());
+assertEquals("tries to first branch on a single phase watched unassigned variable (pure literal if using a CB data structure) else VSIDS from MiniSAT", pureOrder1.toString());
+assertEquals(20, pureOrder1.getPeriod());
+assertEquals(0, pureOrder1.numberOfInterestingVariables());
+assertFalse(solver0.isSolverKeptHot());
+assertEquals(0, solver0.nConstraints());
+assertEquals(2147483, solver0.getTimeout());
+assertEquals(0, solver0.decisionLevel());
+assertEquals(0, solver0.realNumberOfVariables());
+assertEquals(0, solver0.nVars());
+assertEquals("c ", solver0.getLogPrefix());
+assertEquals(0, solver0.currentDecisionLevel());
+assertFalse(solver0.isDBSimplificationAllowed());
+assertFalse(solver0.isVerbose());
+assertEquals(0, solver0.getPropagationLevel());
+assertTrue(groupClauseSelectorSolver1.isSatisfiable());
+assertEquals(10, percentLengthLearning0.getLimit());
+assertEquals(0.999, searchParams0.getClaDecay(), 0.01);
+assertEquals(1.5, searchParams0.getConflictBoundIncFactor(), 0.01);
+assertEquals(0.95, searchParams0.getVarDecay(), 0.01);
+assertEquals(100, searchParams0.getInitConflictBound());
+
+Product product1 = new Product();
+assertNotNull(product1);
+assertFalse(product1.equals((Object)product0));
+
+VecInt vecInt0 = new VecInt(2636, 127);
+assertNotNull(vecInt0);
+assertFalse(vecInt0.isEmpty());
+assertEquals(127, vecInt0.last());
+assertEquals(2636, vecInt0.size());
+
+product0.addAtMostOne((ISolver) null, vecInt0);
+
+* Permissions denied during test execution: 
+  - java.lang.RuntimePermission: 
+         writeFileDescriptor: 2
+* Writing tests to file
+* Writing JUnit test case 'Product_ESTest' to evosuite-tests
+* Done!
+
+* Computation finished
