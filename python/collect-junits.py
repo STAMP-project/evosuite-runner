@@ -1,7 +1,7 @@
 import sys
 import json
 import os
-
+## This python script read the relevant tests for test_seeding and returns them as a single string. In this string, test suites are seperated by ":"
 ## input arguments
 project=sys.argv[1]
 target_class=sys.argv[2]

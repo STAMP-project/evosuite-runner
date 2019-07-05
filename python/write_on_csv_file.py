@@ -3,7 +3,7 @@ import fcntl
 import csv
 import re
 import os
-
+# This python script parses the given EvoSuite's execution log to collect the valuable data and saves them in the csv file.
 ## input arguments
 type=sys.argv[1]
 execution_idx=sys.argv[2]
