@@ -16,23 +16,23 @@ This tool needs three inputs:
 
 ## Run EvoSuite in no_seeding mode
 ```
-. main.sh <Rounds> <List_of_classes> <Maximum_java_processes>
+. main.sh <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <seeding_probabilities>
 ```
 
 
 ## Run EvoSuite in test_seeding mode
 ```
-. main.sh -t <Rounds> <List_of_classes> <Maximum_java_processes>
+. main.sh -t <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <seeding_probabilities>
 ```
 
 
 ## Run EvoSuite in model_seeding mode
 ```
-. main.sh -m <Rounds> <List_of_classes> <Maximum_java_processes>
+. main.sh -m <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <seeding_probabilities>
 ```
 
 ## parameters
-__<Rounds>__ indicates the number of times that we want to repeat each experiment. The minimum value for the empirical evaluation should be 10. __<List_of_classes>__ points to `classes.csv` file. __<Maximum_java_processes>__ Limits the number of parallel java processes.
+__<Rounds>__ indicates the number of times that we want to repeat each experiment. The minimum value for the empirical evaluation should be 10. __<List_of_classes>__ points to `classes.csv` file. __<Maximum_java_processes>__ Limits the number of parallel java processes. __<search_budget>__ is the number of seconds that EvoSuite has for each test generation execution. __<population>__ is the number of test individuals in each generation of the search process. Finally, __<seeding_probabilities>__ is comma separated probabilities for seed_clone.
 
 **Note #1:** Each EvoSuite execution launches two java processes (Master & Client). So, the number of parallel evosuite instances will be half of `<Maximum_java_processes>`.
 

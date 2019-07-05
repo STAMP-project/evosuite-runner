@@ -5,10 +5,7 @@ flagmodel=0
 # params="-generateTests -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=180"
 # params="-generateTests -Dalgorithm=DynaMOSA"
 
-# ToDo: set the value of clone_seed,
-clone_seed=(0.3 0.5 0.8 1.0)
-search_budget=180
-population=100
+
 
 # Check the input parameter to set the EvoSuite execution mode (no-seeding, test_seeding, or model_seeding)
 while [ "$1" != "" ]; do
@@ -24,6 +21,10 @@ done
 rounds=$1
 classes=$2
 LIMIT=$3
+search_budget=$4
+population=$5
+IFS=', ' read -r -a clone_seed <<< "$6"
+
 echo "Round = $rounds"
 echo "classes file = $classes"
 echo "LIMIT = $LIMIT"
