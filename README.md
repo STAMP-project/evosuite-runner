@@ -38,3 +38,14 @@ __<Rounds>__ indicates the number of times that we want to repeat each experimen
 
 ## Output
 The valuable data about the result of the execution save in `results/` directory csv files. The generated tests will be stored in `generated_tests/<no_seeding | test_seeding | model_seeding>/<project_name>-<target_class>-<clone_seed_probability>-<id_of_round>`.
+
+
+## Run PIT on the generated tests
+
+After generating tests, you just need to run `run_pitest.sh` file in the root directory. This script, first, finds all of the existing generated test cases. Then, it removes all of the flaky tests from the generated tests (it runs each of the test cases 5 times. If any test fails even one time, it will be ignored). Finally, it applies PIT on the existing test cases. 
+
+The PIT report is saved in the following directory:
+
+```
+pitest/out/<no_seeding | test_seeding | model_seeding>/<project_name>-<target_class>-<clone_seed_probability>-<id_of_round>
+```
