@@ -10,7 +10,7 @@ flagtest=0
 if [ "$type" != "no" ]; then
   clone_seed_p=$8
   resultDir=$9
-  if [ "$type" != "model" ]; then
+  if [ "$type" == "model" ]; then
     flagmodel=1
   else
     flagtest=1
@@ -36,7 +36,8 @@ if [ -d "$resultDir" ]; then
   fi
 else
   # Re-run the EvoSuite process
-  . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget
+  echo "ReRun evosuite for class $class modelF=$flagmodel and modelT=$flagtest"
+  . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
 fi
 
 
