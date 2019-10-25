@@ -39,6 +39,7 @@ do
    # for each class which is indicated in the classes.csv file
    while read class project
     do
+      
       printf 'Running test generation for %s\n' "$class in $project"
       . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $i $population $search_budget
 

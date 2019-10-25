@@ -26,6 +26,7 @@ while kill -0 "$pid"; do
 done
 
 if [ -d "$resultDir" ]; then
+echo "Finished: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
   # Parsing the final results
   if [ "$type" != "no" ]; then
     # Parsing test_seeding & model_seeding executions
@@ -35,9 +36,22 @@ if [ -d "$resultDir" ]; then
     python python/write_on_csv_file.py $type $execution_idx $project $class &
   fi
 else
-  # Re-run the EvoSuite process
-  echo "ReRun evosuite for class $class modelF=$flagmodel and modelT=$flagtest"
-  . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
+  # Check the root of problem
+  if [ "$type" != "no" ]; then
+    errLogDir="logs/$type-seeding/$project-$class-$clone_seed_p-$execution_idx-err.txt"
+  else
+    errLogDir="logs/$type-seeding/$project-$class-$execution_idx-err.txt"
+  fi
+  lastLine=$(awk '/./{line=$0} END{print line}' $errLogDir)
+  if [[ $lastLine == *"Connecting to master process on port"* ]]; then
+    # Re-run the EvoSuite process
+    echo "ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
+    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
+  else
+    echo "Problem: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
+    cat $errLogDir
+  fi
+  
 fi
 
 
