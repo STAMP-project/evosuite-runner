@@ -51,6 +51,7 @@ else
     . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
   else
     echo "Problem: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
+    echo $errLogDir
     cat $errLogDir
   fi
   
