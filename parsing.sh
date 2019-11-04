@@ -9,6 +9,7 @@ flagmodel=0
 flagtest=0
 if [ "$type" != "no" ]; then
   clone_seed_p=$8
+  clone_seed_p_in_csv=$8
   resultDir=$9
   if [ "$type" == "model" ]; then
     flagmodel=1
@@ -17,6 +18,7 @@ if [ "$type" != "no" ]; then
   fi
 else
   clone_seed_p=0
+  clone_seed_p_in_csv=","
   resultDir=$8
 fi
 
@@ -25,7 +27,7 @@ while kill -0 "$pid"; do
             sleep 1
 done
 
-if [ -d "$resultDir" ]; then
+if [ -d "$resultDir" ] || [ grep -q "$execution_idx,$project,$class,$clone_seed_p_in_csv" "results/$type-results.csv" ]; then
 echo "Finished: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
   # Parsing the final results
   if [ "$type" != "no" ]; then
