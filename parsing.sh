@@ -40,9 +40,9 @@ echo "Finished: class= $class, project= $project, execution_idx= $execution_idx,
 else
   # Check the root of problem
   if [ "$type" != "no" ]; then
-    errLogDir="logs/$type-seeding/$project-$class-$clone_seed_p-$execution_idx-err.txt"
+    errLogDir="logs/$type-seeding/$project-$class-$clone_seed_p-$execution_idx-out.txt"
   else
-    errLogDir="logs/$type-seeding/$project-$class-$execution_idx-err.txt"
+    errLogDir="logs/$type-seeding/$project-$class-$execution_idx-out.txt"
   fi
   lastLine=$(awk '/./{line=$0} END{print line}' $errLogDir)
   if [[ $lastLine == *"Connecting to master process on port"* ]]; then
