@@ -38,21 +38,29 @@ echo "Finished: class= $class, project= $project, execution_idx= $execution_idx,
     python python/write_on_csv_file.py $type $execution_idx $project $class &
   fi
 else
+  
   # Check the root of problem
   if [ "$type" != "no" ]; then
-    errLogDir="logs/"$type"_seeding/$project-$class-$clone_seed_p-$execution_idx-out.txt"
+    LogDir="logs/"$type"_seeding/$project-$class-$clone_seed_p-$execution_idx-out.txt"
+    errLogDir="logs/"$type"_seeding/$project-$class-$clone_seed_p-$execution_idx-err.txt"
   else
-    errLogDir="logs/"$type"_seeding/$project-$class-$execution_idx-out.txt"
+    LogDir="logs/"$type"_seeding/$project-$class-$execution_idx-out.txt"
+    errLogDir="logs/"$type"_seeding/$project-$class-$execution_idx-err.txt"
   fi
-  lastLine=$(awk '/./{line=$0} END{print line}' $errLogDir)
+
+  if grep -q "Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness" "$LogDir"; then
+    echo "Incomplete execution. ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
+    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
+  fi
+  lastLine=$(awk '/./{line=$0} END{print line}' $LogDir)
   if [[ $lastLine == *"Connecting to master process on port"* ]]; then
     # Re-run the EvoSuite process
     echo "ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
     . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
   else
     echo "Problem: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
-    echo $errLogDir
-    cat $errLogDir
+    echo $LogDir
+    cat $LogDir
   fi
   
 fi
