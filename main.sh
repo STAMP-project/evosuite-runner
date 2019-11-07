@@ -29,7 +29,7 @@ echo "Round = $rounds"
 echo "classes file = $classes"
 echo "LIMIT = $LIMIT"
 
-for ((i=11;i<=$rounds;i++));
+for ((i=1;i<=$rounds;i++));
 do
  echo "Round $i experiment"
  # for each clone seed probability
