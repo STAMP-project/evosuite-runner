@@ -52,6 +52,12 @@ else
     echo "Incomplete execution. ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
     . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
   fi
+
+  if [ grep -q "Analyzing classpath:" "$LogDir" ] && [ grep -q "Fatal crash on main EvoSuite process. Class org.pdfsam.console.business.dto.commands.UnpackParsedCommand" "$errLogDir" ]; then
+    echo "Incomplete execution (got stuck in cp analysis). ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
+    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
+  fi
+
   lastLine=$(awk '/./{line=$0} END{print line}' $LogDir)
   if [[ $lastLine == *"Connecting to master process on port"* ]]; then
     # Re-run the EvoSuite process
