@@ -18,7 +18,7 @@ projectCP=$(python python/generateProjectCP.py "bins/$project")
         #   echo "Skip execution because of existing generated test: class= $class, project= $project, execution_idx= $i, modelFlag=$flagmodel, TestFlag=$flagtest"
         #   continue
         # fi
-        java -d64 -Xmx4000m -jar evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dsearch_budget=$search_budget  -Dshow_progress=FALSE -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Donline_model_seeding=TRUE -Dmodel_path="$model_dir" -Dtest_dir="generated_tests/model_seeding/$project-$class-$clone_seed_p-$i" -Djavax.accessibility.assistive_technologies=" " > "logs/model_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/model_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
+        java -Djavax.accessibility.assistive_technologies=" " -d64 -Xmx4000m -jar evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dsearch_budget=$search_budget  -Dshow_progress=FALSE -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Donline_model_seeding=TRUE -Dmodel_path="$model_dir" -Dtest_dir="generated_tests/model_seeding/$project-$class-$clone_seed_p-$i" > "logs/model_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/model_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
         pid=$!
         . parsing.sh "model" $population $search_budget $pid $i $project $class $clone_seed_p $generatedTestDir &
         # Parse the execution log and save the useful information in to the model_seeding csv file
@@ -36,7 +36,7 @@ projectCP=$(python python/generateProjectCP.py "bins/$project")
         #   echo "Skip execution because of existing generated test: class= $class, project= $project, execution_idx= $i, modelFlag=$flagmodel, TestFlag=$flagtest"
         #   continue
         #  fi
-         java -d64 -Xmx4000m -jar evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dsearch_budget=$search_budget -Dshow_progress=FALSE  -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Dcarve_object_pool=TRUE -Dselected_junit="$junits" -Dtest_dir="generated_tests/test_seeding/$project-$class-$clone_seed_p-$i" -Djavax.accessibility.assistive_technologies=" " > "logs/test_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/test_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
+         java -Djavax.accessibility.assistive_technologies=" " -d64 -Xmx4000m -jar evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dsearch_budget=$search_budget -Dshow_progress=FALSE  -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Dcarve_object_pool=TRUE -Dselected_junit="$junits" -Dtest_dir="generated_tests/test_seeding/$project-$class-$clone_seed_p-$i" > "logs/test_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/test_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
          pid=$!
          . parsing.sh "test" $population $search_budget $pid $i $project $class $clone_seed_p $generatedTestDir &
          # Parse the execution log and save the useful information in to the test_seeding csv file
@@ -50,7 +50,7 @@ projectCP=$(python python/generateProjectCP.py "bins/$project")
         #   echo "Skip execution because of existing generated test: class= $class, project= $project, execution_idx= $i, modelFlag=$flagmodel, TestFlag=$flagtest"
         #   continue
         # fi
-        java -d64 -Xmx4000m -jar evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dsearch_budget=$search_budget -Dshow_progress=FALSE  -projectCP "$projectCP" -class "$class" -Dtest_dir="generated_tests/no_seeding/$project-$class-$clone_seed_p-$i" -Djavax.accessibility.assistive_technologies=" " > "logs/no_seeding/$project-$class-$i-out.txt" 2> "logs/no_seeding/$project-$class-$i-err.txt" &
+        java -Djavax.accessibility.assistive_technologies=" " -d64 -Xmx4000m -jar evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dsearch_budget=$search_budget -Dshow_progress=FALSE  -projectCP "$projectCP" -class "$class" -Dtest_dir="generated_tests/no_seeding/$project-$class-$clone_seed_p-$i" > "logs/no_seeding/$project-$class-$i-out.txt" 2> "logs/no_seeding/$project-$class-$i-err.txt" &
         pid=$!
         . parsing.sh "no" $population $search_budget $pid $i $project $class $generatedTestDir &
         # Parse the execution log and save the useful information in to the no_seeding csv file
