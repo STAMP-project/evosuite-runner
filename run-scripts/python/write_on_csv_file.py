@@ -97,8 +97,8 @@ with open(log_dir, "r") as ins:
             splitted_line_1[1]=splitted_line_1[1].replace('\n', ' ').replace('\r', '')
             value = float(splitted_line_1[1])
             if "LineCoverageSuiteFitness" in stdout_line:
+                current_fitness_evaluations+=1
                 if float(csv_result["LineCoverage_value"]) < value :
-                    current_fitness_evaluations+=1
                     csv_result["LineCoverage_value"] = splitted_line_1[1]
                     csv_result["LineCoverage_evaluations"]+="["+splitted_line_1[1]+","+str(current_fitness_evaluations)+"]"
             elif "BranchCoverageSuiteFitness" in stdout_line:
