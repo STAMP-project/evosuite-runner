@@ -32,10 +32,10 @@ echo "Finished: class= $class, project= $project, execution_idx= $execution_idx,
   # Parsing the final results
   if [ "$type" != "no" ]; then
     # Parsing test_seeding & model_seeding executions
-    python python/write_on_csv_file.py $type $execution_idx $project $class $clone_seed_p &
+    python run-scripts/python/write_on_csv_file.py $type $execution_idx $project $class $clone_seed_p &
   else
     # Parsing no_seeding executions
-    python python/write_on_csv_file.py $type $execution_idx $project $class &
+    python run-scripts/python/write_on_csv_file.py $type $execution_idx $project $class &
   fi
 else
   
@@ -50,19 +50,19 @@ else
 
   if grep -q "Current fitness function value: class org.evosuite.coverage.cbranch.CBranchSuiteFitness" "$LogDir"; then
     echo "Incomplete execution. ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
-    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
+    . run-scripts/bash/run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
   fi
 
   if [ grep -q "Analyzing classpath:" "$LogDir" ] && [ grep -q "Fatal crash on main EvoSuite process." "$errLogDir" ]; then
     echo "Incomplete execution (got stuck in cp analysis). ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
-    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
+    . run-scripts/bash/run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
   fi
 
   lastLine=$(awk '/./{line=$0} END{print line}' $LogDir)
-  if [[ $lastLine == *"Connecting to master process on port"* ]]; then
+  if [[ "$lastLine" == *"Connecting to master process on port"* ]]; then
     # Re-run the EvoSuite process
     echo "ReRun: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
-    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
+    . run-scripts/bash/run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $execution_idx $population $search_budget &
   else
     echo "Problem: class= $class, project= $project, execution_idx= $execution_idx, modelFlag=$flagmodel, TestFlag=$flagtest"
     echo $LogDir

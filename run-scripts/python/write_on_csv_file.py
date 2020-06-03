@@ -15,13 +15,13 @@ if type != "no":
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 if type == "model":
-    log_dir = os.path.join(dir_path, "..", "logs","model_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+execution_idx+"-out.txt")
+    log_dir = os.path.join(dir_path, "..", "..", "logs","model_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+execution_idx+"-out.txt")
 elif type =="test":
-    log_dir = os.path.join(dir_path, "..", "logs","test_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+execution_idx+"-out.txt")
+    log_dir = os.path.join(dir_path, "..", "..", "logs","test_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+execution_idx+"-out.txt")
 else:
-    log_dir = os.path.join(dir_path, "..", "logs","no_seeding",application+"-"+class_name+"-"+execution_idx+"-out.txt")
+    log_dir = os.path.join(dir_path, "..", "..", "logs","no_seeding",application+"-"+class_name+"-"+execution_idx+"-out.txt")
 
-out_dir = os.path.join(dir_path, "..", "results",type+"-results.csv")
+out_dir = os.path.join(dir_path, "..", "..", "results",type+"-results.csv")
 ##
 
 
@@ -98,6 +98,7 @@ with open(log_dir, "r") as ins:
             value = float(splitted_line_1[1])
             if "LineCoverageSuiteFitness" in stdout_line:
                 if float(csv_result["LineCoverage_value"]) < value :
+                    current_fitness_evaluations+=1
                     csv_result["LineCoverage_value"] = splitted_line_1[1]
                     csv_result["LineCoverage_evaluations"]+="["+splitted_line_1[1]+","+str(current_fitness_evaluations)+"]"
             elif "BranchCoverageSuiteFitness" in stdout_line:
@@ -125,10 +126,10 @@ with open(log_dir, "r") as ins:
                     csv_result["CBranch_value"] = splitted_line_1[1]
                     csv_result["CBranch_evaluations"]+="["+splitted_line_1[1]+","+str(current_fitness_evaluations)+"]"
 
-        elif "Current fitness evaluations:" in stdout_line:
-            splitted_line_1 = stdout_line.split("evaluations: ")
-            current_fitness_evaluations = splitted_line_1[1].replace('\n', ' ').replace('\r', '')
-            csv_result["current_fitness_evaluations"] = current_fitness_evaluations
+        # elif "Current fitness evaluations:" in stdout_line:
+        #     splitted_line_1 = stdout_line.split("evaluations: ")
+        #     current_fitness_evaluations = splitted_line_1[1].replace('\n', ' ').replace('\r', '')
+        #     csv_result["current_fitness_evaluations"] = current_fitness_evaluations
 
 
 write_on_csv_file(csv_result,out_dir)

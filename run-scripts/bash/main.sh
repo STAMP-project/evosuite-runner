@@ -52,11 +52,11 @@ do
       echo "$i,$project,$class,$clone_seed_p_in_csv Found"
       continue
     else
-      echo "$i,$project,$class,$clone_seed_p_in_csv Not Found. Rerunning ..."
+      echo "$i,$project,$class,$clone_seed_p_in_csv Not Found. Running ..."
     fi
 
     printf 'Running test generation for %s\n' "$class in $project"
-    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $i $population $search_budget
+    . run-scripts/bash/run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $i $population $search_budget
 
     # If the number of active processes reaches the limit, we will wait, in the following loop, until the end of one of the EvoSuite executions.
     while (( $(pgrep -l java | wc -l) >= $LIMIT ))
