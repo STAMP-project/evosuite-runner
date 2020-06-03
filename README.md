@@ -15,18 +15,39 @@ This tool needs three inputs:
 
 
 ## Run EvoSuite in no_seeding mode
+With docker:
+
+```
+. docker-run.sh <Rounds> <Maximum_java_processes>
+```
+
+Without docker:
 ```
 . main.sh <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <seeding_probabilities>
 ```
 
 
 ## Run EvoSuite in test_seeding mode
+With docker:
+
+```
+. docker-run.sh -t <Rounds> <Maximum_java_processes>
+```
+
+Without docker:
 ```
 . main.sh -t <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <seeding_probabilities>
 ```
 
 
 ## Run EvoSuite in model_seeding mode
+With docker:
+
+```
+. docker-run.sh -m <Rounds> <Maximum_java_processes>
+```
+
+Without docker:
 ```
 . main.sh -m <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <seeding_probabilities>
 ```

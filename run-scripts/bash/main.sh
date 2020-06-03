@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 flagtest=0
 flagmodel=0
 # Check the input parameter to set the EvoSuite execution mode (no-seeding, test_seeding, or model_seeding)
@@ -10,9 +11,6 @@ while [ "$1" != "" ]; do
         * )             break ;;
     esac
 done
-
-# params="-generateTests -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=180"
-# params="-generateTests -Dalgorithm=DynaMOSA"
 
 # 2nd parameter: number of execution repeats
 rounds=$1
@@ -72,3 +70,11 @@ do
     fi
  done
 done
+
+
+while (( $(pgrep -l java | wc -l) > 0 ))
+    do
+                sleep 1
+    done
+# Sleep for 60 seconds to make sure that all of the reports will be saved
+sleep 60
