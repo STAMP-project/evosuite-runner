@@ -1,6 +1,7 @@
 
 
 RunLimit=5
+parallelExecutions=$1
 
 # Check if an array contains the given element
 containsElement () {
@@ -30,11 +31,24 @@ find generated_tests -type f -name "*_scaffolding.java" | while read scaffolding
     projectCP=$(ls -d -1 "$PWD/bins/$project_name/"* | tr '\n' ':')
     test_execution_libs=$(ls -p "$PWD/pitest/libs/test_execution/"* | tr '\n' ':')
 
+
+    
+
+    
     # 1- Compile scaffolding
     javac -cp "$projectCP$test_execution_libs" $scaffoldingTest
     testDir=$(dirname $scaffoldingTest)
     scaffodlingClassPathEntryDir="generated_tests/$seeding_type/$folderName"
+    # 1.a- check if the PIT report is already generated
+    pitDir="pitest/out/$seeding_type/$project_name-$target_class-$clone_seed_p-$execution_id"
+    if [ -d $pitDir ]; then
+      echo "The PIT report is already available in $pitDir"
+      continue
+    fi
     find $testDir -type f -name "*_ESTest.java" | while read mainTest; do
+
+      # 1.b- Seperate classloaders
+      python python/separate-loader-editor.py $mainTest
 
       # 2- Compile the main test
       javac -cp "$projectCP$test_execution_libs$scaffodlingClassPathEntryDir" $mainTest
@@ -82,7 +96,13 @@ find generated_tests -type f -name "*_scaffolding.java" | while read scaffolding
       --sourceDirs $sourceDirs \
       --mutators ALL \
       --timestampedReports=false \
-      --outputFormats "HTML,XML,CSV"
-    #   done
+      --outputFormats "HTML,XML,CSV" > "pitest/logs/$project_name-$target_class-$clone_seed_p-$execution_id.txt" 2>&1 &
+
+      pid=$!
+
+      while (( $(pgrep -l java | wc -l) >= $parallelExecutions ))
+    do
+      sleep 1
+    done
     done
 done

@@ -39,6 +39,22 @@ do
    # for each class which is indicated in the classes.csv file
    while read class project
     do
+
+     if [[ "$flagmodel" -eq 1 ]]; then
+      resultFile="results/model-results.csv"
+      clone_seed_p_in_csv=$clone_seed_p
+     else
+      resultFile="results/no-results.csv"
+      clone_seed_p_in_csv=","
+     fi
+
+    if grep -q "$i,$project,$class,$clone_seed_p_in_csv" $resultFile
+    then
+      echo "$i,$project,$class,$clone_seed_p_in_csv Found"
+      continue
+    else
+      echo "$i,$project,$class,$clone_seed_p_in_csv Not Found. Rerunning ..."
+    fi
       
       printf 'Running test generation for %s\n' "$class in $project"
       . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $i $population $search_budget
