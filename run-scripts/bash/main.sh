@@ -1,12 +1,5 @@
 flagtest=0
 flagmodel=0
-
-
-# params="-generateTests -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=180"
-# params="-generateTests -Dalgorithm=DynaMOSA"
-
-
-
 # Check the input parameter to set the EvoSuite execution mode (no-seeding, test_seeding, or model_seeding)
 while [ "$1" != "" ]; do
     case $1 in
@@ -18,16 +11,21 @@ while [ "$1" != "" ]; do
     esac
 done
 
-rounds=$1
-classes=$2
-LIMIT=$3
-search_budget=$4
-population=$5
-IFS=', ' read -r -a clone_seed <<< "$6"
+# params="-generateTests -Dalgorithm=DynaMOSA -Dpopulation=100 -Dsearch_budget=180"
+# params="-generateTests -Dalgorithm=DynaMOSA"
 
-echo "Round = $rounds"
-echo "classes file = $classes"
-echo "LIMIT = $LIMIT"
+# 2nd parameter: number of execution repeats
+rounds=$1
+# 3rd parameter: List of target classes
+classes=$2
+# 4th parameter: Maximum number of parallel evosuite instances
+LIMIT=$3
+# 5th parameter: Search budget in seconds
+search_budget=$4
+# 6th parameter: Population size
+population=$5
+# 7th parameter: list of probabilities seperated by ,
+IFS=', ' read -r -a clone_seed <<< "$6"
 
 for ((i=1;i<=$rounds;i++));
 do
@@ -48,6 +46,7 @@ do
       clone_seed_p_in_csv=","
      fi
 
+    #If we have the final results, skip the rerun
     if grep -q "$i,$project,$class,$clone_seed_p_in_csv" $resultFile
     then
       echo "$i,$project,$class,$clone_seed_p_in_csv Found"
@@ -55,15 +54,15 @@ do
     else
       echo "$i,$project,$class,$clone_seed_p_in_csv Not Found. Rerunning ..."
     fi
-      
-      printf 'Running test generation for %s\n' "$class in $project"
-      . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $i $population $search_budget
 
-      # If the number of active processes reaches the limit, we will wait, in the following loop, until the end of one of the EvoSuite executions.
-      while (( $(pgrep -l java | wc -l) >= $LIMIT ))
-      do
-        sleep 1
-      done
+    printf 'Running test generation for %s\n' "$class in $project"
+    . run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $i $population $search_budget
+
+    # If the number of active processes reaches the limit, we will wait, in the following loop, until the end of one of the EvoSuite executions.
+    while (( $(pgrep -l java | wc -l) >= $LIMIT ))
+    do
+      sleep 1
+    done
       
     done < "$classes"
 
