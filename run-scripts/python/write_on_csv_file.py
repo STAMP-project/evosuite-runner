@@ -10,12 +10,15 @@ execution_idx=sys.argv[2]
 application=sys.argv[3]
 class_name=sys.argv[4]
 clone_seed_p=""
+random_abstract_test_selection=""
 if type != "no":
     clone_seed_p=sys.argv[5]
+    p_object_pool=sys.argv[6]
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 if type == "model":
-    log_dir = os.path.join(dir_path, "..", "..", "logs","model_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+execution_idx+"-out.txt")
+    random_abstract_test_selection =sys.argv[7]
+    log_dir = os.path.join(dir_path, "..", "..", "logs","model_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+p_object_pool+"-"+execution_idx+"-"+random_abstract_test_selection+"-out.txt")
 elif type =="test":
     log_dir = os.path.join(dir_path, "..", "..", "logs","test_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+execution_idx+"-out.txt")
 else:
@@ -33,6 +36,8 @@ def write_on_csv_file(csv_result,csv_file_dir):
                    "application",
                    "class",
                    "clone_seed_p",
+                   "p_object_pool",
+                   "random_abstract_test_selection",
                    "LineCoverage_value",
                    "LineCoverage_evaluations",
                    "BranchCoverage_value",
@@ -72,6 +77,8 @@ csv_result = {"execution_idx": execution_idx,
               "application": application,
               "class": class_name,
               "clone_seed_p": clone_seed_p,
+              "p_object_pool": p_object_pool,
+              "random_abstract_test_selection": random_abstract_test_selection,
               "LineCoverage_value":"0",
               "LineCoverage_evaluations":"",
               "BranchCoverage_value":"0",

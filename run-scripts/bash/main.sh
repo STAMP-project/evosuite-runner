@@ -5,12 +5,27 @@ flagmodel=0
 while [ "$1" != "" ]; do
     case $1 in
         -m | --model )   flagmodel=1
-                        shift ;;
+                        shift
+                        echo "Model Seeding mode!"  ;;
         -t | --test )    flagtest=1
-                        shift ;;
+                        shift 
+                        echo "Test Seeding mode!";;
+        * )              break ;;
+    esac
+done
+
+# if we are in the model seeding mode, we need to check the abstract test case selection
+random_abstract_test_selection="FALSE"
+if [[ "$flagmodel" -eq 1 ]]; then
+  while [ "$1" != "" ]; do
+      case $1 in
+        -r | --random )   random_abstract_test_selection="TRUE"
+                        shift
+                        echo "Random abstract test selection is on!" ;;
         * )             break ;;
     esac
 done
+fi
 
 # 2nd parameter: number of execution repeats
 rounds=$1
@@ -22,8 +37,11 @@ LIMIT=$3
 search_budget=$4
 # 6th parameter: Population size
 population=$5
-# 7th parameter: list of probabilities seperated by ,
-IFS=', ' read -r -a clone_seed <<< "$6"
+# 7th parameter: p object pool probability
+p_object_pool=$6
+# 8th parameter: list of clone probabilities seperated by ,
+IFS=',' read -r -a clone_seed <<< "$7"
+
 
 for ((i=1;i<=$rounds;i++));
 do
@@ -35,7 +53,7 @@ do
    # for each class which is indicated in the classes.csv file
    while read class project
     do
-
+    
      if [[ "$flagmodel" -eq 1 ]]; then
       resultFile="results/model-results.csv"
       clone_seed_p_in_csv=$clone_seed_p
@@ -54,7 +72,7 @@ do
     fi
 
     printf 'Running test generation for %s\n' "$class in $project"
-    . run-scripts/bash/run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $class $i $population $search_budget
+    . run-scripts/bash/run_evosuite.sh $project $flagmodel $flagtest $clone_seed_p $p_object_pool $class $i $population $search_budget $random_abstract_test_selection
 
     # If the number of active processes reaches the limit, we will wait, in the following loop, until the end of one of the EvoSuite executions.
     while (( $(pgrep -l java | wc -l) >= $LIMIT ))

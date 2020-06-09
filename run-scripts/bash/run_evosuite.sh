@@ -2,21 +2,23 @@ project=$1
 flagmodel=$2
 flagtest=$3
 clone_seed_p=$4
-class=$5
-i=$6
+p_object_pool=$5
+class=$6
+i=$7
 
-population=$7
-search_budget=$8
+population=$8
+search_budget=$9
+random_abstract_test_selection=${10}
 
 projectCP=$(python run-scripts/python/generateProjectCP.py "bins/$project")
       if [ "$flagmodel" -eq 1 ]; then
         # model_seeding execution mode
-        echo "Model seeding is on - seed_clone=$clone_seed_p"
+        echo "Model seeding is on - seed_clone=$clone_seed_p, p_object_pool=$p_object_pool"
         model_dir="analysis-result/$project/models"
-        generatedTestDir="generated_tests/model_seeding/$project-$class-$clone_seed_p-$i"
-        java -d64 -Xmx4000m -jar libs/evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dtimeline_interval=10000 -Dsearch_budget=$search_budget  -Dshow_progress=FALSE -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Donline_model_seeding=TRUE -Dmodel_path="$model_dir" -Dtest_dir="generated_tests/model_seeding/$project-$class-$clone_seed_p-$i" > "logs/model_seeding/$project-$class-$clone_seed_p-$i-out.txt" 2> "logs/model_seeding/$project-$class-$clone_seed_p-$i-err.txt" &
+        generatedTestDir="generated_tests/model_seeding/$project-$class-$clone_seed_p-$p_object_pool-$i-$random_abstract_test_selection"
+        java -d64 -Xmx4000m -jar libs/evosuite-master-1.1.0-SNAPSHOT.jar -generateMOSuite -Dalgorithm=DynaMOSA -Dpopulation=$population -Dseed_model=TRUE -Dtimeline_interval=10000 -Dsearch_budget=$search_budget  -Dshow_progress=FALSE -projectCP "$projectCP" -class "$class" -Dseed_clone="$clone_seed_p" -Dp_object_pool="$p_object_pool" -Donline_model_seeding=TRUE -Drandom_abstract_test_selection="$random_abstract_test_selection" -Dmodel_path="$model_dir" -Dtest_dir="generated_tests/model_seeding/$project-$class-$clone_seed_p-$p_object_pool-$i-$random_abstract_test_selection" > "logs/model_seeding/$project-$class-$clone_seed_p-$p_object_pool-$i-$random_abstract_test_selection-out.txt" 2> "logs/model_seeding/$project-$class-$clone_seed_p-$p_object_pool-$i-$random_abstract_test_selection-err.txt" &
         pid=$!
-        . run-scripts/bash/parsing.sh "model" $population $search_budget $pid $i $project $class $clone_seed_p $generatedTestDir &
+        . run-scripts/bash/parsing.sh "model" $population $search_budget $pid $i $project $class $clone_seed_p $p_object_pool $generatedTestDir $random_abstract_test_selection &
         # Parse the execution log and save the useful information in to the model_seeding csv file
       elif [[ "$flagtest" -eq 1  ]]; then
         # test_seeding execution mode
