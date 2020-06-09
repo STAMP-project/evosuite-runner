@@ -53,7 +53,7 @@ do
    # for each class which is indicated in the classes.csv file
    while read class project
     do
-    
+
      if [[ "$flagmodel" -eq 1 ]]; then
       resultFile="results/model-results.csv"
       clone_seed_p_in_csv=$clone_seed_p
@@ -63,12 +63,12 @@ do
      fi
 
     #If we have the final results, skip the rerun
-    if grep -q "$i,$project,$class,$clone_seed_p_in_csv" $resultFile
+    if grep -q "$i,$project,$class,$clone_seed_p_in_csv,$p_object_pool,$random_abstract_test_selection" $resultFile
     then
-      echo "$i,$project,$class,$clone_seed_p_in_csv Found"
+      echo "$i,$project,$class,$clone_seed_p_in_csv,$p_object_pool,$random_abstract_test_selection Found"
       continue
     else
-      echo "$i,$project,$class,$clone_seed_p_in_csv Not Found. Running ..."
+      echo "$i,$project,$class,$clone_seed_p_in_csv,$p_object_pool,$random_abstract_test_selection Not Found. Running ..."
     fi
 
     printf 'Running test generation for %s\n' "$class in $project"
