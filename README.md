@@ -1,4 +1,4 @@
-# EvoSuite model seeding empirical evaluation
+# EvoSuite Runner
 This tool is designed for running an empirical evaluation for EvoSuite model seeding. It can execute EvoSuite in three different modes:
 - __no-seeding:__ Run EvoSuite without any call-sequence seeding.
 - __test_seeding:__ Run EvoSuite with seeding call-sequences which are derived from the execution tests.
@@ -44,12 +44,12 @@ Without docker:
 With docker:
 
 ```
-. docker-run.sh -m <Rounds> <Maximum_java_processes>
+. docker-run.sh -m [-r] <Rounds> <Maximum_java_processes> <object_pool_usage_probabilities> <seeding_probabilities>
 ```
 
 Without docker:
 ```
-. main.sh -m <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <seeding_probabilities>
+. main.sh -m [-r] <Rounds> <List_of_classes> <Maximum_java_processes> <search_budget> <population> <object_pool_usage_probabilities> <seeding_probabilities>
 ```
 
 ## parameters
