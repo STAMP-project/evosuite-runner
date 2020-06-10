@@ -68,10 +68,10 @@ import org.evosuite.runtime.testdata.EvoSuiteFile;
 import org.evosuite.runtime.testdata.FileSystemHandling;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class Gson_ESTest extends Gson_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test000()  throws Throwable  {
       Gson gson0 = new Gson();
       assertFalse(gson0.serializeNulls());
@@ -91,7 +91,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test001()  throws Throwable  {
       Gson gson0 = new Gson();
       LongSerializationPolicy longSerializationPolicy0 = LongSerializationPolicy.DEFAULT;
@@ -107,7 +107,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.fromJson("", (Type) class0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test002()  throws Throwable  {
       Gson gson0 = new Gson();
       String string0 = gson0.toString();
@@ -125,7 +125,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test003()  throws Throwable  {
       JsonReader jsonReader0 = null;
       Gson.FutureTypeAdapter<Double> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Double>();
@@ -145,7 +145,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test004()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[1];
@@ -168,7 +168,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test005()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<BigDecimal> class0 = BigDecimal.class;
@@ -193,7 +193,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.getAdapter(typeToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test006()  throws Throwable  {
       Gson gson0 = new Gson();
       Gson.FutureTypeAdapter<HashMap<Short, Object>> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<HashMap<Short, Object>>();
@@ -211,7 +211,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test007()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Long> class0 = Long.TYPE;
@@ -228,7 +228,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test008()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toJson((Object) null);
@@ -245,14 +245,14 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test009()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.TYPE;
       gson0.toJsonTree((Object) null, (Type) class0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test010()  throws Throwable  {
       Gson gson0 = new Gson();
       PipedOutputStream pipedOutputStream0 = new PipedOutputStream();
@@ -264,7 +264,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson1.toString();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test011()  throws Throwable  {
       Gson gson0 = new Gson();
       String string0 = gson0.toString();
@@ -280,7 +280,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson1.toJson((Object) short0, (Appendable) mockPrintStream0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test012()  throws Throwable  {
       Gson gson0 = new Gson();
       GsonBuilder gsonBuilder0 = gson0.newBuilder();
@@ -302,7 +302,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test013()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = new Excluder();
@@ -311,7 +311,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.getDelegateAdapter((TypeAdapterFactory) excluder0, typeToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test014()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.htmlSafe();
@@ -320,13 +320,13 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJsonTree((Object) pipedOutputStream0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test015()  throws Throwable  {
       Gson.FutureTypeAdapter<Double> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Double>();
       Gson gson0 = new Gson();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test016()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toString();
@@ -345,7 +345,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test017()  throws Throwable  {
       Gson gson0 = new Gson();
       Double double0 = new Double(1.0);
@@ -370,7 +370,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test018()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<DefaultDateTypeAdapter> class0 = DefaultDateTypeAdapter.class;
@@ -395,7 +395,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test019()  throws Throwable  {
       Class<Float> class0 = Float.TYPE;
       Reader reader0 = mock(Reader.class, new ViolatedAssumptionAnswer());
@@ -408,7 +408,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.fromJson(reader0, class1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test020()  throws Throwable  {
       Gson gson0 = new Gson();
       MockDate mockDate0 = new MockDate();
@@ -417,7 +417,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJson((Object) null, (Type) class1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test021()  throws Throwable  {
       Gson gson0 = new Gson();
       // Undeclared exception!
@@ -433,7 +433,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test022()  throws Throwable  {
       Gson gson0 = new Gson();
       FileSystemHandling.appendStringToFile((EvoSuiteFile) null, "com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter");
@@ -444,7 +444,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJsonTree((Object) mockDate0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test023()  throws Throwable  {
       Gson gson0 = new Gson();
       boolean boolean0 = gson0.serializeNulls();
@@ -456,13 +456,13 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJsonTree((Object) atomicLong0, (Type) class0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test024()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toJson((Object) gson0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test025()  throws Throwable  {
       FileSystemHandling.shouldThrowIOException((EvoSuiteFile) null);
       Gson gson0 = new Gson();
@@ -479,7 +479,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJson((JsonElement) jsonPrimitive0, jsonWriter4);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test026()  throws Throwable  {
       Gson gson0 = new Gson();
       LongSerializationPolicy longSerializationPolicy0 = LongSerializationPolicy.DEFAULT;
@@ -493,7 +493,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.newJsonReader(stringReader0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test027()  throws Throwable  {
       Gson gson0 = new Gson();
       Float float0 = new Float(448.37F);
@@ -515,14 +515,14 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test028()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLong> class0 = AtomicLong.class;
       gson0.fromJson((String) null, (Type) class0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test029()  throws Throwable  {
       Gson gson0 = new Gson();
       boolean boolean0 = Gson.DEFAULT_LENIENT;
@@ -534,7 +534,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJson((Object) pipedOutputStream0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test030()  throws Throwable  {
       Gson gson0 = new Gson();
       String string0 = gson0.toString();
@@ -549,7 +549,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test031()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Long> class0 = Long.TYPE;
@@ -565,14 +565,14 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test032()  throws Throwable  {
       Gson gson0 = new Gson();
       Object object0 = new Object();
       gson0.toJson(object0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test033()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Object> class0 = Object.class;
@@ -593,7 +593,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test034()  throws Throwable  {
       byte[] byteArray0 = new byte[1];
       byteArray0[0] = (byte) (-84);
@@ -605,7 +605,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJson((Object) atomicLongArray0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test035()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader(" |t$_[LU");
@@ -622,13 +622,13 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test036()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toJsonTree((Object) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test037()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = gson0.excluder();
@@ -642,7 +642,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.getDelegateAdapter((TypeAdapterFactory) excluder0, typeToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test038()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<BigDecimal> class0 = BigDecimal.class;
@@ -675,7 +675,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test039()  throws Throwable  {
       Gson gson0 = new Gson();
       LongSerializationPolicy longSerializationPolicy0 = LongSerializationPolicy.DEFAULT;
@@ -688,7 +688,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.fromJson((Reader) stringReader0, class0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test040()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = gson0.excluder();
@@ -715,7 +715,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test041()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Object> class0 = Object.class;
@@ -727,7 +727,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toString();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test042()  throws Throwable  {
       byte[] byteArray0 = new byte[8];
       byteArray0[0] = (byte)61;
@@ -765,7 +765,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test043()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.htmlSafe();
@@ -788,7 +788,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.fromJson(" ~z", class1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test044()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader(" M2");
@@ -807,7 +807,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test045()  throws Throwable  {
       Gson gson0 = new Gson();
       PipedWriter pipedWriter0 = new PipedWriter();
@@ -815,7 +815,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJson((Object) pipedWriter0, (Appendable) pipedWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test046()  throws Throwable  {
       Gson.FutureTypeAdapter<Double> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Double>();
       // Undeclared exception!
@@ -831,7 +831,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test047()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = Excluder.DEFAULT;
@@ -845,7 +845,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test048()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[1];
@@ -864,7 +864,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test049()  throws Throwable  {
       Gson gson0 = new Gson();
       PipedWriter pipedWriter0 = new PipedWriter();
@@ -880,7 +880,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test050()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("kx+2tP");
@@ -890,7 +890,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test051()  throws Throwable  {
       Gson gson0 = new Gson();
       Short short0 = new Short((short)1);
@@ -920,7 +920,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test052()  throws Throwable  {
       Gson gson0 = new Gson();
       PipedReader pipedReader0 = new PipedReader(65279);
@@ -943,7 +943,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test053()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLongArray> class0 = AtomicLongArray.class;
@@ -974,7 +974,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test054()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.TYPE;
@@ -988,7 +988,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test055()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = Excluder.DEFAULT;
@@ -1011,7 +1011,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test056()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toString();
@@ -1022,7 +1022,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test057()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.newBuilder();
@@ -1042,7 +1042,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test058()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[7];
@@ -1054,7 +1054,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test059()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("~5");
@@ -1072,14 +1072,14 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test060()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toJsonTree((Object) "");
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test061()  throws Throwable  {
       Excluder excluder0 = Excluder.DEFAULT;
       Gson gson0 = new Gson();
@@ -1098,7 +1098,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test062()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.excluder();
@@ -1123,7 +1123,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test063()  throws Throwable  {
       Gson.FutureTypeAdapter<Integer> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Integer>();
       Gson gson0 = new Gson();
@@ -1150,14 +1150,14 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test064()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.fieldNamingStrategy();
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test065()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<DefaultDateTypeAdapter> class0 = DefaultDateTypeAdapter.class;
@@ -1172,7 +1172,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test066()  throws Throwable  {
       Gson gson0 = new Gson();
       JsonObject jsonObject0 = new JsonObject();
@@ -1189,7 +1189,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test067()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Type> class0 = Type.class;
@@ -1220,7 +1220,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test068()  throws Throwable  {
       Gson gson0 = new Gson();
       Gson.checkValidFloatingPoint(1.0);
@@ -1239,7 +1239,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test069()  throws Throwable  {
       Gson gson0 = new Gson();
       boolean boolean0 = gson0.htmlSafe();
@@ -1264,7 +1264,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test070()  throws Throwable  {
       Gson.FutureTypeAdapter<Double> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Double>();
       Gson.FutureTypeAdapter<Double> gson_FutureTypeAdapter1 = new Gson.FutureTypeAdapter<Double>();
@@ -1282,7 +1282,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test071()  throws Throwable  {
       Class<Double> class0 = Double.TYPE;
       Gson gson0 = new Gson();
@@ -1301,7 +1301,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test072()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.excluder();
@@ -1328,7 +1328,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test073()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLongArray> class0 = AtomicLongArray.class;
@@ -1345,7 +1345,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test074()  throws Throwable  {
       Gson gson0 = new Gson();
       String string0 = gson0.toString();
@@ -1362,7 +1362,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test075()  throws Throwable  {
       Gson gson0 = new Gson();
       Character character0 = Character.valueOf('K');
@@ -1380,7 +1380,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test076()  throws Throwable  {
       Gson gson0 = new Gson();
       Double double0 = new Double(0.0);
@@ -1398,7 +1398,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test077()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.TYPE;
@@ -1436,7 +1436,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test078()  throws Throwable  {
       FileSystemHandling.shouldThrowIOException((EvoSuiteFile) null);
       Gson gson0 = new Gson();
@@ -1458,7 +1458,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test079()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<BigDecimal> class0 = BigDecimal.class;
@@ -1483,7 +1483,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test080()  throws Throwable  {
       Gson gson0 = new Gson();
       Float float0 = new Float(2645.0);
@@ -1492,7 +1492,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test081()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Date> class0 = Date.class;
@@ -1509,7 +1509,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test082()  throws Throwable  {
       Gson gson0 = new Gson();
       PipedReader pipedReader0 = new PipedReader();
@@ -1526,7 +1526,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test083()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLong> class0 = AtomicLong.class;
@@ -1542,7 +1542,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test084()  throws Throwable  {
       Class<Double> class0 = Double.TYPE;
       Gson gson0 = new Gson();
@@ -1555,7 +1555,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test085()  throws Throwable  {
       Gson.checkValidFloatingPoint((-1440.3));
       Gson gson0 = new Gson();
@@ -1576,7 +1576,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test086()  throws Throwable  {
       Gson gson0 = new Gson();
       // Undeclared exception!
@@ -1592,7 +1592,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test087()  throws Throwable  {
       Gson gson0 = new Gson();
       Double double0 = new Double((-1.0));
@@ -1613,7 +1613,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test088()  throws Throwable  {
       Gson.checkValidFloatingPoint(446.6);
       Gson gson0 = new Gson();
@@ -1633,7 +1633,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test089()  throws Throwable  {
       Gson gson0 = new Gson();
       Gson.FutureTypeAdapter<HashMap<Short, Object>> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<HashMap<Short, Object>>();
@@ -1654,7 +1654,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test090()  throws Throwable  {
       Gson gson0 = new Gson();
       Gson gson1 = new Gson();
@@ -1673,7 +1673,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test091()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLongArray> class0 = AtomicLongArray.class;
@@ -1682,7 +1682,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test092()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.class;
@@ -1695,7 +1695,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test093()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<String> class0 = String.class;
@@ -1720,7 +1720,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test094()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.htmlSafe();
@@ -1741,7 +1741,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test095()  throws Throwable  {
       Gson gson0 = new Gson();
       Long long0 = new Long(1315L);
@@ -1762,7 +1762,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test096()  throws Throwable  {
       Gson gson0 = new Gson();
       Long long0 = new Long(1315L);
@@ -1781,7 +1781,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertNotNull(typeAdapter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test097()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader(" M2");
@@ -1799,7 +1799,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test098()  throws Throwable  {
       FileSystemHandling.shouldAllThrowIOExceptions();
       Class<Float> class0 = Float.TYPE;
@@ -1823,7 +1823,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test099()  throws Throwable  {
       HashMap<Short, Object> hashMap0 = new HashMap<Short, Object>();
       Gson gson0 = new Gson();
@@ -1841,7 +1841,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test100()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<DefaultDateTypeAdapter> class0 = DefaultDateTypeAdapter.class;
@@ -1860,7 +1860,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test101()  throws Throwable  {
       Gson.FutureTypeAdapter<Integer> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Integer>();
       Gson gson0 = new Gson();
@@ -1883,7 +1883,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test102()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.TYPE;
@@ -1906,7 +1906,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test103()  throws Throwable  {
       Gson gson0 = new Gson();
       // Undeclared exception!
@@ -1922,7 +1922,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test104()  throws Throwable  {
       Gson gson0 = new Gson();
       // Undeclared exception!
@@ -1938,7 +1938,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test105()  throws Throwable  {
       Gson gson0 = new Gson();
       Double double0 = new Double(0.0);
@@ -1955,7 +1955,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test106()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[1];
@@ -1972,7 +1972,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test107()  throws Throwable  {
       Gson gson0 = new Gson();
       Gson gson1 = new Gson();
@@ -1991,7 +1991,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test108()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = Excluder.DEFAULT;
@@ -2003,7 +2003,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test109()  throws Throwable  {
       Gson gson0 = new Gson();
       AtomicLong atomicLong0 = new AtomicLong(0L);
@@ -2012,7 +2012,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test110()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = Excluder.DEFAULT;
@@ -2026,7 +2026,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test111()  throws Throwable  {
       Gson.FutureTypeAdapter<Integer> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Integer>();
       Gson gson0 = new Gson();
@@ -2050,7 +2050,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test112()  throws Throwable  {
       FileSystemHandling.shouldThrowIOException((EvoSuiteFile) null);
       FileSystemHandling.setPermissions((EvoSuiteFile) null, true, true, true);
@@ -2071,7 +2071,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test113()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Long> class0 = Long.TYPE;
@@ -2080,7 +2080,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test114()  throws Throwable  {
       Gson gson0 = new Gson();
       Double double0 = new Double(1.0);
@@ -2106,7 +2106,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test115()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[17];
@@ -2125,7 +2125,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test116()  throws Throwable  {
       Gson gson0 = new Gson();
       Float float0 = new Float(448.37F);
@@ -2147,7 +2147,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test117()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.TYPE;
@@ -2165,7 +2165,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test118()  throws Throwable  {
       Gson gson0 = new Gson();
       Float float0 = new Float(0.888F);
@@ -2183,7 +2183,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test119()  throws Throwable  {
       Gson.FutureTypeAdapter<Double> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Double>();
       Excluder excluder0 = new Excluder();
@@ -2212,7 +2212,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test120()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<String> class0 = String.class;
@@ -2234,7 +2234,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertNotNull(object0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test121()  throws Throwable  {
       Gson gson0 = new Gson();
       TypeToken<DefaultDateTypeAdapter> typeToken0 = null;
@@ -2250,7 +2250,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test122()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("kx+2tP");
@@ -2272,7 +2272,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test123()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.serializeNulls();
@@ -2295,7 +2295,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test124()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[1];
@@ -2314,7 +2314,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test125()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toString();
@@ -2333,7 +2333,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test126()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Excluder> class0 = Excluder.class;

@@ -16,10 +16,10 @@ import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test00()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.beginArray();
@@ -28,7 +28,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter1.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test01()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -37,7 +37,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter1, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test02()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -46,7 +46,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter1, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test03()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -54,7 +54,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonTreeWriter0, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test04()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setHtmlSafe(true);
@@ -62,7 +62,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter0, jsonTreeWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test05()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -70,7 +70,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test06()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setHtmlSafe(true);
@@ -78,7 +78,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter0, jsonTreeWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test07()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -86,7 +86,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonTreeWriter0, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test08()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       Byte byte0 = new Byte((byte)1);
@@ -95,7 +95,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test09()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -108,7 +108,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test10()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -117,7 +117,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test11()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       Boolean boolean0 = Boolean.TRUE;
@@ -126,7 +126,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test12()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -135,7 +135,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test13()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -143,7 +143,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test14()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setHtmlSafe(true);
@@ -151,7 +151,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test15()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -159,7 +159,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter0, jsonTreeWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test16()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setHtmlSafe(true);
@@ -167,7 +167,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test17()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -175,7 +175,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonTreeWriter0, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test18()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -183,7 +183,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test19()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setHtmlSafe(true);
@@ -191,7 +191,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonTreeWriter0, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test20()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.beginObject();
@@ -200,7 +200,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter1.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test21()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -210,14 +210,14 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonElement0.isJsonObject());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test22()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonElement jsonElement0 = jsonTreeWriter0.get();
       assertTrue(jsonElement0.isJsonNull());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test23()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -226,7 +226,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonElement0.isJsonPrimitive());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test24()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.beginObject();
@@ -235,7 +235,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter1, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test25()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -244,7 +244,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter0, jsonWriter1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test26()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -253,7 +253,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test27()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -262,7 +262,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test28()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -271,7 +271,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonTreeWriter0, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test29()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setHtmlSafe(true);
@@ -282,7 +282,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonWriter1, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test30()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -290,7 +290,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test31()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -302,7 +302,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test32()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.close();
@@ -319,7 +319,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test33()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.close();
@@ -336,7 +336,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test34()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.close();
@@ -353,7 +353,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test35()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.close();
@@ -371,7 +371,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test36()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginObject();
@@ -388,7 +388,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test37()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.close();
@@ -405,7 +405,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test38()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.close();
@@ -422,7 +422,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test39()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.close();
@@ -439,7 +439,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test40()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -455,7 +455,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test41()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -464,7 +464,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertSame(jsonTreeWriter0, jsonWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test42()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setLenient(true);
@@ -472,21 +472,21 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonWriter0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test43()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.value((Boolean) null);
       assertSame(jsonWriter0, jsonTreeWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test44()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.value((String) null);
       assertTrue(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test45()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -503,7 +503,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test46()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginObject();
@@ -521,7 +521,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test47()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       // Undeclared exception!
@@ -537,7 +537,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test48()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       // Undeclared exception!
@@ -553,7 +553,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test49()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.beginArray();
@@ -572,7 +572,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test50()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginObject();
@@ -590,7 +590,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test51()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginObject();
@@ -607,7 +607,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test52()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.beginObject();
@@ -625,7 +625,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test53()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       // Undeclared exception!
@@ -641,7 +641,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test54()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.beginObject();
@@ -658,7 +658,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test55()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.setSerializeNulls(false);
@@ -668,7 +668,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter1.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test56()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       JsonWriter jsonWriter0 = jsonTreeWriter0.beginObject();
@@ -677,7 +677,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertFalse(jsonWriter1.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test57()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginObject();
@@ -686,7 +686,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       assertTrue(jsonElement0.isJsonObject());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test58()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginArray();
@@ -704,14 +704,14 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test59()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.flush();
       assertFalse(jsonTreeWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test60()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       jsonTreeWriter0.beginObject();
@@ -730,7 +730,7 @@ public class JsonTreeWriter_ESTest extends JsonTreeWriter_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test61()  throws Throwable  {
       JsonTreeWriter jsonTreeWriter0 = new JsonTreeWriter();
       // Undeclared exception!

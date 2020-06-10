@@ -51,10 +51,10 @@ import org.evosuite.runtime.mock.java.io.MockPrintWriter;
 import org.evosuite.runtime.mock.java.util.MockDate;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class Gson_ESTest extends Gson_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test000()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -90,7 +90,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test001()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -126,7 +126,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test002()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -164,7 +164,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(class1.isAnnotation());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test003()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -224,7 +224,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test004()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -250,12 +250,12 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonObject0.isJsonPrimitive());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test005()  throws Throwable  {
       Gson.checkValidFloatingPoint(545.79137192);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test006()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -299,7 +299,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertEquals(42.0, atomicLong0.doubleValue(), 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test007()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -349,7 +349,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonWriter0.isHtmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test008()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -371,7 +371,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonElement0.isJsonNull());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test009()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -398,7 +398,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonPrimitive0.isJsonNull());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test010()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -420,7 +420,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(jsonElement0.isJsonObject());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test011()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       assertNotNull(jsonArray0);
@@ -457,7 +457,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertEquals(0, jsonArray1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test012()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -497,7 +497,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(class1.isArray());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test013()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -522,7 +522,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(jsonNull0.isJsonNull());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test014()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -536,7 +536,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test015()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -551,7 +551,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertEquals("Fri Feb 14 20:21:21 GMT 2014", mockDate0.toString());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test016()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -586,7 +586,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(class0.isAnnotation());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test017()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -603,7 +603,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test018()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       assertNotNull(jsonArray0);
@@ -634,7 +634,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertEquals("[]", atomicLongArray0.toString());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test019()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -655,7 +655,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test020()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -680,7 +680,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test021()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -704,7 +704,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test022()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -756,7 +756,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test023()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -793,7 +793,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test024()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -813,7 +813,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test025()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -877,7 +877,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test026()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -909,7 +909,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test027()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -933,7 +933,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test028()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -968,7 +968,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test029()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1046,7 +1046,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test030()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1082,7 +1082,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test031()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1106,7 +1106,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test032()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1127,7 +1127,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJson((Object) string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test033()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1158,7 +1158,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test034()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1236,7 +1236,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test035()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1288,7 +1288,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test036()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1343,7 +1343,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test037()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1368,7 +1368,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test038()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1390,7 +1390,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test039()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1411,7 +1411,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test040()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1431,7 +1431,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test041()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1452,7 +1452,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test042()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1469,7 +1469,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test043()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1489,7 +1489,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test044()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1527,7 +1527,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test045()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1560,7 +1560,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test046()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1581,7 +1581,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test047()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1611,7 +1611,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.fromJson(jsonReader0, (Type) class0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test048()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1653,7 +1653,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test049()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1689,7 +1689,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test050()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1724,7 +1724,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test051()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1763,7 +1763,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test052()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1812,7 +1812,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test053()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1841,7 +1841,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test054()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1872,7 +1872,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test055()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1902,7 +1902,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test056()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1930,7 +1930,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test057()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -1951,7 +1951,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test058()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       assertNotNull(jsonArray0);
@@ -1980,7 +1980,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test059()  throws Throwable  {
       Gson.FutureTypeAdapter<String> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<String>();
       assertNotNull(gson_FutureTypeAdapter0);
@@ -1988,7 +1988,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson_FutureTypeAdapter0.setDelegate(gson_FutureTypeAdapter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test060()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2020,7 +2020,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(class0.isSynthetic());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test061()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2064,7 +2064,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test062()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2087,7 +2087,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonWriter0.getSerializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test063()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2107,7 +2107,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test064()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2137,7 +2137,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test065()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2154,7 +2154,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test066()  throws Throwable  {
       Class<AtomicLongArray> class0 = AtomicLongArray.class;
       TypeToken<AtomicLongArray> typeToken0 = TypeToken.get(class0);
@@ -2178,7 +2178,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test067()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       assertNotNull(jsonArray0);
@@ -2207,7 +2207,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test068()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2227,7 +2227,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test069()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2253,7 +2253,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test070()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2280,7 +2280,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test071()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2315,7 +2315,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test072()  throws Throwable  {
       Gson.FutureTypeAdapter<Gson.FutureTypeAdapter<AtomicLong>> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Gson.FutureTypeAdapter<AtomicLong>>();
       assertNotNull(gson_FutureTypeAdapter0);
@@ -2333,7 +2333,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test073()  throws Throwable  {
       Gson.FutureTypeAdapter<Gson.FutureTypeAdapter<AtomicLong>> gson_FutureTypeAdapter0 = new Gson.FutureTypeAdapter<Gson.FutureTypeAdapter<AtomicLong>>();
       assertNotNull(gson_FutureTypeAdapter0);
@@ -2351,7 +2351,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test074()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2379,7 +2379,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test075()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2409,7 +2409,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test076()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2441,7 +2441,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(class0.isAnnotation());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test077()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2473,7 +2473,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(class0.isArray());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test078()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2498,7 +2498,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test079()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2517,7 +2517,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertEquals("null", charArrayWriter0.toString());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test080()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2534,7 +2534,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(jsonElement0.isJsonPrimitive());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test081()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2579,7 +2579,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test082()  throws Throwable  {
       Gson gson0 = new Gson();
       assertNotNull(gson0);
@@ -2625,7 +2625,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(class0.isSynthetic());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test083()  throws Throwable  {
       Gson gson0 = new Gson();
       PipedWriter pipedWriter0 = new PipedWriter();
@@ -2633,7 +2633,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.toJsonTree((Object) pipedWriter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test084()  throws Throwable  {
       Gson gson0 = new Gson();
       // Undeclared exception!
@@ -2649,7 +2649,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test085()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       jsonArray0.add((Boolean) null);
@@ -2668,7 +2668,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test086()  throws Throwable  {
       Gson gson0 = new Gson();
       AtomicLongArray atomicLongArray0 = new AtomicLongArray(2401);
@@ -2680,7 +2680,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       gson0.fromJson(string0, (Type) class1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test087()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Float> class0 = Float.TYPE;
@@ -2689,7 +2689,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test088()  throws Throwable  {
       Gson gson0 = new Gson();
       Float float0 = new Float(1.0);
@@ -2698,7 +2698,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test089()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Float> class0 = Float.TYPE;
@@ -2708,7 +2708,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test090()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Float> class0 = Float.TYPE;
@@ -2721,7 +2721,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test091()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.TYPE;
@@ -2730,7 +2730,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test092()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Double> class0 = Double.TYPE;
@@ -2740,7 +2740,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test093()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.fieldNamingStrategy();
@@ -2748,7 +2748,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test094()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Float> class0 = Float.class;
@@ -2757,7 +2757,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test095()  throws Throwable  {
       Gson gson0 = new Gson();
       AtomicLong atomicLong0 = new AtomicLong(22L);
@@ -2766,7 +2766,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test096()  throws Throwable  {
       Gson gson0 = new Gson();
       Excluder excluder0 = gson0.excluder();
@@ -2775,14 +2775,14 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertNotNull(excluder0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test097()  throws Throwable  {
       Gson gson0 = new Gson();
       boolean boolean0 = gson0.htmlSafe();
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test098()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLongArray> class0 = AtomicLongArray.class;
@@ -2799,7 +2799,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test099()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLong> class0 = AtomicLong.class;
@@ -2815,7 +2815,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test100()  throws Throwable  {
       Gson gson0 = new Gson();
       gson0.toString();
@@ -2823,7 +2823,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertFalse(gson0.serializeNulls());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test101()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLongArray> class0 = AtomicLongArray.class;
@@ -2841,7 +2841,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test102()  throws Throwable  {
       Gson gson0 = new Gson();
       PipedReader pipedReader0 = new PipedReader();
@@ -2858,7 +2858,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test103()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicLongArray> class0 = AtomicLongArray.class;
@@ -2875,7 +2875,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test104()  throws Throwable  {
       Gson gson0 = new Gson();
       String string0 = gson0.toJson((Object) null);
@@ -2883,7 +2883,7 @@ public class Gson_ESTest extends Gson_ESTest_scaffolding {
       assertTrue(gson0.htmlSafe());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test105()  throws Throwable  {
       Gson gson0 = new Gson();
       boolean boolean0 = gson0.serializeNulls();

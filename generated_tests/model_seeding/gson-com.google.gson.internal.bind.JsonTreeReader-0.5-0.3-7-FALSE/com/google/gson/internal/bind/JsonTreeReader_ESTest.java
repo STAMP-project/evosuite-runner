@@ -22,10 +22,10 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test00()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       jsonArray0.add("2~^0&X&wD$-XLVN'");
@@ -35,7 +35,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(jsonTreeReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test01()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       Boolean boolean0 = Boolean.valueOf("S~4FWZ");
@@ -46,7 +46,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("S~4FWZ", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test02()  throws Throwable  {
       Float float0 = new Float(0.9168919894892849);
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(float0);
@@ -55,7 +55,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(0L, long0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test03()  throws Throwable  {
       Float float0 = new Float((-1.0));
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(float0);
@@ -64,7 +64,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals((-1L), long0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test04()  throws Throwable  {
       Float float0 = new Float(0.9168919894892849);
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(float0);
@@ -73,7 +73,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(0, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test05()  throws Throwable  {
       Byte byte0 = new Byte((byte)0);
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(byte0);
@@ -82,7 +82,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(0.0, double0, 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test06()  throws Throwable  {
       Boolean boolean0 = Boolean.TRUE;
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(boolean0);
@@ -91,7 +91,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertTrue(boolean1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test07()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -110,7 +110,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test08()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       jsonObject0.add("comsgoogle.gson.JsonIOException", jsonObject0);
@@ -130,7 +130,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test09()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -145,7 +145,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test10()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -163,7 +163,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test11()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -182,7 +182,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test12()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       jsonObject0.add("comsgoogle.gson.JsonIOException", jsonObject0);
@@ -202,7 +202,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test13()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -217,7 +217,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test14()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -236,7 +236,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test15()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -251,7 +251,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test16()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -270,7 +270,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test17()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -287,7 +287,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test18()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -302,7 +302,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test19()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       jsonObject0.add("comsgoogle.gson.JsonIOException", jsonObject0);
@@ -322,7 +322,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test20()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -337,7 +337,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test21()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -356,7 +356,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test22()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("x4SR[N");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -373,7 +373,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test23()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -392,7 +392,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test24()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("rFRP.4o");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -409,7 +409,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test25()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -424,7 +424,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test26()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -443,7 +443,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test27()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("c@7Td:?Hct$");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -456,7 +456,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test28()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -471,7 +471,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test29()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -490,7 +490,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test30()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -505,7 +505,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test31()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -523,7 +523,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test32()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -538,7 +538,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test33()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray(84);
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -558,7 +558,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test34()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -575,7 +575,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test35()  throws Throwable  {
       JsonElement jsonElement0 = mock(JsonElement.class, new ViolatedAssumptionAnswer());
       doReturn((String) null).when(jsonElement0).toString();
@@ -592,7 +592,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test36()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -611,7 +611,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test37()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -628,7 +628,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test38()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -643,7 +643,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test39()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -658,7 +658,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test40()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray(0);
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -677,7 +677,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test41()  throws Throwable  {
       JsonNull jsonNull0 = JsonNull.INSTANCE;
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonNull0);
@@ -694,7 +694,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test42()  throws Throwable  {
       JsonElement jsonElement0 = mock(JsonElement.class, new ViolatedAssumptionAnswer());
       doReturn((String) null).when(jsonElement0).toString();
@@ -711,7 +711,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test43()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -720,7 +720,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("$.", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test44()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       Character character0 = new Character('F');
@@ -732,7 +732,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("$.null", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test45()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -741,7 +741,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("$[0]", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test46()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -749,7 +749,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("$", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test47()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -757,7 +757,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("$", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test48()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       jsonTreeReader0.close();
@@ -774,7 +774,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test49()  throws Throwable  {
       JsonNull jsonNull0 = JsonNull.INSTANCE;
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonNull0);
@@ -782,7 +782,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.NULL, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test50()  throws Throwable  {
       Boolean boolean0 = Boolean.FALSE;
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(boolean0);
@@ -791,7 +791,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.BOOLEAN, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test51()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       Character character0 = new Character('F');
@@ -803,7 +803,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.STRING, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test52()  throws Throwable  {
       Byte byte0 = new Byte((byte)0);
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(byte0);
@@ -812,7 +812,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.NUMBER, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test53()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -820,7 +820,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.BEGIN_ARRAY, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test54()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -828,7 +828,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.BEGIN_OBJECT, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test55()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -837,7 +837,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.END_ARRAY, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test56()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -856,7 +856,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test57()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       jsonObject0.add("key == null", jsonObject0);
@@ -866,7 +866,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.NAME, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test58()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -875,7 +875,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.END_OBJECT, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test59()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -890,7 +890,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test60()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       jsonObject0.add("", jsonObject0);
@@ -910,7 +910,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test61()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -928,7 +928,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test62()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -946,7 +946,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test63()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -955,7 +955,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(JsonToken.END_DOCUMENT, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test64()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -972,7 +972,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test65()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("7");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -980,7 +980,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(7, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test66()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -991,7 +991,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals((-527), int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test67()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -1008,7 +1008,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test68()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("7");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -1016,7 +1016,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(7L, long0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test69()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       Byte byte0 = new Byte((byte)25);
@@ -1027,7 +1027,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(25L, long0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test70()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("Infinity");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -1044,7 +1044,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test71()  throws Throwable  {
       Float float0 = new Float((-2215.78));
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(float0);
@@ -1054,7 +1054,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals((-2215.780029296875), double0, 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test72()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -1071,7 +1071,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test73()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       jsonArray0.add((String) null);
@@ -1081,7 +1081,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(jsonTreeReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test74()  throws Throwable  {
       Boolean boolean0 = Boolean.valueOf("1");
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(boolean0);
@@ -1090,7 +1090,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(boolean1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test75()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       jsonObject0.add("key == null", jsonObject0);
@@ -1101,7 +1101,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("key == null", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test76()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -1118,7 +1118,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test77()  throws Throwable  {
       Byte byte0 = new Byte((byte)2);
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(byte0);
@@ -1127,7 +1127,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertNotNull(string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test78()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -1135,7 +1135,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test79()  throws Throwable  {
       JsonNull jsonNull0 = JsonNull.INSTANCE;
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonNull0);
@@ -1143,7 +1143,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(jsonTreeReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test80()  throws Throwable  {
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("7");
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonPrimitive0);
@@ -1151,7 +1151,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals(7.0, double0, 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test81()  throws Throwable  {
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader((JsonElement) null);
       // Undeclared exception!
@@ -1166,7 +1166,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test82()  throws Throwable  {
       Float float0 = new Float((-2215.78));
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(float0);
@@ -1185,7 +1185,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test83()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -1194,7 +1194,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test84()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -1202,7 +1202,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test85()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -1211,7 +1211,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test86()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
@@ -1220,7 +1220,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(jsonTreeReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test87()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       Double double0 = new Double((-434.0));
@@ -1231,7 +1231,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals((-434.0), double1, 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test88()  throws Throwable  {
       Float float0 = new Float((-1.0));
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(float0);
@@ -1240,7 +1240,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertEquals("JsonTreeReader", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test89()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonArray0);
@@ -1249,7 +1249,7 @@ public class JsonTreeReader_ESTest extends JsonTreeReader_ESTest_scaffolding {
       assertFalse(jsonTreeReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test90()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       JsonTreeReader jsonTreeReader0 = new JsonTreeReader(jsonObject0);
