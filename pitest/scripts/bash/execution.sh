@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 execution_id=$1
 project=$2

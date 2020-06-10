@@ -59,7 +59,6 @@ do
     for clone_seed_p in "${clone_seed[@]}"
     do
         IFS=,
-        echo "e"
         # for each class which is indicated in the classes.csv file
         while read class project
         do
@@ -111,7 +110,7 @@ do
             do
                 sleep 1
             done
-
+            pgrep -l javac
             # 3- Run the main test for 5 times. if it fails even once, we count it as a flaky test and we will ignore it.
             for ((run=1;run<=$RunLimit;run++))
             do
@@ -145,7 +144,7 @@ do
             mutableCPs=$(python pitest/scripts/python/export_mutable_cps.py $projectCP)
             echo "--> cp: $classPaths, src: $sourceDirs, outDir: $outDir, mutableCps: $mutableCPs, logDir: $executionLogDir"
             # Run PIT
-            . pitest/scripts/bash/execution.sh $execution_id $project_name $classPaths $outDir $target_class $sourceDirs "$mutableCPs" "$executionLogDir" "$testDir" "$outDir"
+            sudo bash pitest/scripts/bash/execution.sh $execution_id $project_name $classPaths $outDir $target_class $sourceDirs "$mutableCPs" "$executionLogDir" "$testDir" "$outDir"
 
             # Manage number of parallel processes
             while (( $(pgrep -l java | wc -l) >= $parallelExecutions ))
@@ -156,4 +155,8 @@ do
         done < "$classes"
     done
 done
-return
+
+   while (( $(pgrep -l java | wc -l) >= 1 ))
+            do
+                sleep 1
+            done
