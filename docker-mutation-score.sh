@@ -60,13 +60,13 @@ tudelft/evosuite-runner
 
 if [ "$flagmodel" -eq 1 ]; then
     #Model seeding
-     docker exec -it evosuite-runner-container bash -c "pitest/scripts/bash/run_pitest.sh  -m $random_abstract_test_selection $rounds 5 classes.csv $LIMIT $p_object_pool $seed_clone > consoleLog/PITOutModel.txt 2> consoleLog/PITErrModel.txt"
+     docker exec -it evosuite-runner-container bash -c "pitest/scripts/bash/run_pitest.sh -m $random_abstract_test_selection $rounds $LIMIT classes.csv 5 $p_object_pool $seed_clone > consoleLog/PITOutModel.txt 2> consoleLog/PITErrModel.txt"
 elif [[ "$flagtest" -eq 1  ]]; then
     #Test seeding
-    docker exec -it evosuite-runner-container bash -c "pitest/scripts/bash/run_pitest.sh  -t $rounds 5 classes.csv $LIMIT $p_object_pool $seed_clone > consoleLog/PITOutTest.txt 2> consoleLog/PITErrTest.txt"
+    docker exec -it evosuite-runner-container bash -c "pitest/scripts/bash/run_pitest.sh -t $rounds $LIMIT classes.csv 5 $p_object_pool $seed_clone > consoleLog/PITOutTest.txt 2> consoleLog/PITErrTest.txt"
 else
     # Pure EvoSuite
-    docker exec -it evosuite-runner-container bash -c "pitest/scripts/bash/run_pitest.sh  $rounds 5 classes.csv $LIMIT 0 0 > consoleLog/PITOutPure.txt 2> consoleLog/PITErrPure.txt"
+    docker exec -it evosuite-runner-container bash -c "pitest/scripts/bash/run_pitest.sh $rounds $LIMIT classes.csv 5 0 0 > consoleLog/PITOutPure.txt 2> consoleLog/PITErrPure.txt"
 fi
 
 echo "Done!"
