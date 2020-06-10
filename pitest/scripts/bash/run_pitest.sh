@@ -78,38 +78,49 @@ do
                 p_object_pool="$p_object_pool"
                 testDir="$PWD/generated_tests/"$seeding_type"_seeding/$project_name-$target_class-$clone_seed_p-$p_object_pool-$execution_id-$random_abstract_test_selection"
                 pitDir="pitest/out/"$seeding_type"_seeding/$project_name-$target_class-$clone_seed_p-$p_object_pool-$execution_id-$random_abstract_test_selection"
+                executionLogDir="pitest/logs/"$seeding_type"_seeding/$project_name-$target_class-$clone_seed_p-$p_object_pool-$execution_id-$random_abstract_test_selection.txt"
             else
                 seeding_type="no"
                 clone_seed_p=""
                 p_object_pool=""
                 testDir="$PWD/generated_tests/"$seeding_type"_seeding/$project_name-$target_class-0-$execution_id"
                 pitDir="pitest/out/"$seeding_type"_seeding/$project_name-$target_class-0-$execution_id"
+                executionLogDir="pitest/logs/"$seeding_type"_seeding/$project_name-$target_class-0-$execution_id.txt"
             fi
-            
-            # 1- Compile scaffolding
-            find "$testDir" -type f -name "*_scaffolding.java" | while read scaffoldingTest; do
-                javac -cp "$projectCP$test_execution_libs" $scaffoldingTest &
-            done
-            scaffodlingClassPathEntryDir="$testDir"
-            # 1.a- check if the PIT report is already generated
+            # # 1.a- check if the PIT report is already generated
             if [ -d $pitDir ]; then
                 echo "The PIT report is already available in $pitDir"
                 continue
             fi
+            # 1- Compile scaffolding
+            find "$testDir" -type f -name "*_scaffolding.java" | while read scaffoldingTest; do
+                echo "Compile $scaffoldingTest"
+                javac -cp "$projectCP$test_execution_libs" $scaffoldingTest &
+            done
+            scaffodlingClassPathEntryDir="$testDir"
+            
             find $testDir -type f -name "*_ESTest.java" | while read mainTest; do
                 # 1.b- Seperate classloaders
                 python run-scripts/python/separate-loader-editor.py $mainTest
                 # 2- Compile the main test
+                echo "Compile $mainTest"
                 javac -cp "$projectCP$test_execution_libs$scaffodlingClassPathEntryDir" $mainTest &
+            done
+
+             while (( $(pgrep -l javac | wc -l) > 1 ))
+            do
+                sleep 1
             done
 
             # 3- Run the main test for 5 times. if it fails even once, we count it as a flaky test and we will ignore it.
             for ((run=1;run<=$RunLimit;run++))
             do
+                echo "$projectCP$test_execution_libs$scaffodlingClassPathEntryDir"
                 java -cp "$projectCP$test_execution_libs$scaffodlingClassPathEntryDir" org.junit.runner.JUnitCore $target_class"_ESTest" > $scaffodlingClassPathEntryDir/junit_result.txt
                 cat $scaffodlingClassPathEntryDir/junit_result.txt
                 failingTestsOutput=$(python pitest/scripts/python/parse_failing_tests.py "$scaffodlingClassPathEntryDir/junit_result.txt")
                 read -r -a array <<< "$failingTestsOutput"
+                flaky_tests=()
                 for index in "${!array[@]}"
                     do
                         containsElement "${array[index]}" "${flaky_tests[@]}"
@@ -117,55 +128,32 @@ do
                             flaky_tests+=("${array[index]}")
                         fi
                     done
-                printf 'The test is: %s\n' "${flaky_tests[@]}"
-
                 if (( ${#flaky_tests[@]} )); then
-                    for mainTest in `find $resultDir -name "*_ESTest.java" -type f`; do
+                    for mainTest in `find $testDir -name "*_ESTest.java" -type f`; do
+                        echo " remove ${flaky_tests[@]} from $mainTest"
                         java -jar pitest/libs/flaky_related/IgnoreAdder.jar $mainTest "${flaky_tests[@]}"
+                        # Compile main tests again after potential changes (changes = add @ignore to flaky test cases).
+                        javac -cp "$projectCP$test_execution_libs$scaffodlingClassPathEntryDir" $mainTest
                     done
                 fi
             done
-            # 4- Compile main tests again after potential changes (changes = add @ignore to flaky test cases).
-            javac -cp "$projectCP$test_execution_libs$scaffodlingClassPathEntryDir" $mainTest
             pitestLibs=$(ls -d -1 "pitest/libs/pitest/"* | tr '\n' ':')
-
-            # 5- Run pitest
+            # 4- Run pitest
             classPaths="$projectCP$test_execution_libs$scaffodlingClassPathEntryDir:$pitestLibs"
-            #ToDo: add source
-            sourceDirs="sources/$project_name/src"
+            sourceDirs="sources/$project_name/$project_name/src"
             outDir=$pitDir
             mutableCPs=$(python pitest/scripts/python/export_mutable_cps.py $projectCP)
-            # Add PIT execution command and parser
+            echo "--> cp: $classPaths, src: $sourceDirs, outDir: $outDir, mutableCps: $mutableCPs, logDir: $executionLogDir"
+            # Run PIT
+            . pitest/scripts/bash/execution.sh $execution_id $project_name $classPaths $outDir $target_class $sourceDirs "$mutableCPs" "$executionLogDir" "$testDir" "$outDir"
+
+            # Manage number of parallel processes
+            while (( $(pgrep -l java | wc -l) >= $parallelExecutions ))
+            do
+                sleep 1
+            done
 
         done < "$classes"
     done
 done
 return
-
-
-    #     # 5- Run pitest
-    #     classPaths="$projectCP$test_execution_libs$scaffodlingClassPathEntryDir:$pitestLibs"
-    #     sourceDirs="sources/$project_name/src"
-    #     outDir="pitest/out/$seeding_type/$project_name-$target_class-$clone_seed_p-$execution_id"
-    #     mutableCPs=$(python pitest/scripts/python/export_mutable_cps.py $projectCP)
-
-
-    #     java -cp $classPaths org.pitest.mutationtest.commandline.MutationCoverageReport \
-    #   --reportDir $outDir \
-    #   --targetClasses $target_class \
-    #   --targetTests $target_class"_ESTest" \
-    #   --mutableCodePaths "$mutableCPs" \
-    #   --testPlugin evosuite \
-    #   --sourceDirs $sourceDirs \
-    #   --mutators ALL \
-    #   --timestampedReports=false \
-    #   --outputFormats "HTML,XML,CSV" > "pitest/logs/$project_name-$target_class-$clone_seed_p-$execution_id.txt" 2>&1 &
-
-    #   pid=$!
-
-    #   while (( $(pgrep -l java | wc -l) >= $parallelExecutions ))
-    # do
-    #   sleep 1
-    # done
-    # done
-# done
