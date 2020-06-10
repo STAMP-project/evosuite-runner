@@ -18,10 +18,10 @@ import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test000()  throws Throwable  {
       StringReader stringReader0 = new StringReader(")kojBX3{N>qVn");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -30,7 +30,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.STRING, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test001()  throws Throwable  {
       StringReader stringReader0 = new StringReader(" column ");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -39,7 +39,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test002()  throws Throwable  {
       StringReader stringReader0 = new StringReader("*/");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -57,7 +57,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test003()  throws Throwable  {
       StringReader stringReader0 = new StringReader("/>[w{J) ' M");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -76,7 +76,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test004()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -85,7 +85,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test005()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -102,7 +102,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test006()  throws Throwable  {
       StringReader stringReader0 = new StringReader("null");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -120,7 +120,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test007()  throws Throwable  {
       StringReader stringReader0 = new StringReader("false");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -137,7 +137,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test008()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -154,7 +154,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test009()  throws Throwable  {
       StringReader stringReader0 = new StringReader("FALSE");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -172,7 +172,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test010()  throws Throwable  {
       StringReader stringReader0 = new StringReader("&;sA{");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -189,7 +189,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test011()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -199,7 +199,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test012()  throws Throwable  {
       StringReader stringReader0 = new StringReader("0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -217,7 +217,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test013()  throws Throwable  {
       StringReader stringReader0 = new StringReader("/");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -234,7 +234,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test014()  throws Throwable  {
       StringReader stringReader0 = new StringReader("0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -242,7 +242,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(0L, long0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test015()  throws Throwable  {
       StringReader stringReader0 = new StringReader("0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -250,7 +250,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(0, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test016()  throws Throwable  {
       StringReader stringReader0 = new StringReader("0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -258,7 +258,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(0.0, double0, 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test017()  throws Throwable  {
       StringReader stringReader0 = new StringReader(",%7:Gm`+7sFn");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -267,7 +267,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(" at line 1 column 1 path $", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test018()  throws Throwable  {
       StringReader stringReader0 = new StringReader("NUMBER");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -276,7 +276,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test019()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -294,7 +294,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test020()  throws Throwable  {
       StringReader stringReader0 = new StringReader("KmUOwgFg@");
       stringReader0.close();
@@ -311,7 +311,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test021()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -329,7 +329,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test022()  throws Throwable  {
       StringReader stringReader0 = new StringReader("0");
       stringReader0.close();
@@ -346,7 +346,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test023()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -362,7 +362,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test024()  throws Throwable  {
       StringReader stringReader0 = new StringReader("z;");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -379,7 +379,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test025()  throws Throwable  {
       StringReader stringReader0 = new StringReader("yvl|s");
       stringReader0.close();
@@ -396,7 +396,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test026()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -412,7 +412,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test027()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -429,7 +429,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test028()  throws Throwable  {
       StringReader stringReader0 = new StringReader("null");
       stringReader0.close();
@@ -446,7 +446,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test029()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -462,7 +462,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test030()  throws Throwable  {
       StringReader stringReader0 = new StringReader("qjll");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -479,7 +479,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test031()  throws Throwable  {
       StringReader stringReader0 = new StringReader("Unterminated string");
       stringReader0.close();
@@ -496,7 +496,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test032()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -512,7 +512,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test033()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -529,7 +529,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test034()  throws Throwable  {
       StringReader stringReader0 = new StringReader("'eXY\"9g9('1>&[6dNs$");
       stringReader0.close();
@@ -546,7 +546,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test035()  throws Throwable  {
       StringReader stringReader0 = new StringReader("[L");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -563,7 +563,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test036()  throws Throwable  {
       StringReader stringReader0 = new StringReader("/");
       stringReader0.close();
@@ -580,7 +580,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test037()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -596,7 +596,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test038()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -613,7 +613,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test039()  throws Throwable  {
       StringReader stringReader0 = new StringReader("-z7|4c4 ");
       stringReader0.close();
@@ -630,7 +630,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test040()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -646,7 +646,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test041()  throws Throwable  {
       StringReader stringReader0 = new StringReader("#iaYtQOlbedc[3W6");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -663,7 +663,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test042()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       stringReader0.close();
@@ -680,7 +680,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test043()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -696,7 +696,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test044()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{&g1qI/Wv_:lz7p");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -714,7 +714,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test045()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{&g1@VqI/Wv_:l7p");
       stringReader0.close();
@@ -731,7 +731,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test046()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -747,7 +747,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test047()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{&g1qI/Wv_:lz7p");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -764,7 +764,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test048()  throws Throwable  {
       StringReader stringReader0 = new StringReader("null");
       stringReader0.close();
@@ -781,7 +781,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test049()  throws Throwable  {
       StringReader stringReader0 = new StringReader("-{L![");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -797,7 +797,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test050()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{TZsFI/Tv_:lz7p");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -814,7 +814,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test051()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       stringReader0.close();
@@ -831,7 +831,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test052()  throws Throwable  {
       StringReader stringReader0 = new StringReader("0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -849,7 +849,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test053()  throws Throwable  {
       StringReader stringReader0 = new StringReader(",%7:m+7sFn");
       stringReader0.close();
@@ -866,7 +866,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test054()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -882,7 +882,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test055()  throws Throwable  {
       StringReader stringReader0 = new StringReader("n94ull");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -898,7 +898,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test056()  throws Throwable  {
       StringReader stringReader0 = new StringReader("null");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -915,7 +915,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test057()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       stringReader0.close();
@@ -932,7 +932,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test058()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -949,7 +949,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test059()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       stringReader0.close();
@@ -966,7 +966,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test060()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -975,7 +975,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("$", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test061()  throws Throwable  {
       StringReader stringReader0 = new StringReader("[tZ=!*QbX=");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -986,7 +986,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("$[1]", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test062()  throws Throwable  {
       StringReader stringReader0 = new StringReader("+jN-LLN\u0007");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1000,7 +1000,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test063()  throws Throwable  {
       StringReader stringReader0 = new StringReader("\"DzMHXtiZ!");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1016,7 +1016,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test064()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1024,7 +1024,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.BOOLEAN, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test065()  throws Throwable  {
       StringReader stringReader0 = new StringReader("'eXY\"9g9('1>&[6dNs$");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1035,7 +1035,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.STRING, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test066()  throws Throwable  {
       StringReader stringReader0 = new StringReader("20");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1045,7 +1045,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test067()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1062,7 +1062,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test068()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1072,7 +1072,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test069()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{&g1qI/Wv_:lz7p");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1091,7 +1091,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test070()  throws Throwable  {
       StringReader stringReader0 = new StringReader("Uul");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1101,7 +1101,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("$", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test071()  throws Throwable  {
       StringReader stringReader0 = new StringReader("[Gq>N60J_.-^nkLWnw");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1110,7 +1110,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("$[0]", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test072()  throws Throwable  {
       StringReader stringReader0 = new StringReader("#iaYtQOlbedc[3W6");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1127,7 +1127,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test073()  throws Throwable  {
       StringReader stringReader0 = new StringReader("#91A!rK#%`8)'fqcb?");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1143,7 +1143,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test074()  throws Throwable  {
       StringReader stringReader0 = new StringReader("nul");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1154,7 +1154,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.STRING, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test075()  throws Throwable  {
       StringReader stringReader0 = new StringReader("239e0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1162,7 +1162,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test076()  throws Throwable  {
       StringReader stringReader0 = new StringReader("'eXY\"9g9('1>&[6dNs$");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1171,7 +1171,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test077()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1189,7 +1189,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test078()  throws Throwable  {
       StringReader stringReader0 = new StringReader("20");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1207,7 +1207,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test079()  throws Throwable  {
       StringReader stringReader0 = new StringReader("639e7");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1224,7 +1224,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test080()  throws Throwable  {
       StringReader stringReader0 = new StringReader("\"7&0<-_[Zq}#}d%=K");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1240,7 +1240,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test081()  throws Throwable  {
       StringReader stringReader0 = new StringReader("'eXY\"9g9('1>&[6dNs$");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1254,7 +1254,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test082()  throws Throwable  {
       StringReader stringReader0 = new StringReader("239e0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1262,7 +1262,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(239, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test083()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1270,7 +1270,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(8, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test084()  throws Throwable  {
       StringReader stringReader0 = new StringReader("/");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1287,7 +1287,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test085()  throws Throwable  {
       StringReader stringReader0 = new StringReader("@}i3JW#6D<,lb}:w)Zc");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1296,7 +1296,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test086()  throws Throwable  {
       StringReader stringReader0 = new StringReader("x`W]!");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1305,7 +1305,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test087()  throws Throwable  {
       StringReader stringReader0 = new StringReader("3e9PF2k|^");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1314,7 +1314,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test088()  throws Throwable  {
       StringReader stringReader0 = new StringReader(")VP,SxHPNTt");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1323,7 +1323,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test089()  throws Throwable  {
       StringReader stringReader0 = new StringReader("jI.M#+/FPE~3o|:N8");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1332,7 +1332,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test090()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1349,7 +1349,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test091()  throws Throwable  {
       StringReader stringReader0 = new StringReader("\"DzMHXtiZ!");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1365,7 +1365,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test092()  throws Throwable  {
       StringReader stringReader0 = new StringReader("R}I-^?.l4[u51Jm%5X");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1379,7 +1379,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test093()  throws Throwable  {
       StringReader stringReader0 = new StringReader("ebD9z{@");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1393,7 +1393,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test094()  throws Throwable  {
       StringReader stringReader0 = new StringReader("E0(]");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1407,7 +1407,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test095()  throws Throwable  {
       StringReader stringReader0 = new StringReader("WMj?_rY[PTzXc|;0t");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1421,7 +1421,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test096()  throws Throwable  {
       StringReader stringReader0 = new StringReader("2x=|u$P{#*lk0$y");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1435,7 +1435,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test097()  throws Throwable  {
       StringReader stringReader0 = new StringReader("|3;>o\"]@xF%w");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1449,7 +1449,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test098()  throws Throwable  {
       StringReader stringReader0 = new StringReader("6~_:hybVE\"P");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1463,7 +1463,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test099()  throws Throwable  {
       StringReader stringReader0 = new StringReader("<F+/BC");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1477,7 +1477,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test100()  throws Throwable  {
       StringReader stringReader0 = new StringReader(".),rH`-*zN<z");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1491,7 +1491,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test101()  throws Throwable  {
       StringReader stringReader0 = new StringReader("Expected an int but was ");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1505,7 +1505,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test102()  throws Throwable  {
       StringReader stringReader0 = new StringReader("\"DzMHXtiZ!");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1521,7 +1521,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test103()  throws Throwable  {
       StringReader stringReader0 = new StringReader("'9XY\"9$9PC'1>U6dsK");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1535,7 +1535,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test104()  throws Throwable  {
       StringReader stringReader0 = new StringReader("&A5Kuj#m+=");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1549,7 +1549,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test105()  throws Throwable  {
       StringReader stringReader0 = new StringReader("\"7&0<-_[Zq}#}d%=K");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1566,7 +1566,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test106()  throws Throwable  {
       StringReader stringReader0 = new StringReader("239e0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1574,7 +1574,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(239L, long0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test107()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1590,7 +1590,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test108()  throws Throwable  {
       StringReader stringReader0 = new StringReader("239e0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1599,7 +1599,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(239.0, double0, 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test109()  throws Throwable  {
       StringReader stringReader0 = new StringReader("T*BJn_xL");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1613,7 +1613,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test110()  throws Throwable  {
       StringReader stringReader0 = new StringReader("239e0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1621,7 +1621,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(239.0, double0, 0.01);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test111()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1639,7 +1639,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test112()  throws Throwable  {
       StringReader stringReader0 = new StringReader("null");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1647,7 +1647,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test113()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1655,7 +1655,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test114()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1673,7 +1673,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test115()  throws Throwable  {
       StringReader stringReader0 = new StringReader("239e0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1681,7 +1681,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("239e0", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test116()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1689,7 +1689,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("8", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test117()  throws Throwable  {
       StringReader stringReader0 = new StringReader("nul");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1699,7 +1699,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test118()  throws Throwable  {
       StringReader stringReader0 = new StringReader("\"FTC 8GQL");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1715,7 +1715,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test119()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1732,7 +1732,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test120()  throws Throwable  {
       StringReader stringReader0 = new StringReader("nul");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1744,7 +1744,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("nul", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test121()  throws Throwable  {
       StringReader stringReader0 = new StringReader("E");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1761,7 +1761,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test122()  throws Throwable  {
       StringReader stringReader0 = new StringReader("6,z[Z~S/q");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1779,7 +1779,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test123()  throws Throwable  {
       StringReader stringReader0 = new StringReader("}r?uKo^c94Z-74?)G");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1795,7 +1795,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test124()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8]D");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1812,7 +1812,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test125()  throws Throwable  {
       String string0 = "\\u";
       StringReader stringReader0 = new StringReader(string0);
@@ -1829,7 +1829,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test126()  throws Throwable  {
       StringReader stringReader0 = new StringReader("82[6}gMbp");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1846,7 +1846,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test127()  throws Throwable  {
       StringReader stringReader0 = new StringReader(" 2=dP=00e8P~0ds2Y0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1862,7 +1862,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test128()  throws Throwable  {
       StringReader stringReader0 = new StringReader("2;\"");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1878,7 +1878,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test129()  throws Throwable  {
       StringReader stringReader0 = new StringReader("/");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1894,7 +1894,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test130()  throws Throwable  {
       StringReader stringReader0 = new StringReader("3e9#PF2k|^");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1910,7 +1910,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test131()  throws Throwable  {
       StringReader stringReader0 = new StringReader("0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1927,7 +1927,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test132()  throws Throwable  {
       StringReader stringReader0 = new StringReader("34e-99b");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1943,7 +1943,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test133()  throws Throwable  {
       StringReader stringReader0 = new StringReader(" 02lc>~+4");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1959,7 +1959,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test134()  throws Throwable  {
       StringReader stringReader0 = new StringReader(" -1bXP;fhps2");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1975,7 +1975,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test135()  throws Throwable  {
       StringReader stringReader0 = new StringReader("3.e-9Tsx9b");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -1991,7 +1991,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test136()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8E+tG");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2007,7 +2007,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test137()  throws Throwable  {
       StringReader stringReader0 = new StringReader("7-|F{");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2023,7 +2023,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test138()  throws Throwable  {
       StringReader stringReader0 = new StringReader("Expemte& null but was ");
       stringReader0.skip(8L);
@@ -2032,7 +2032,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.NULL, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test139()  throws Throwable  {
       StringReader stringReader0 = new StringReader("Expeite& null+butRwhs ");
       stringReader0.skip(8L);
@@ -2049,7 +2049,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test140()  throws Throwable  {
       StringReader stringReader0 = new StringReader("NN:Ee_h?P;q-");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2065,7 +2065,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test141()  throws Throwable  {
       StringReader stringReader0 = new StringReader("false");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2073,7 +2073,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test142()  throws Throwable  {
       StringReader stringReader0 = new StringReader("TRUE");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2090,7 +2090,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test143()  throws Throwable  {
       StringReader stringReader0 = new StringReader(":T");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2106,7 +2106,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test144()  throws Throwable  {
       StringReader stringReader0 = new StringReader("]]N?VX_,");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2122,7 +2122,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test145()  throws Throwable  {
       StringReader stringReader0 = new StringReader(";i?Q1V");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2138,7 +2138,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test146()  throws Throwable  {
       StringReader stringReader0 = new StringReader("q{S=");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2156,7 +2156,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test147()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{&g1qIF)Wv_:lz7p");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2173,7 +2173,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test148()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{{|5_5,n\"");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2190,7 +2190,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test149()  throws Throwable  {
       StringReader stringReader0 = new StringReader("H`KmU{'MkuOwgFg@");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2208,7 +2208,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test150()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{\"|5_>,n\"");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2224,7 +2224,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test151()  throws Throwable  {
       StringReader stringReader0 = new StringReader("[{Z1=2O<*QbX=");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2241,7 +2241,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test152()  throws Throwable  {
       StringReader stringReader0 = new StringReader("32_grzsm-[dk;vpH9");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2259,7 +2259,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test153()  throws Throwable  {
       StringReader stringReader0 = new StringReader("&W+U2oB.8x%A[,^");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2277,7 +2277,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test154()  throws Throwable  {
       StringReader stringReader0 = new StringReader("[G/>N60J_.-^RkLW{w");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2294,7 +2294,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test155()  throws Throwable  {
       StringReader stringReader0 = new StringReader("null");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2304,7 +2304,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.END_DOCUMENT, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test156()  throws Throwable  {
       StringReader stringReader0 = new StringReader("239e0");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2321,7 +2321,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test157()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2339,7 +2339,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test158()  throws Throwable  {
       StringReader stringReader0 = new StringReader("ULJ\"wD|5wLzgWY(}+");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2357,7 +2357,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test159()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2367,7 +2367,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test160()  throws Throwable  {
       StringReader stringReader0 = new StringReader("T*BJn_xL");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2377,7 +2377,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.STRING, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test161()  throws Throwable  {
       StringReader stringReader0 = new StringReader("\"FTC 8GQL");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2385,7 +2385,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.STRING, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test162()  throws Throwable  {
       StringReader stringReader0 = new StringReader("FALSE");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2393,7 +2393,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.BOOLEAN, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test163()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2403,7 +2403,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.BEGIN_ARRAY, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test164()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2413,7 +2413,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals(JsonToken.END_OBJECT, jsonToken0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test165()  throws Throwable  {
       StringReader stringReader0 = new StringReader("8");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2423,7 +2423,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(jsonReader0.isLenient());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test166()  throws Throwable  {
       StringReader stringReader0 = new StringReader("20");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2433,7 +2433,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test167()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2443,7 +2443,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test168()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2461,7 +2461,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test169()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2477,7 +2477,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test170()  throws Throwable  {
       StringReader stringReader0 = new StringReader("{&g1qI/Wv_:lz7p");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2486,7 +2486,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("$.", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test171()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2502,7 +2502,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test172()  throws Throwable  {
       StringReader stringReader0 = new StringReader("H`KmU{'MkuOwgFg@");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2519,7 +2519,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test173()  throws Throwable  {
       StringReader stringReader0 = new StringReader("20");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2537,7 +2537,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test174()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2553,7 +2553,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test175()  throws Throwable  {
       StringReader stringReader0 = new StringReader("");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2569,7 +2569,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test176()  throws Throwable  {
       StringReader stringReader0 = new StringReader("true");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2587,7 +2587,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test177()  throws Throwable  {
       JsonReader jsonReader0 = null;
       try {
@@ -2602,7 +2602,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test178()  throws Throwable  {
       StringReader stringReader0 = new StringReader("%6yX3");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2618,7 +2618,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test179()  throws Throwable  {
       StringReader stringReader0 = new StringReader(":T");
       JsonReader jsonReader0 = new JsonReader(stringReader0);
@@ -2627,7 +2627,7 @@ public class JsonReader_ESTest extends JsonReader_ESTest_scaffolding {
       assertEquals("JsonReader at line 1 column 1 path $", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test180()  throws Throwable  {
       StringReader stringReader0 = new StringReader(";;^");
       JsonReader jsonReader0 = new JsonReader(stringReader0);

@@ -22,10 +22,10 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test000()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       doReturn((-901)).when(comparator0).compare(any() , any());
@@ -65,7 +65,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap3.remove((Object) linkedHashTreeMap_Node8);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test001()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<String, String> linkedHashTreeMap0 = new LinkedHashTreeMap<String, String>(comparator0);
@@ -97,7 +97,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_Node10.setValue(linkedHashTreeMap2);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test002()  throws Throwable  {
       LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_AvlIterator0 = new LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
@@ -106,7 +106,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_KeySet0.remove((Object) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test003()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong(3271);
@@ -123,7 +123,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap3.putAll(linkedHashTreeMap0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test004()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       LinkedHashTreeMap<Object, Object> linkedHashTreeMap1 = new LinkedHashTreeMap<Object, Object>();
@@ -132,7 +132,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap2.get(linkedHashTreeMap1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test005()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>(comparator0);
@@ -176,7 +176,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test006()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap.Node<Object, AbstractMap.SimpleEntry<String, Integer>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Object, AbstractMap.SimpleEntry<String, Integer>>();
@@ -194,7 +194,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap<String, Object> linkedHashTreeMap1 = new LinkedHashTreeMap<String, Object>();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test007()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       LinkedHashTreeMap.Node<Integer, String>[] linkedHashTreeMap_NodeArray0 = (LinkedHashTreeMap.Node<Integer, String>[]) Array.newInstance(LinkedHashTreeMap.Node.class, 2);
@@ -215,7 +215,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_Node5.first();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test008()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>();
@@ -252,7 +252,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap3.remove((Object) linkedHashTreeMap_Node6);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test009()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>(comparator0);
@@ -290,7 +290,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap4.find(linkedHashTreeMap5, false);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test010()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -327,7 +327,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test011()  throws Throwable  {
       LinkedHashTreeMap<String, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<String, Object>();
       linkedHashTreeMap0.entrySet();
@@ -350,7 +350,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test012()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -365,7 +365,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap.doubleCapacity((LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<LinkedHashTreeMap<Integer, Object>, String>>[]) linkedHashTreeMap_NodeArray0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test013()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       linkedHashTreeMap0.clear();
@@ -392,7 +392,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_KeySet1.clear();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test014()  throws Throwable  {
       LinkedHashTreeMap<String, String> linkedHashTreeMap0 = new LinkedHashTreeMap<String, String>();
       BiFunction<Object, String, String> biFunction0 = (BiFunction<Object, String, String>) mock(BiFunction.class, new ViolatedAssumptionAnswer());
@@ -411,7 +411,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test015()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap<String, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<String, Object>();
@@ -427,7 +427,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap.doubleCapacity((LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<LinkedHashTreeMap<Integer, Object>, String>>[]) linkedHashTreeMap_NodeArray0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test016()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
@@ -438,7 +438,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_EntrySet0.remove(linkedHashTreeMap_Node2);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test017()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong(3271);
@@ -484,7 +484,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test018()  throws Throwable  {
       LinkedHashTreeMap<LinkedHashTreeMap<Object, Object>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap0 = new LinkedHashTreeMap<LinkedHashTreeMap<Object, Object>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -506,7 +506,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test019()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
@@ -542,14 +542,14 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       Object object0 = new Object();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test020()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
       linkedHashTreeMap0.removeInternal(linkedHashTreeMap_Node0, false);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test021()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node1 = linkedHashTreeMap_Node0.last();
@@ -583,7 +583,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap1.size();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test022()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<String, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<String, LinkedHashTreeMap<Object, String>>(comparator0);
@@ -609,7 +609,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test023()  throws Throwable  {
       LinkedHashTreeMap<LinkedHashTreeMap<String, String>, AbstractMap.SimpleEntry<Object, Object>> linkedHashTreeMap0 = new LinkedHashTreeMap<LinkedHashTreeMap<String, String>, AbstractMap.SimpleEntry<Object, Object>>();
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -655,7 +655,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test024()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       long long0 = new Integer((-1));
@@ -677,7 +677,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_Node5.first();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test025()  throws Throwable  {
       LinkedHashTreeMap<String, String> linkedHashTreeMap0 = new LinkedHashTreeMap<String, String>();
       linkedHashTreeMap0.putIfAbsent("R", "R");
@@ -685,7 +685,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_KeySet0.contains((Object) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test026()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong(0);
@@ -711,7 +711,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_EntrySet1.contains(linkedHashTreeMap_Node2);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test027()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
@@ -731,7 +731,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap1.size();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test028()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -740,7 +740,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap0.findByObject(linkedHashTreeMap_AvlBuilder0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test029()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       linkedHashTreeMap_Node0.height = 8;
@@ -772,7 +772,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test030()  throws Throwable  {
       LinkedHashTreeMap<Comparable<Object>, Map.Entry<AbstractMap.SimpleEntry<Integer, Object>, Object>> linkedHashTreeMap0 = new LinkedHashTreeMap<Comparable<Object>, Map.Entry<AbstractMap.SimpleEntry<Integer, Object>, Object>>();
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -796,7 +796,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap5.findByObject(integer0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test031()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Map.Entry<Object, String>, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Map.Entry<Object, String>, Object>(comparator0);
@@ -807,7 +807,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_EntrySet0.contains(set0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test032()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node1 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -815,7 +815,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap0.removeInternal(linkedHashTreeMap_Node0, true);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test033()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -834,7 +834,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test034()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       linkedHashTreeMap0.clear();
@@ -852,7 +852,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test035()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -876,7 +876,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test036()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       linkedHashTreeMap0.clear();
@@ -888,7 +888,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(1, linkedHashTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test037()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -898,7 +898,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap0.findByObject(linkedHashTreeMap_AvlBuilder0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test038()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Object, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, String>(comparator0);
@@ -910,7 +910,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_Node2.last();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test039()  throws Throwable  {
       Integer integer0 = new Integer(20);
       Comparator<String> comparator0 = (Comparator<String>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -919,14 +919,14 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap0.size();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test040()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.EntrySet linkedHashTreeMap_EntrySet0 = linkedHashTreeMap0.new EntrySet();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test041()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Object, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Object>(comparator0);
@@ -954,7 +954,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test042()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       LinkedHashTreeMap.KeySet linkedHashTreeMap_KeySet0 = linkedHashTreeMap0.new KeySet();
@@ -969,13 +969,13 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap<AbstractMap.SimpleImmutableEntry<Integer, Integer>, String> linkedHashTreeMap3 = new LinkedHashTreeMap<AbstractMap.SimpleImmutableEntry<Integer, Integer>, String>((Comparator<? super AbstractMap.SimpleImmutableEntry<Integer, Integer>>) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test043()  throws Throwable  {
       LinkedHashTreeMap.AvlIterator<String, Comparable<String>> linkedHashTreeMap_AvlIterator0 = new LinkedHashTreeMap.AvlIterator<String, Comparable<String>>();
       linkedHashTreeMap_AvlIterator0.next();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test044()  throws Throwable  {
       Comparator<String> comparator0 = (Comparator<String>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<String, String> linkedHashTreeMap0 = new LinkedHashTreeMap<String, String>(comparator0);
@@ -992,7 +992,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap1.find(linkedHashTreeMap0, true);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test045()  throws Throwable  {
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>();
       LinkedHashTreeMap.KeySet linkedHashTreeMap_KeySet0 = linkedHashTreeMap0.new KeySet();
@@ -1031,7 +1031,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test046()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1049,7 +1049,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test047()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       doReturn((-13)).when(comparator0).compare(any() , any());
@@ -1063,7 +1063,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_KeySet0.contains(linkedHashTreeMap0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test048()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node1 = linkedHashTreeMap_Node0.last();
@@ -1072,7 +1072,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap0.clear();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test049()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1086,7 +1086,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap0.removeInternal(linkedHashTreeMap_Node0, true);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test050()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1096,20 +1096,20 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_EntrySet0.contains(linkedHashTreeMap_Node1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test051()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Integer>(comparator0);
       linkedHashTreeMap0.size();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test052()  throws Throwable  {
       LinkedHashTreeMap.Node<LinkedHashTreeMap<Object, String>, Object> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<LinkedHashTreeMap<Object, String>, Object>();
       linkedHashTreeMap_Node0.last();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test053()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<LinkedHashTreeMap<Object, Object>, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<LinkedHashTreeMap<Object, Object>, Integer>(comparator0);
@@ -1124,7 +1124,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_Node4.equals(linkedHashTreeMap_Node0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test054()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       linkedHashTreeMap0.clear();
@@ -1138,7 +1138,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap_KeySet1.iterator();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test055()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1151,7 +1151,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap<Comparable<Object>, LinkedHashTreeMap<String, Object>> linkedHashTreeMap2 = new LinkedHashTreeMap<Comparable<Object>, LinkedHashTreeMap<String, Object>>();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test056()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<AbstractMap.SimpleImmutableEntry<Integer, String>, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<AbstractMap.SimpleImmutableEntry<Integer, String>, Integer>(comparator0);
@@ -1175,7 +1175,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test057()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong((-1));
@@ -1204,7 +1204,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap4.putAll(linkedHashTreeMap0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test058()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       LinkedHashTreeMap<Object, Object> linkedHashTreeMap1 = new LinkedHashTreeMap<Object, Object>();
@@ -1228,7 +1228,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap<AbstractMap.SimpleEntry<Integer, Integer>, Map.Entry<AbstractMap.SimpleEntry<Integer, Object>, Object>> linkedHashTreeMap5 = new LinkedHashTreeMap<AbstractMap.SimpleEntry<Integer, Integer>, Map.Entry<AbstractMap.SimpleEntry<Integer, Object>, Object>>((Comparator<? super AbstractMap.SimpleEntry<Integer, Integer>>) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test059()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       Comparator<Integer> comparator0 = (Comparator<Integer>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -1253,7 +1253,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       linkedHashTreeMap2.putAll(linkedHashTreeMap0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test060()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<String, LinkedHashTreeMap<Object, Object>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, LinkedHashTreeMap<Object, Object>>();
       // Undeclared exception!
@@ -1269,7 +1269,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test061()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       doReturn(481).when(comparator0).compare(any() , any());
@@ -1310,7 +1310,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNull(abstractMap_SimpleImmutableEntry0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test062()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1320,7 +1320,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals((-1), linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test063()  throws Throwable  {
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>();
       LinkedHashTreeMap.KeySet linkedHashTreeMap_KeySet0 = linkedHashTreeMap0.new KeySet();
@@ -1340,7 +1340,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test064()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       linkedHashTreeMap_Node0.height = 8;
@@ -1368,7 +1368,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNull(linkedHashTreeMap_Node4);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test065()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong((-1));
@@ -1398,7 +1398,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test066()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong(0);
@@ -1430,7 +1430,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap5.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test067()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>(comparator0);
@@ -1483,7 +1483,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(12, linkedHashTreeMap_NodeArray1.length);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test068()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
       LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -1521,7 +1521,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap6.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test069()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<LinkedHashTreeMap<Object, Object>, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<LinkedHashTreeMap<Object, Object>, Integer>(comparator0);
@@ -1535,7 +1535,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test070()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Object, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, String>(comparator0);
@@ -1549,7 +1549,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertSame(linkedHashTreeMap_Node3, linkedHashTreeMap_Node2);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test071()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, AbstractMap.SimpleImmutableEntry<Object, Object>>();
       LinkedHashTreeMap.Node<Integer, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_Node1 = linkedHashTreeMap_Node0.first();
@@ -1557,7 +1557,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals("null=null", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test072()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       LinkedHashTreeMap.KeySet linkedHashTreeMap_KeySet0 = linkedHashTreeMap0.new KeySet();
@@ -1584,7 +1584,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap_NodeArray1.length);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test073()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
       LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -1604,7 +1604,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNotNull(linkedHashTreeMap_Node3);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test074()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>(comparator0);
@@ -1660,7 +1660,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(32, linkedHashTreeMap_NodeArray1.length);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test075()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
       LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -1687,7 +1687,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals((-1), linkedHashTreeMap2.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test076()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       BiFunction<Object, Object, LinkedHashTreeMap<Object, String>> biFunction0 = (BiFunction<Object, Object, LinkedHashTreeMap<Object, String>>) mock(BiFunction.class, new ViolatedAssumptionAnswer());
@@ -1695,7 +1695,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test077()  throws Throwable  {
       Integer integer0 = new Integer((-3328));
       AbstractMap.SimpleEntry<Integer, Object> abstractMap_SimpleEntry0 = new AbstractMap.SimpleEntry<Integer, Object>(integer0, integer0);
@@ -1720,7 +1720,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test078()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Integer, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, Object>(comparator0);
@@ -1774,7 +1774,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(12, linkedHashTreeMap_NodeArray1.length);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test079()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -1791,7 +1791,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test080()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<String, String> linkedHashTreeMap0 = new LinkedHashTreeMap<String, String>(comparator0);
@@ -1825,7 +1825,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test081()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer integer0 = Integer.valueOf((-1));
@@ -1842,7 +1842,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(1, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test082()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1861,7 +1861,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test083()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1886,7 +1886,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap4.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test084()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<String, AbstractMap.SimpleEntry<Integer, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<String, AbstractMap.SimpleEntry<Integer, String>>(comparator0);
@@ -1917,7 +1917,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test085()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<Object, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Object>(comparator0);
@@ -1938,7 +1938,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test086()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong((-1));
@@ -1969,7 +1969,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(2, linkedHashTreeMap4.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test087()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -1978,7 +1978,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals((-1), linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test088()  throws Throwable  {
       LinkedHashTreeMap.AvlIterator<Integer, String> linkedHashTreeMap_AvlIterator0 = new LinkedHashTreeMap.AvlIterator<Integer, String>();
       LinkedHashTreeMap.Node<Integer, String> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, String>();
@@ -1989,7 +1989,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNotNull(linkedHashTreeMap_Node2);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test089()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<String, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<String, Object>(comparator0);
@@ -2014,7 +2014,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test090()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap<String, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<String, Object>();
@@ -2033,7 +2033,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       LinkedHashTreeMap.doubleCapacity((LinkedHashTreeMap.Node<String, AbstractMap.SimpleEntry<LinkedHashTreeMap<Integer, Object>, String>>[]) linkedHashTreeMap_NodeArray0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test091()  throws Throwable  {
       LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_AvlIterator0 = new LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
@@ -2043,7 +2043,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test092()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer integer0 = Integer.valueOf((-1));
@@ -2068,7 +2068,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap3.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test093()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer.toUnsignedLong((-1));
@@ -2098,7 +2098,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test094()  throws Throwable  {
       LinkedHashTreeMap<Map.Entry<AbstractMap.SimpleEntry<Integer, Object>, Object>, Map.Entry<String, Integer>> linkedHashTreeMap0 = new LinkedHashTreeMap<Map.Entry<AbstractMap.SimpleEntry<Integer, Object>, Object>, Map.Entry<String, Integer>>();
       Integer integer0 = new Integer(1783);
@@ -2116,7 +2116,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test095()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<AbstractMap.SimpleEntry<Object, Object>, String> linkedHashTreeMap0 = new LinkedHashTreeMap<AbstractMap.SimpleEntry<Object, Object>, String>(comparator0);
@@ -2143,7 +2143,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test096()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap.Node<Object, AbstractMap.SimpleEntry<String, Integer>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Object, AbstractMap.SimpleEntry<String, Integer>>();
@@ -2163,7 +2163,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test097()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap.Node<Object, AbstractMap.SimpleEntry<String, Integer>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Object, AbstractMap.SimpleEntry<String, Integer>>();
@@ -2175,7 +2175,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap_EntrySet0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test098()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
@@ -2190,7 +2190,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(1, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test099()  throws Throwable  {
       LinkedHashTreeMap<String, String> linkedHashTreeMap0 = new LinkedHashTreeMap<String, String>();
       LinkedHashTreeMap.KeySet linkedHashTreeMap_KeySet0 = linkedHashTreeMap0.new KeySet();
@@ -2199,7 +2199,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test100()  throws Throwable  {
       LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_AvlIterator0 = new LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
@@ -2219,7 +2219,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap2.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test101()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<AbstractMap.SimpleImmutableEntry<String, String>, AbstractMap.SimpleEntry<Object, Object>> linkedHashTreeMap0 = new LinkedHashTreeMap<AbstractMap.SimpleImmutableEntry<String, String>, AbstractMap.SimpleEntry<Object, Object>>(comparator0);
@@ -2241,7 +2241,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test102()  throws Throwable  {
       LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, AbstractMap.SimpleImmutableEntry<Object, Object>>();
@@ -2255,7 +2255,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(1, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test103()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -2268,7 +2268,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test104()  throws Throwable  {
       LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_AvlIterator0 = new LinkedHashTreeMap.AvlIterator<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, String>, LinkedHashTreeMap<String, String>>();
@@ -2288,7 +2288,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test105()  throws Throwable  {
       LinkedHashTreeMap.Node<Object, AbstractMap.SimpleImmutableEntry<Object, Integer>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Object, AbstractMap.SimpleImmutableEntry<Object, Integer>>();
       LinkedHashTreeMap.Node<Object, AbstractMap.SimpleImmutableEntry<Object, Integer>> linkedHashTreeMap_Node1 = new LinkedHashTreeMap.Node<Object, AbstractMap.SimpleImmutableEntry<Object, Integer>>(linkedHashTreeMap_Node0, linkedHashTreeMap_Node0, (-41), linkedHashTreeMap_Node0, linkedHashTreeMap_Node0);
@@ -2296,7 +2296,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNull(abstractMap_SimpleImmutableEntry0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test106()  throws Throwable  {
       LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, LinkedHashTreeMap<Object, String>>();
       LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, LinkedHashTreeMap<Object, String>>();
@@ -2312,7 +2312,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNull(linkedHashTreeMap_Node4);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test107()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>> linkedHashTreeMap_AvlBuilder0 = new LinkedHashTreeMap.AvlBuilder<String, AbstractMap.SimpleEntry<Object, String>>();
@@ -2326,7 +2326,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertEquals(0, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test108()  throws Throwable  {
       LinkedHashTreeMap<Object, Integer> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, Integer>();
       LinkedHashTreeMap<String, Object> linkedHashTreeMap1 = new LinkedHashTreeMap<String, Object>();
@@ -2338,7 +2338,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test109()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       doReturn(0).when(comparator0).compare(any() , any());
@@ -2379,7 +2379,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNull(abstractMap_SimpleImmutableEntry0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test110()  throws Throwable  {
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, Object>, String> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, Object>, String>();
       LinkedHashTreeMap.Node<AbstractMap.SimpleEntry<Object, Object>, String> linkedHashTreeMap_Node1 = linkedHashTreeMap_Node0.first();
@@ -2387,14 +2387,14 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNull(string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test111()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap<Object, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Object, String>();
       assertEquals(0, linkedHashTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test112()  throws Throwable  {
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node0 = new LinkedHashTreeMap.Node<Integer, Integer>();
       LinkedHashTreeMap.Node<Integer, Integer> linkedHashTreeMap_Node1 = linkedHashTreeMap_Node0.last();
@@ -2408,7 +2408,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       assertNull(object0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test113()  throws Throwable  {
       Comparator<String> comparator0 = (Comparator<String>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedHashTreeMap<String, Object> linkedHashTreeMap0 = new LinkedHashTreeMap<String, Object>(comparator0);
@@ -2426,7 +2426,7 @@ public class LinkedHashTreeMap_ESTest extends LinkedHashTreeMap_ESTest_scaffoldi
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test114()  throws Throwable  {
       LinkedHashTreeMap<Integer, String> linkedHashTreeMap0 = new LinkedHashTreeMap<Integer, String>((Comparator<? super Integer>) null);
       Integer integer0 = Integer.valueOf((-1));

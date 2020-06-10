@@ -21,10 +21,10 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test00()  throws Throwable  {
       LinkedTreeMap.Node<LinkedTreeMap<Integer, String>, LinkedTreeMap<String, Integer>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<LinkedTreeMap<Integer, String>, LinkedTreeMap<String, Integer>>();
       Comparator<Integer> comparator0 = (Comparator<Integer>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -35,14 +35,14 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test01()  throws Throwable  {
       LinkedTreeMap.Node<Integer, AbstractMap.SimpleEntry<Object, Object>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Integer, AbstractMap.SimpleEntry<Object, Object>>();
       Integer integer0 = linkedTreeMap_Node0.getKey();
       assertNull(integer0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test02()  throws Throwable  {
       LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>>();
       LinkedTreeMap.KeySet linkedTreeMap_KeySet0 = linkedTreeMap0.new KeySet();
@@ -50,7 +50,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap_KeySet0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test03()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Object, AbstractMap.SimpleEntry<Object, Object>> linkedTreeMap0 = new LinkedTreeMap<Object, AbstractMap.SimpleEntry<Object, Object>>(comparator0);
@@ -59,7 +59,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test04()  throws Throwable  {
       LinkedTreeMap<Object, Object> linkedTreeMap0 = new LinkedTreeMap<Object, Object>();
       LinkedTreeMap.EntrySet linkedTreeMap_EntrySet0 = linkedTreeMap0.new EntrySet();
@@ -67,7 +67,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap_EntrySet0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test05()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.find("`mgV$L3SZ$-hy$>e", true);
@@ -78,7 +78,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test06()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Object, String>();
@@ -87,7 +87,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(1, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test07()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Comparable<Object>, AbstractMap.SimpleImmutableEntry<Object, Integer>> linkedTreeMap0 = new LinkedTreeMap<Comparable<Object>, AbstractMap.SimpleImmutableEntry<Object, Integer>>(comparator0);
@@ -97,7 +97,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals((-1), int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test08()  throws Throwable  {
       LinkedTreeMap.Node<Integer, AbstractMap.SimpleEntry<Object, Object>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Integer, AbstractMap.SimpleEntry<Object, Object>>();
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -107,7 +107,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test09()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Object, String>();
@@ -122,7 +122,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(1, linkedTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test10()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.find("", true);
@@ -130,7 +130,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(1, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test11()  throws Throwable  {
       LinkedTreeMap<AbstractMap.SimpleImmutableEntry<String, Object>, Integer> linkedTreeMap0 = new LinkedTreeMap<AbstractMap.SimpleImmutableEntry<String, Object>, Integer>();
       linkedTreeMap0.size = (-1204);
@@ -138,14 +138,14 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals((-1204), set0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test12()  throws Throwable  {
       LinkedTreeMap<Map.Entry<Object, Object>, Integer> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<Object, Object>, Integer>();
       linkedTreeMap0.get("");
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test13()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       doReturn(0).when(comparator0).compare(any() , any());
@@ -158,7 +158,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(1, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test14()  throws Throwable  {
       LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>>();
       LinkedTreeMap<String, Object> linkedTreeMap1 = new LinkedTreeMap<String, Object>();
@@ -166,7 +166,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test15()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       doReturn(0).when(comparator0).compare(any() , any());
@@ -179,14 +179,14 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertNotNull(linkedTreeMap_Node2);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test16()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.find("`mgV$L3SZ$-hy$>e", false);
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test17()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Integer, AbstractMap.SimpleEntry<String, Object>> linkedTreeMap0 = new LinkedTreeMap<Integer, AbstractMap.SimpleEntry<String, Object>>(comparator0);
@@ -196,7 +196,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(1, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test18()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Object, Integer> linkedTreeMap0 = new LinkedTreeMap<Object, Integer>(comparator0);
@@ -206,7 +206,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals((-1), linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test19()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       doReturn(0).when(comparator0).compare(any() , any());
@@ -222,7 +222,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test20()  throws Throwable  {
       LinkedTreeMap<Integer, AbstractMap.SimpleImmutableEntry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Integer, AbstractMap.SimpleImmutableEntry<Object, String>>();
       // Undeclared exception!
@@ -238,7 +238,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test21()  throws Throwable  {
       LinkedTreeMap.Node<LinkedTreeMap<Object, Object>, LinkedTreeMap<Object, Object>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<LinkedTreeMap<Object, Object>, LinkedTreeMap<Object, Object>>();
       LinkedTreeMap<Object, String> linkedTreeMap0 = new LinkedTreeMap<Object, String>();
@@ -256,7 +256,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test22()  throws Throwable  {
       Comparator<Map.Entry<Object, String>> comparator0 = (Comparator<Map.Entry<Object, String>>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Map.Entry<Object, String>, String> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<Object, String>, String>(comparator0);
@@ -274,7 +274,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test23()  throws Throwable  {
       LinkedTreeMap<Comparable<Object>, Integer> linkedTreeMap0 = new LinkedTreeMap<Comparable<Object>, Integer>();
       // Undeclared exception!
@@ -290,7 +290,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test24()  throws Throwable  {
       LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>>();
       LinkedTreeMap<String, Object> linkedTreeMap1 = new LinkedTreeMap<String, Object>();
@@ -301,7 +301,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(linkedTreeMap_Node1.equals((Object)linkedTreeMap_Node0));
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test25()  throws Throwable  {
       LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>>();
       boolean boolean0 = linkedTreeMap0.containsKey("0K~ ");
@@ -309,14 +309,14 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test26()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.clear();
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test27()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.EntrySet linkedTreeMap_EntrySet0 = linkedTreeMap0.new EntrySet();
@@ -325,7 +325,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test28()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.Node<String, Object> linkedTreeMap_Node0 = linkedTreeMap0.find(" ", true);
@@ -335,7 +335,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test29()  throws Throwable  {
       LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>>();
       LinkedTreeMap.EntrySet linkedTreeMap_EntrySet0 = linkedTreeMap0.new EntrySet();
@@ -345,7 +345,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap_EntrySet0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test30()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Comparable<Object>, AbstractMap.SimpleImmutableEntry<Object, Integer>> linkedTreeMap0 = new LinkedTreeMap<Comparable<Object>, AbstractMap.SimpleImmutableEntry<Object, Integer>>(comparator0);
@@ -355,7 +355,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap_EntrySet0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test31()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.Node<String, Object> linkedTreeMap_Node0 = linkedTreeMap0.find(" is not Comparable", true);
@@ -365,7 +365,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertNotSame(linkedTreeMap_Node0, linkedTreeMap_Node1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test32()  throws Throwable  {
       LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>>();
       Comparable<Map.Entry<Object, String>> comparable0 = (Comparable<Map.Entry<Object, String>>) mock(Comparable.class, new ViolatedAssumptionAnswer());
@@ -376,7 +376,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertNotNull(linkedTreeMap_Node2);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test33()  throws Throwable  {
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Object, String>();
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node1 = new LinkedTreeMap.Node<Object, String>();
@@ -388,7 +388,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test34()  throws Throwable  {
       LinkedTreeMap.Node<LinkedTreeMap<Integer, Integer>, Map.Entry<Object, String>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<LinkedTreeMap<Integer, Integer>, Map.Entry<Object, String>>();
       AbstractMap.SimpleEntry<Object, String> abstractMap_SimpleEntry0 = new AbstractMap.SimpleEntry<Object, String>((Object) null, "(;-^X85-/Xum;M3<");
@@ -396,7 +396,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test35()  throws Throwable  {
       LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>>();
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node1 = new LinkedTreeMap.Node<Object, String>();
@@ -407,7 +407,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test36()  throws Throwable  {
       LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>>();
       Comparable<Map.Entry<Object, String>> comparable0 = (Comparable<Map.Entry<Object, String>>) mock(Comparable.class, new ViolatedAssumptionAnswer());
@@ -417,7 +417,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test37()  throws Throwable  {
       LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Comparable<Map.Entry<Object, String>>, Map.Entry<Object, String>>();
       Comparable<Map.Entry<Object, String>> comparable0 = (Comparable<Map.Entry<Object, String>>) mock(Comparable.class, new ViolatedAssumptionAnswer());
@@ -427,7 +427,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test38()  throws Throwable  {
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Object, String>();
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node1 = new LinkedTreeMap.Node<Object, String>(linkedTreeMap_Node0, "", linkedTreeMap_Node0, linkedTreeMap_Node0);
@@ -435,7 +435,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test39()  throws Throwable  {
       LinkedTreeMap<Object, Integer> linkedTreeMap0 = new LinkedTreeMap<Object, Integer>();
       linkedTreeMap0.keySet();
@@ -444,7 +444,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertNotNull(set0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test40()  throws Throwable  {
       LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>>();
       LinkedTreeMap<String, Object> linkedTreeMap1 = new LinkedTreeMap<String, Object>();
@@ -456,7 +456,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test41()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.EntrySet linkedTreeMap_EntrySet0 = linkedTreeMap0.new EntrySet();
@@ -466,7 +466,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(3, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test42()  throws Throwable  {
       LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<String, Object>, Map.Entry<Object, String>>();
       LinkedTreeMap<String, Object> linkedTreeMap1 = new LinkedTreeMap<String, Object>();
@@ -477,7 +477,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(2, linkedTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test43()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.Node<String, Object> linkedTreeMap_Node0 = new LinkedTreeMap.Node<String, Object>();
@@ -496,7 +496,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test44()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.EntrySet linkedTreeMap_EntrySet0 = linkedTreeMap0.new EntrySet();
@@ -506,7 +506,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(3, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test45()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.putIfAbsent(" is not Comparable", " is not Comparable");
@@ -517,7 +517,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test46()  throws Throwable  {
       LinkedTreeMap.Node<Integer, AbstractMap.SimpleEntry<Map.Entry<Object, String>, String>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Integer, AbstractMap.SimpleEntry<Map.Entry<Object, String>, String>>();
       LinkedTreeMap<Integer, AbstractMap.SimpleEntry<Map.Entry<Object, String>, String>> linkedTreeMap0 = new LinkedTreeMap<Integer, AbstractMap.SimpleEntry<Map.Entry<Object, String>, String>>();
@@ -527,7 +527,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals((-1), linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test47()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Object, String>();
@@ -540,7 +540,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test48()  throws Throwable  {
       LinkedTreeMap<Map.Entry<Object, String>, Map.Entry<Object, Map.Entry<Object, String>>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<Object, String>, Map.Entry<Object, Map.Entry<Object, String>>>();
       LinkedTreeMap.Node<Object, String> linkedTreeMap_Node0 = new LinkedTreeMap.Node<Object, String>();
@@ -557,7 +557,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test49()  throws Throwable  {
       LinkedTreeMap.Node<LinkedTreeMap<Object, Object>, LinkedTreeMap<Object, Object>> linkedTreeMap_Node0 = new LinkedTreeMap.Node<LinkedTreeMap<Object, Object>, LinkedTreeMap<Object, Object>>();
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
@@ -572,7 +572,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test50()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.putIfAbsent(" is not Comparable", " is not Comparable");
@@ -582,7 +582,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test51()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Object, Integer> linkedTreeMap0 = new LinkedTreeMap<Object, Integer>(comparator0);
@@ -592,7 +592,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap1.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test52()  throws Throwable  {
       LinkedTreeMap<Map.Entry<Object, String>, Comparable<Map.Entry<Object, String>>> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<Object, String>, Comparable<Map.Entry<Object, String>>>();
       Comparable<Map.Entry<Object, String>> comparable0 = (Comparable<Map.Entry<Object, String>>) mock(Comparable.class, new ViolatedAssumptionAnswer());
@@ -609,13 +609,13 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test53()  throws Throwable  {
       LinkedTreeMap<Object, Object> linkedTreeMap0 = new LinkedTreeMap<Object, Object>((Comparator<? super Object>) null);
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test54()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Comparable<Object>, AbstractMap.SimpleImmutableEntry<Object, Integer>> linkedTreeMap0 = new LinkedTreeMap<Comparable<Object>, AbstractMap.SimpleImmutableEntry<Object, Integer>>(comparator0);
@@ -623,7 +623,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test55()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.putIfAbsent("e zFY\"I)d2)OZ}P#", "e zFY\"I)d2)OZ}P#");
@@ -635,14 +635,14 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertTrue(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test56()  throws Throwable  {
       LinkedTreeMap.Node<String, Integer> linkedTreeMap_Node0 = new LinkedTreeMap.Node<String, Integer>();
       String string0 = linkedTreeMap_Node0.toString();
       assertEquals("null=null", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test57()  throws Throwable  {
       LinkedTreeMap<Object, Object> linkedTreeMap0 = new LinkedTreeMap<Object, Object>();
       LinkedTreeMap.Node<String, Integer> linkedTreeMap_Node0 = new LinkedTreeMap.Node<String, Integer>();
@@ -650,7 +650,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test58()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<LinkedTreeMap<Integer, Object>, AbstractMap.SimpleImmutableEntry<Object, Object>> linkedTreeMap0 = new LinkedTreeMap<LinkedTreeMap<Integer, Object>, AbstractMap.SimpleImmutableEntry<Object, Object>>(comparator0);
@@ -659,7 +659,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, int0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test59()  throws Throwable  {
       Comparator<Map.Entry<Object, String>> comparator0 = (Comparator<Map.Entry<Object, String>>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Map.Entry<Object, String>, String> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<Object, String>, String>(comparator0);
@@ -669,7 +669,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test60()  throws Throwable  {
       LinkedTreeMap<Map.Entry<Object, String>, Integer> linkedTreeMap0 = new LinkedTreeMap<Map.Entry<Object, String>, Integer>();
       LinkedTreeMap.KeySet linkedTreeMap_KeySet0 = linkedTreeMap0.new KeySet();
@@ -677,7 +677,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap_KeySet0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test61()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.putIfAbsent("U", "U");
@@ -694,7 +694,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test62()  throws Throwable  {
       LinkedTreeMap<String, Object> linkedTreeMap0 = new LinkedTreeMap<String, Object>();
       linkedTreeMap0.putAll(linkedTreeMap0);
@@ -702,7 +702,7 @@ public class LinkedTreeMap_ESTest extends LinkedTreeMap_ESTest_scaffolding {
       assertEquals(0, linkedTreeMap0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test63()  throws Throwable  {
       Comparator<Object> comparator0 = (Comparator<Object>) mock(Comparator.class, new ViolatedAssumptionAnswer());
       LinkedTreeMap<Integer, Object> linkedTreeMap0 = new LinkedTreeMap<Integer, Object>(comparator0);

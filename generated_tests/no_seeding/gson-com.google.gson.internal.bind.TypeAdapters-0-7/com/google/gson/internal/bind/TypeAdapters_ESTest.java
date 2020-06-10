@@ -52,10 +52,10 @@ import org.evosuite.runtime.mock.java.util.MockGregorianCalendar;
 import org.evosuite.runtime.mock.java.util.MockUUID;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test00()  throws Throwable  {
       Class<JsonNull> class0 = JsonNull.class;
       Class<Object> class1 = Object.class;
@@ -65,14 +65,14 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNotNull(typeAdapterFactory0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test01()  throws Throwable  {
       Class<Locale> class0 = Locale.class;
       TypeAdapterFactory typeAdapterFactory0 = TypeAdapters.newFactory(class0, class0, (TypeAdapter<? super Locale>) null);
       assertNotNull(typeAdapterFactory0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test02()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<UUID> class0 = UUID.class;
@@ -83,7 +83,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNotNull(typeAdapterFactory0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test03()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       // Undeclared exception!
@@ -99,7 +99,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test04()  throws Throwable  {
       Boolean boolean0 = Boolean.TRUE;
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive(boolean0);
@@ -116,7 +116,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test05()  throws Throwable  {
       JsonArray jsonArray0 = new JsonArray();
       Gson gson0 = new Gson();
@@ -133,7 +133,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test06()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Calendar> class0 = Calendar.class;
@@ -141,14 +141,14 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNotNull(typeAdapter0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test07()  throws Throwable  {
       Gson gson0 = new Gson();
       JsonElement jsonElement0 = gson0.toJsonTree((Object) gson0);
       assertFalse(jsonElement0.isJsonPrimitive());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test08()  throws Throwable  {
       Gson gson0 = new Gson();
       MockGregorianCalendar mockGregorianCalendar0 = new MockGregorianCalendar();
@@ -157,7 +157,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNotNull(string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test09()  throws Throwable  {
       Gson gson0 = new Gson();
       JsonNull jsonNull0 = JsonNull.INSTANCE;
@@ -165,7 +165,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("null", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test10()  throws Throwable  {
       Gson gson0 = new Gson();
       TypeAdapterFactory typeAdapterFactory0 = TypeAdapters.SHORT_FACTORY;
@@ -180,7 +180,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertFalse(jsonElement0.isJsonPrimitive());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test11()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<JsonPrimitive> class0 = JsonPrimitive.class;
@@ -197,7 +197,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test12()  throws Throwable  {
       Gson gson0 = new Gson();
       AtomicIntegerArray atomicIntegerArray0 = new AtomicIntegerArray(945);
@@ -212,7 +212,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals(945, jsonArray0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test13()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Locale> class0 = Locale.class;
@@ -220,7 +220,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("null", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test14()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Locale> class0 = Locale.class;
@@ -229,7 +229,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("\"k_K\"", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test15()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("`b7JR~e_%[dFvI <");
@@ -246,7 +246,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test16()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("_;gP6aU6<PN");
@@ -264,7 +264,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test17()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("K");
@@ -273,7 +273,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("", locale0.getVariant());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test18()  throws Throwable  {
       Gson gson0 = new Gson();
       UUID uUID0 = MockUUID.fromString("to:<$4[F>^$/3K3@:");
@@ -281,7 +281,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("\"00000000-0100-4000-8200-000003000000\"", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test19()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<InetAddress> class0 = InetAddress.class;
@@ -289,7 +289,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertFalse(inet4Address0.isLoopbackAddress());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test20()  throws Throwable  {
       Gson gson0 = new Gson();
       URI uRI0 = MockURI.aFileURI;
@@ -297,7 +297,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("\"file:///tmp/foo.bar\"", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test21()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<URI> class0 = URI.class;
@@ -314,7 +314,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test22()  throws Throwable  {
       Gson gson0 = new Gson();
       URL uRL0 = MockURL.getFileExample();
@@ -322,7 +322,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("\"file://some/fake/but/wellformed/url\"", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test23()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("null");
@@ -331,7 +331,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNull(uRL0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test24()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("Expected ");
@@ -348,7 +348,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test25()  throws Throwable  {
       Gson gson0 = new Gson();
       StringBuffer stringBuffer0 = new StringBuffer();
@@ -356,7 +356,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("\"\"", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test26()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("null");
@@ -365,7 +365,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNull(stringBuffer0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test27()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("K#uBOMA8L");
@@ -382,7 +382,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test28()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<String> class0 = String.class;
@@ -391,7 +391,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNull(byte0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test29()  throws Throwable  {
       Gson gson0 = new Gson();
       JsonArray jsonArray0 = new JsonArray();
@@ -408,7 +408,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test30()  throws Throwable  {
       Gson gson0 = new Gson();
       Character character0 = Character.valueOf('0');
@@ -416,7 +416,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("\"0\"", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test31()  throws Throwable  {
       Gson gson0 = new Gson();
       JsonElement jsonElement0 = gson0.toJsonTree((Object) null);
@@ -425,7 +425,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNull(character0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test32()  throws Throwable  {
       Gson gson0 = new Gson();
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("null");
@@ -442,7 +442,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test33()  throws Throwable  {
       Gson gson0 = new Gson();
       StringReader stringReader0 = new StringReader("null");
@@ -451,7 +451,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNull(long0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test34()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Long> class0 = Long.TYPE;
@@ -468,7 +468,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test35()  throws Throwable  {
       Gson gson0 = new Gson();
       AtomicIntegerArray atomicIntegerArray0 = new AtomicIntegerArray(945);
@@ -478,7 +478,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals(945, atomicIntegerArray1.length());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test36()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Integer> class0 = Integer.TYPE;
@@ -495,7 +495,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test37()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Short> class0 = Short.class;
@@ -503,7 +503,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNull(short0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test38()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Short> class0 = Short.class;
@@ -519,7 +519,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test39()  throws Throwable  {
       Gson gson0 = new Gson();
       JsonPrimitive jsonPrimitive0 = new JsonPrimitive("null");
@@ -536,7 +536,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test40()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Boolean> class0 = Boolean.class;
@@ -552,7 +552,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test41()  throws Throwable  {
       JsonObject jsonObject0 = new JsonObject();
       Gson gson0 = new Gson();
@@ -569,7 +569,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test42()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[2];
@@ -579,7 +579,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals(76, jsonArray0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test43()  throws Throwable  {
       Gson gson0 = new Gson();
       Byte byte0 = new Byte((byte)48);
@@ -587,7 +587,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNotNull(string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test44()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Short> class0 = Short.class;
@@ -595,7 +595,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("null", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test45()  throws Throwable  {
       Class<AtomicBoolean> class0 = AtomicBoolean.class;
       Gson gson0 = new Gson();
@@ -612,7 +612,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test46()  throws Throwable  {
       Gson gson0 = new Gson();
       AtomicBoolean atomicBoolean0 = new AtomicBoolean(true);
@@ -620,7 +620,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("true", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test47()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<AtomicInteger> class0 = AtomicInteger.class;
@@ -636,7 +636,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test48()  throws Throwable  {
       Gson gson0 = new Gson();
       AtomicInteger atomicInteger0 = new AtomicInteger(953);
@@ -644,7 +644,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("953", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test49()  throws Throwable  {
       Gson gson0 = new Gson();
       InetAddress inetAddress0 = MockInetAddress.anyLocalAddress();
@@ -652,7 +652,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertEquals("\"192.168.1.42\"", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test50()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Short> class0 = Short.TYPE;
@@ -669,7 +669,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test51()  throws Throwable  {
       TypeAdapterFactory typeAdapterFactory0 = TypeAdapters.CHARACTER_FACTORY;
       Gson gson0 = new Gson();
@@ -680,7 +680,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertFalse(typeAdapterFactory1.equals((Object)typeAdapterFactory0));
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test52()  throws Throwable  {
       Gson gson0 = new Gson();
       Class<Object> class0 = Object.class;
@@ -689,14 +689,14 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       assertNotNull(typeAdapterFactory0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test53()  throws Throwable  {
       Gson gson0 = new Gson();
       String string0 = gson0.toString();
       assertNotNull(string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test54()  throws Throwable  {
       Gson gson0 = new Gson();
       long[] longArray0 = new long[2];
@@ -715,7 +715,7 @@ public class TypeAdapters_ESTest extends TypeAdapters_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 100000)
   public void test55()  throws Throwable  {
       Gson gson0 = new Gson();
       Locale locale0 = Locale.FRANCE;
