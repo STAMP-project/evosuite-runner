@@ -22,6 +22,7 @@ if type == "model":
 elif type =="test":
     log_dir = os.path.join(dir_path, "..", "..", "logs","test_seeding",application+"-"+class_name+"-"+clone_seed_p+"-"+execution_idx+"-out.txt")
 else:
+    p_object_pool=0
     log_dir = os.path.join(dir_path, "..", "..", "logs","no_seeding",application+"-"+class_name+"-"+execution_idx+"-out.txt")
 
 out_dir = os.path.join(dir_path, "..", "..", "results",type+"-results.csv")

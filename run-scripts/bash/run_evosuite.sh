@@ -47,8 +47,3 @@ projectCP=$(python run-scripts/python/generateProjectCP.py "bins/$project")
         . run-scripts/bash/parsing.sh "no" $population $search_budget $pid $i $project $class $generatedTestDir &
         # Parse the execution log and save the useful information in to the no_seeding csv file
       fi
-
-         while (( $(pgrep -l java | wc -l) >= 1 ))
-            do
-                sleep 1
-            done

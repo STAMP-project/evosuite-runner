@@ -158,5 +158,5 @@ done
 
    while (( $(pgrep -l java | wc -l) >= 1 ))
             do
-                sleep 1
+                sleep 30
             done
