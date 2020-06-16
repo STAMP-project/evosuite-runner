@@ -16,7 +16,7 @@ random_abstract_test_selection=sys.argv[9]
 firstInputCSV=os.path.join(firstConfReport,"mutations.csv")
 secondInputCSV=os.path.join(secondConfReport,"mutations.csv")
 
-fieldnames = ['project','target_class','execution_id','model_clone_seed','model_p_object_pool','model_random_abstract_test_selection','total_mutants','mutation_operator','method','line','killed_by','loser_status']
+fieldnames = ['project','target_class','execution_id','model_clone_seed','model_p_object_pool','model_random_abstract_test_selection','total_mutants','mutation_operator','method','line','killed_by','loser_status','mutant_id']
 
 csvFile = open(csvDir,"a")
 csvWriter = csv.writer(csvFile)
@@ -60,5 +60,7 @@ for index in range(0, len(first_mutation_data)):
         finalRow.append(line)
         finalRow.append(killed_by)
         finalRow.append(loser_status)
+        finalRow.append(index)
+        
 
         csvWriter.writerow(finalRow)
