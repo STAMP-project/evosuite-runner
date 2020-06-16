@@ -1,7 +1,6 @@
 import sys,os
 import csv
 
-print sys.argv
 pitDir=sys.argv[1]
 csvDir=sys.argv[2]
 
