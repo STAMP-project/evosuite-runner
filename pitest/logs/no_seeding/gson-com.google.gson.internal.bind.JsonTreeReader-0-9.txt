@@ -1,40 +1,53 @@
-6:37:10 PM PIT >> INFO : Verbose logging is disabled. If you encounter an problem please enable it before reporting an issue.
-6:37:11 PM PIT >> INFO : Sending 1 test classes to minion
-6:37:11 PM PIT >> INFO : Sent tests to minion
-6:37:11 PM PIT >> INFO : MINION : 6:37:11 PM PIT >> INFO : Checking environment
-6:37:11 PM PIT >> INFO : Found  90 tests
-6:37:11 PM PIT >> INFO : Dependency analysis reduced number of potential tests by 0
-6:37:11 PM PIT >> INFO : 90 tests received
+12:45:27 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+12:45:27 PM PIT >> INFO : Sending 1 test classes to minion
+12:45:27 PM PIT >> INFO : Sent tests to minion
+12:45:27 PM PIT >> INFO : MINION : 12:45:27 PM PIT >> INFO : Checking environment
 
-6:37:11 PM PIT >> INFO : MINION : SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+12:45:27 PM PIT >> INFO : MINION : 12:45:27 PM PIT >> INFO : Found  90 tests
 
-6:37:11 PM PIT >> INFO : MINION : SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+12:45:27 PM PIT >> INFO : MINION : 12:45:27 PM PIT >> INFO : Dependency analysis reduced number of potential tests by 0
 
-6:37:12 PM PIT >> INFO : MINION : 6:37:12 PM PIT >> WARNING : More threads at end of test (6) test00 than start. (4)
+12:45:27 PM PIT >> INFO : MINION : 12:45:27 PM PIT >> INFO : 90 tests received
 
-/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-6:37:12 PM PIT >> INFO : Calculated coverage in 2 seconds.
-6:37:13 PM PIT >> INFO : Created  1 mutation test units
+12:45:27 PM PIT >> INFO : MINION : SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+
+12:45:27 PM PIT >> INFO : MINION : SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+12:45:29 PM PIT >> INFO : MINION : 12:45:29 PM PIT >> WARNING : More threads at end of test (6) test00 than start. (4)
+
+/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-12:45:29 PM PIT >> INFO : Calculated coverage in 2 seconds.
+12:45:30 PM PIT >> INFO : Created  1 mutation test units
 stderr  : SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-6:37:21 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+12:45:42 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
 stderr  : SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-6:37:35 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+12:46:04 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
 stderr  : SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-/6:37:43 PM PIT >> INFO : Completed in 32 seconds
+12:46:53 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+stderr  : SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+/12:47:10 PM PIT >> INFO : Completed in 102 seconds
 ================================================================================
 - Mutators
 ================================================================================
-> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
->> Generated 11 Killed 1 (9%)
-> KILLED 1 SURVIVED 10 TIMED_OUT 0 NON_VIABLE 0 
+> org.pitest.mutationtest.engine.gregor.mutators.rv.AOR3Mutator
+>> Generated 27 Killed 4 (15%)
+> KILLED 4 SURVIVED 18 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
-> NO_COVERAGE 0 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.AOR2Mutator
+>> Generated 27 Killed 5 (19%)
+> KILLED 5 SURVIVED 17 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 
 --------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
 >> Generated 15 Killed 13 (87%)
@@ -42,11 +55,17 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 0 
 --------------------------------------------------------------------------------
-> org.pitest.mutationtest.engine.gregor.mutators.experimental.MemberVariableMutator
->> Generated 11 Killed 6 (55%)
-> KILLED 6 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> org.pitest.mutationtest.engine.gregor.mutators.rv.AOR1Mutator
+>> Generated 27 Killed 5 (19%)
+> KILLED 5 SURVIVED 17 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
-> NO_COVERAGE 3 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.AOR4Mutator
+>> Generated 27 Killed 3 (11%)
+> KILLED 3 SURVIVED 19 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 
 --------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
 >> Generated 34 Killed 31 (91%)
@@ -66,29 +85,23 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 5 
 --------------------------------------------------------------------------------
-> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
->> Generated 45 Killed 44 (98%)
-> KILLED 44 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
-> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
-> NO_COVERAGE 0 
---------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator
 >> Generated 3 Killed 3 (100%)
 > KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 0 
 --------------------------------------------------------------------------------
-> org.pitest.mutationtest.engine.gregor.mutators.BooleanTrueReturnValsMutator
->> Generated 2 Killed 2 (100%)
-> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> org.pitest.mutationtest.engine.gregor.mutators.rv.CRCR3Mutator
+>> Generated 42 Killed 19 (45%)
+> KILLED 19 SURVIVED 18 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
-> NO_COVERAGE 0 
+> NO_COVERAGE 5 
 --------------------------------------------------------------------------------
-> org.pitest.mutationtest.engine.gregor.mutators.EmptyObjectReturnValsMutator
->> Generated 5 Killed 3 (60%)
-> KILLED 3 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> org.pitest.mutationtest.engine.gregor.mutators.rv.CRCR4Mutator
+>> Generated 37 Killed 14 (38%)
+> KILLED 14 SURVIVED 18 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
-> NO_COVERAGE 0 
+> NO_COVERAGE 5 
 --------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
 >> Generated 11 Killed 10 (91%)
@@ -108,6 +121,12 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 0 
 --------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.CRCR2Mutator
+>> Generated 37 Killed 15 (41%)
+> KILLED 15 SURVIVED 17 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.NullReturnValsMutator
 >> Generated 12 Killed 12 (100%)
 > KILLED 12 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
@@ -117,6 +136,12 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 > org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator
 >> Generated 42 Killed 17 (40%)
 > KILLED 17 SURVIVED 20 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.AOD2Mutator
+>> Generated 27 Killed 5 (19%)
+> KILLED 5 SURVIVED 17 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 5 
 --------------------------------------------------------------------------------
@@ -132,15 +157,129 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 0 
 --------------------------------------------------------------------------------
-> org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator
->> Generated 3 Killed 0 (0%)
-> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> org.pitest.mutationtest.engine.gregor.mutators.rv.CRCR6Mutator
+>> Generated 42 Killed 17 (40%)
+> KILLED 17 SURVIVED 20 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
-> NO_COVERAGE 3 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.CRCR1Mutator
+>> Generated 15 Killed 14 (93%)
+> KILLED 14 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
 --------------------------------------------------------------------------------
 > org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator
 >> Generated 18 Killed 15 (83%)
 > KILLED 15 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 3 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.CRCR5Mutator
+>> Generated 42 Killed 16 (38%)
+> KILLED 16 SURVIVED 21 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF
+>> Generated 34 Killed 30 (88%)
+> KILLED 30 SURVIVED 4 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.ABSMutator
+>> Generated 62 Killed 28 (45%)
+> KILLED 28 SURVIVED 25 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 9 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 11 Killed 1 (9%)
+> KILLED 1 SURVIVED 10 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.ROR3Mutator
+>> Generated 31 Killed 17 (55%)
+> KILLED 17 SURVIVED 14 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.ROR5Mutator
+>> Generated 45 Killed 44 (98%)
+> KILLED 44 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.ROR1Mutator
+>> Generated 31 Killed 26 (84%)
+> KILLED 26 SURVIVED 5 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.ROR2Mutator
+>> Generated 31 Killed 13 (42%)
+> KILLED 13 SURVIVED 18 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.experimental.MemberVariableMutator
+>> Generated 11 Killed 6 (55%)
+> KILLED 6 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 3 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.ROR4Mutator
+>> Generated 31 Killed 19 (61%)
+> KILLED 19 SURVIVED 12 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.UOI1Mutator
+>> Generated 62 Killed 20 (32%)
+> KILLED 20 SURVIVED 33 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 9 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 45 Killed 44 (98%)
+> KILLED 44 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.BooleanTrueReturnValsMutator
+>> Generated 2 Killed 2 (100%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.EmptyObjectReturnValsMutator
+>> Generated 5 Killed 3 (60%)
+> KILLED 3 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.UOI3Mutator
+>> Generated 62 Killed 31 (50%)
+> KILLED 31 SURVIVED 22 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 9 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.UOI2Mutator
+>> Generated 62 Killed 18 (29%)
+> KILLED 17 SURVIVED 35 TIMED_OUT 1 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 9 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.rv.UOI4Mutator
+>> Generated 62 Killed 29 (47%)
+> KILLED 29 SURVIVED 24 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 9 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator
+>> Generated 3 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 3 
 --------------------------------------------------------------------------------
@@ -156,24 +295,18 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 > MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
 > NO_COVERAGE 6 
 --------------------------------------------------------------------------------
-> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF
->> Generated 34 Killed 30 (88%)
-> KILLED 30 SURVIVED 4 TIMED_OUT 0 NON_VIABLE 0 
-> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
-> NO_COVERAGE 0 
---------------------------------------------------------------------------------
 ================================================================================
 - Timings
 ================================================================================
 > scan classpath : < 1 second
 > coverage and dependency analysis : 2 seconds
 > build mutation tests : < 1 second
-> run mutation analysis : 30 seconds
+> run mutation analysis : 1 minutes and 39 seconds
 --------------------------------------------------------------------------------
-> Total  : 32 seconds
+> Total  : 1 minutes and 42 seconds
 --------------------------------------------------------------------------------
 ================================================================================
 - Statistics
 ================================================================================
->> Generated 453 mutations Killed 313 (69%)
->> Ran 1509 tests (3.33 tests per mutation)
+>> Generated 1282 mutations Killed 675 (53%)
+>> Ran 5374 tests (4.19 tests per mutation)
