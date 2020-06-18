@@ -34,6 +34,30 @@ getModelVSManual_majority <- function(){
     summarise(count = n(), killing_tests=paste0(exec_killed, collapse = "|"))
 }
 
+
+getManualVSModel <- function(){
+  csvFile='../../../pitest/killed_mutants/manualvsModel.csv'
+  df <- read.csv(csvFile, stringsAsFactors = FALSE)
+  df$exec_killed <- paste(df$execution_id,"->",df$killed_by,sep = "")
+  
+  df <- df %>%
+    group_by(mutant_id,mutation_operator,target_class,method,line,total_mutants) %>%
+    summarise(count = n(), killing_tests=paste0(exec_killed, collapse = "|"))
+  
+  return(df)
+}
+
+getManualVSPure <- function(){
+  csvFile='../../../pitest/killed_mutants/manualvsPure.csv'
+  df <- read.csv(csvFile, stringsAsFactors = FALSE)
+  df$exec_killed <- paste(df$execution_id,"->",df$killed_by,sep = "")
+  
+  df <- df %>%
+    group_by(mutant_id,mutation_operator,target_class,method,line,total_mutants) %>%
+    summarise(count = n(), killing_tests=paste0(exec_killed, collapse = "|"))
+  
+  return(df)
+}
 getPureVSManual <- function(){
   csvFile='../../../pitest/killed_mutants/purevsManual.csv'
   df <- read.csv(csvFile, stringsAsFactors = FALSE)
@@ -55,11 +79,9 @@ getPureVSManual_majority <- function(){
 }
 
 getCoveredByModelSeeding_majority <- function(){
-  halfOfRuns <- TOTAL_RUNS/2
   df<-getCoveredByModelSeeding() %>%
     group_by(mutant_id,mutation_operator,target_class,method,line,total_mutants) %>%
-    summarise(count = n()) %>%
-    filter(count >= halfOfRuns)
+    summarise(count = n()) 
   
   return(df)
 }
@@ -87,11 +109,9 @@ getCoveredByPureEvoSuite <- function(){
 
 
 getCoveredByPureEvoSuite_majority <- function(){
-  halfOfRuns <- TOTAL_RUNS/2
   df<-getCoveredByPureEvoSuite() %>%
     group_by(mutant_id,mutation_operator,target_class,method,line,total_mutants) %>%
-    summarise(count = n()) %>%
-    filter(count >= halfOfRuns)
+    summarise(count = n()) 
   
   return(df)
 }
