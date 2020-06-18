@@ -1,9 +1,21 @@
 #!/usr/bin/env bash
 modelVSPure=1
-# Check the input parameter to set the EvoSuite execution mode (no-seeding, test_seeding, or model_seeding)
+manualVSPure=0
+pureVSmanual=0
+modelVSmanual=0
+manualVSmodel=0
+# Check the input parameter to set the PIT comparison
 while [ "$1" != "" ]; do
     case $1 in
         -p | --pure )   modelVSPure=0
+                        shift ;;
+        -mp | --manualpure )   manualVSPure=1
+                        shift ;;
+        -pm | --puremanual )   pureVSmanual=1
+                        shift ;;
+        -mom | --modelmanual )   modelVSmanual=1
+                        shift ;;
+        -mmo | --manualmodel )   manualVSmodel=1
                         shift ;;
         * )             break ;;
     esac
@@ -23,6 +35,8 @@ random_abstract_test_selection=$5
 modelPITOut="pitest/out/model_seeding"
 purePITOut="pitest/out/no_seeding"
 
+manualReport="pitest/out/manual/1"
+
 resultDir="pitest/killed_mutants"
 
 
@@ -39,7 +53,23 @@ do
         modelReport="$modelPITOut/$project-$target_class-$clone_seed-$p_object_pool-$i-$random_abstract_test_selection"
         pureReport="$purePITOut/$project-$target_class-0-$i"
 
-        if [[ "$modelVSPure" -eq 1 ]]; then
+        if [[ "$manualVSPure" -eq 1 ]]; then
+            firstConfReport="$manualReport"
+            secondConfReport="$pureReport"
+             csvDir="$resultDir/manualvsPure.csv"
+        elif [[ "$pureVSmanual" -eq 1 ]]; then
+            firstConfReport="$pureReport"
+            secondConfReport="$manualReport"
+            csvDir="$resultDir/purevsManual.csv"
+        elif [[ "$modelVSmanual" -eq 1 ]]; then
+            firstConfReport="$modelReport"
+            secondConfReport="$manualReport"
+            csvDir="$resultDir/modelvsManual.csv"
+        elif [[ "$manualVSmodel" -eq 1 ]]; then
+            firstConfReport="$manualReport"
+            secondConfReport="$modelReport"
+            csvDir="$resultDir/manualvsmodel.csv"
+        elif [[ "$modelVSPure" -eq 1 ]]; then
             firstConfReport="$modelReport"
             secondConfReport="$pureReport"
             csvDir="$resultDir/modelKilled.csv"
