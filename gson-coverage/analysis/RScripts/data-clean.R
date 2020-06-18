@@ -23,6 +23,11 @@ getModelVSManual <- function(){
 
 getModelVSManual_majority <- function(){
   df <- getModelVSManual()
+  
+  df2 <- df %>%
+    group_by(killed_by,execution_id) %>%
+    summarise(count=n())
+  write.csv(df2,'../results/modelVsManual_killers.csv')
   df$exec_killed <- paste(df$execution_id,"->",df$killed_by,sep = "")
   df <- df %>%
     group_by(mutant_id,mutation_operator,target_class,method,line,total_mutants) %>%
@@ -39,6 +44,10 @@ getPureVSManual <- function(){
 
 getPureVSManual_majority <- function(){
   df <- getPureVSManual()
+  
+  df2 <- df %>%
+    group_by(killed_by,execution_id) %>%
+    summarise(count=n())
   df$exec_killed <- paste(df$execution_id,"->",df$killed_by,sep = "")
   df <- df %>%
     group_by(mutant_id,mutation_operator,target_class,method,line,total_mutants) %>%
