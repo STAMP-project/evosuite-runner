@@ -35,13 +35,13 @@ cat("(Manual ∩ Model) - Pure:",nrow(manualImodel_pure),"\n")
 
 pureImanual_model <- mutantTable %>%
   filter(status.model=="NOT_KILLED" & status.manual=="KILLED" & status.pure=="KILLED")
-cat("(Pure ∩ Model) - Manual:",nrow(pureImanual_model),"\n")
+cat("(Pure ∩ Manual) - Model:",nrow(pureImanual_model),"\n")
 
 pureImanualImodel <- mutantTable %>%
   filter(status.model=="KILLED" & status.manual=="KILLED" & status.pure=="KILLED")
-cat("(Pure ∩ Model) - Manual:",nrow(pureImanualImodel),"\n")
+cat("(Pure ∩ Model) ∩ Manual:",nrow(pureImanualImodel),"\n")
 
 other <- mutantTable %>%
   filter(status.model=="NOT_KILLED" & status.manual=="NOT_KILLED" & status.pure=="NOT_KILLED")
-cat("Not Killed:",nrow(other))
+cat("Not Killed:",nrow(other),"\n")
 
